@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './PartnersSection.module.css';
 import Button from '../../components/Button';
+import partnerImg from '../../assets/partner.png';
 
 const PartnersSection: React.FC = () => (
   <section className={styles.section}>
@@ -11,8 +12,8 @@ const PartnersSection: React.FC = () => (
           <p className={styles.sectionDescription}>Join us in driving life-changing research forward. As a partner, your support fuels breakthroughs and brings hope to millions affected by serious diseases.</p>
           <Button variant="primary">Join Us</Button>
         </div>
-        <div className={styles.emojiContainer}>
-          <span className={styles.emoji}>🤝</span>
+        <div>
+          <img src={partnerImg} alt="Partner" style={{ width: '80%', height: '80%', objectFit: 'contain' }} />
         </div>
       </div>
       <div className={styles.partnersContainer}>
@@ -21,7 +22,7 @@ const PartnersSection: React.FC = () => (
         <div className={styles.partnerLogo} />
         <div className={styles.partnerLogo} />
       </div>
-      <Button variant="outline">View All Partners</Button>
+      <Button variant="primary">View All Partners</Button>
     </div>
   </section>
 );

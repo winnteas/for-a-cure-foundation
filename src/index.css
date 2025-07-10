@@ -39,3 +39,16 @@ h1, h2, h3, h4, h5, h6 {
 p, span, div, button, input, textarea, select {
   font-family: 'Inter', sans-serif;
 }
+
+.largeText {
+  font-size: 2.5rem;
+  font-family: 'Inter Black', 'Inter', sans-serif;
+  font-weight: 900;
+  display: block;
+}
+
+.sectionTitle {
+  text-align: center;
+  color: var(--primary-blue);
+  margin-bottom: 3rem;
+}

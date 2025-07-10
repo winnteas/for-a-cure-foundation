@@ -19,19 +19,27 @@
 .content {
   flex: 1;
   margin-right: 2rem;
+  background: #16597A;
+  color: #fff;
+  border-radius: 18px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 4px 16px 0 rgba(32, 91, 119, 0.08);
 }
 
 .sectionTitle {
   font-size: 1.875rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: var(--primary-blue);
+  color: #fff;
 }
 
 .sectionDescription {
   margin-bottom: 1rem;
   max-width: 28rem;
-  color: var(--text-dark);
+  color: #fff;
   line-height: 1.6;
 }
 

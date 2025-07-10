@@ -20,6 +20,10 @@ const Navbar: React.FC = () => (
             <a href="#" className={styles.socialIcon} aria-label="X">
               <img src={xIcon} alt="X"/>
             </a>
+            <a> | </a>
+            info@foracure.org.au
+            <a> | </a>
+            1300 651 633
           </div>
           <div className={styles.infoButtons}>
             <button className={`${styles.infoButton} ${styles.searchButton}`} aria-label="Search">
@@ -36,8 +40,8 @@ const Navbar: React.FC = () => (
       </div>
       <div className={styles.navigationLinks}>
         <button className={styles.navLink}>Home</button>
-        <button className={styles.navLink}>About Us <img src={dropdownIcon} alt="dropdown" style={{height: '0.4em', marginLeft: 2, verticalAlign: 'middle'}} /></button>
-        <button className={styles.navLink}>Research <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" style={{height: '0.4em', marginLeft: 2, verticalAlign: 'middle'}}><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></button>
+        <button className={styles.navLink}>About Us<img src={dropdownIcon} alt="dropdown" style={{height: '0.4em', marginLeft: 2, verticalAlign: 'middle'}} /></button>
+        <button className={styles.navLink}>Research</button>
         <button className={styles.navLink}>Get Involved <img src={dropdownIcon} alt="dropdown" style={{height: '0.4em', marginLeft: 2, verticalAlign: 'middle'}} /></button>
         <button className={styles.navLink}>News</button>
         <button className={styles.navLink}>Contact</button>
