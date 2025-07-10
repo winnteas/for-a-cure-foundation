@@ -1,14 +1,12 @@
 import React from 'react';
-import {
-  Navbar,
-  Footer,
-  HeroSection,
-  VisionMissionValues,
-  ImpactStats,
-  NewsSection,
-  PartnersSection,
-  DonationSection
-} from './components';
+import Navbar from './layouts/Navbar';
+import Footer from './layouts/Footer';
+import HeroSection from './pages/Home/HeroSection';
+import VisionMissionValues from './pages/Home/VisionMissionValues';
+import ImpactStats from './pages/Home/ImpactStats';
+import NewsSection from './pages/Home/NewsSection';
+import PartnersSection from './pages/Home/PartnersSection';
+import DonationSection from './features/donation/DonationSection';
 import './App.css';
 
 const App: React.FC = () => {
