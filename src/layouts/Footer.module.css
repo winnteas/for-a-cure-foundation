@@ -14,6 +14,7 @@
 .footerContent {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 3rem 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -26,6 +27,7 @@
   min-width: 220px;
   display: flex;
   flex-direction: column;
+  padding-right: 8rem;
   align-items: flex-start;
 }
 
@@ -35,7 +37,7 @@
 }
 
 .orgInfo {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #fff;
   margin-bottom: 0;
   line-height: 1.5;
@@ -52,13 +54,16 @@
   font-size: 1.1rem;
   border-bottom: 2px solid #fff;
   padding-bottom: 0.25rem;
-  width: fit-content;
+  display: inline-block;
 }
 
 .linksList {
+  display: flex;
+  flex-direction: column;
   list-style: none;
-  padding: 0;
+  padding: 0.5rem 0;
   margin: 0;
+  gap: 1rem;
 }
 
 .linkItem {
@@ -91,6 +96,9 @@
   list-style: none;
   padding: 0;
   margin: 0 0 1rem 0;
+  color: #fff;
+  font-size: 0.75rem;
+  padding-top: 0.5rem;
 }
 
 .contactItem {
@@ -129,9 +137,17 @@
   align-items: center;
   max-width: 1100px;
   margin: 2rem auto 0 auto;
-  padding-bottom: 1.5rem;
-  font-size: 1rem;
-  color: #fff;
+  padding-bottom: 6rem;
+}
+
+.linkItem:hover,
+.linkItem.active {
+  color: #FF8A65;
+}
+
+.linkItem:hover img,
+.linkItem.active img {
+  filter: invert(62%) sepia(64%) saturate(749%) hue-rotate(338deg) brightness(101%) contrast(101%);
 }
 
 @media (max-width: 900px) {

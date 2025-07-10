@@ -52,3 +52,10 @@ p, span, div, button, input, textarea, select {
   color: var(--primary-blue);
   margin-bottom: 3rem;
 }
+
+.smallText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 0.75rem;
+}

@@ -5,7 +5,7 @@ const DonationSection: React.FC = () => (
   <section className={styles.section}>
     <div className={styles.container}>
       <form className={styles.form}>
-        <h2 className={styles.sectionTitle}>Help Us Make a <span style={{ color: 'var(--primary-blue)' }}>Difference!</span></h2>
+        <h2 className="sectionTitle largeText">Help Us Make a <span style={{ color: 'var(--primary-blue)' }}>Difference!</span></h2>
         <label className={styles.label}>Your Donation</label>
         <div className={styles.amountButtons}>
           <button type="button" className={styles.amountButton}>20</button>
