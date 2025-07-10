@@ -1,0 +1,113 @@
+.section {
+  padding: 3rem 2rem;
+  background-color: var(--primary-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: var(--white);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 20rem;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--primary-blue);
+}
+
+.label {
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.amountButtons {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.amountButton {
+  background-color: var(--primary-green);
+  color: var(--primary-blue);
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.amountButton:hover {
+  background-color: #97D5BC;
+}
+
+.customInput {
+  border: 1px solid var(--primary-green);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  width: 4rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.customInput:focus {
+  border-color: var(--primary-blue);
+}
+
+.cardInput {
+  border: 1px solid var(--primary-green);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.cardInput:focus {
+  border-color: var(--primary-blue);
+}
+
+.donateButton {
+  background-color: var(--accent-orange);
+  color: var(--white);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  border: none;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.donateButton:hover {
+  background-color: #E67A5A;
+}
+
+.emojiContainer {
+  height: 10rem;
+  width: 10rem;
+  background-color: var(--primary-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.emoji {
+  font-size: 2.5rem;
+} 

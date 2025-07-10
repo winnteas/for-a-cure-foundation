@@ -1,0 +1,148 @@
+.footer {
+  background: #205B77;
+  color: #fff;
+  padding: 3rem 0 0 0;
+  margin-top: 0;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #e0e6ea;
+  margin: 2rem 0;
+}
+
+.footerContent {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.logoSection {
+  flex: 1 1 260px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo {
+  height: 56px;
+  margin-bottom: 1.5rem;
+}
+
+.orgInfo {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.linksSection {
+  flex: 1 1 180px;
+  min-width: 180px;
+}
+
+.sectionTitle {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 0.25rem;
+  width: fit-content;
+}
+
+.linksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.linkItem.active {
+  color: #FF8A65;
+  font-weight: bold;
+}
+
+.linkIcon {
+  color: #FF8A65;
+  font-size: 1.1em;
+}
+
+.contactSection {
+  flex: 1 1 220px;
+  min-width: 220px;
+}
+
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contactIcon {
+  color: #FF8A65;
+  font-size: 1.1em;
+}
+
+.socials {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.socialIcon {
+  color: #fff;
+  font-size: 1.3em;
+  transition: color 0.2s;
+}
+
+.socialIcon:hover {
+  color: #FF8A65;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 2rem auto 0 auto;
+  padding-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .footerContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+  .footerBottom {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+} 

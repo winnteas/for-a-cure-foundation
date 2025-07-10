@@ -1,0 +1,52 @@
+.section {
+  padding: 4rem 2rem;
+  background-color: var(--primary-green);
+  color: var(--primary-blue);
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  color: var(--primary-blue);
+}
+
+.statsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+}
+
+.statCard {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.statNumber {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--accent-orange);
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--primary-blue);
+}
+
+.statDescription {
+  font-size: 0.875rem;
+  color: var(--text-dark);
+  text-align: center;
+  margin-top: 0.5rem;
+} 

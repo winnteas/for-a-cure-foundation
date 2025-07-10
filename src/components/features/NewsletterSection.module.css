@@ -1,0 +1,52 @@
+.section {
+  padding: 2rem 0 1.5rem 0;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-align: left;
+}
+
+.form {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+
+.emailInput {
+  border: 1px solid var(--primary-green);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.emailInput:focus {
+  border-color: var(--primary-blue);
+}
+
+.subscribeButton {
+  background-color: var(--accent-orange);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.subscribeButton:hover {
+  background-color: #E67A5A;
+} 
