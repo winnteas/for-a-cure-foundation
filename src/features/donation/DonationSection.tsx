@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './DonationSection.module.css';
+import glovesIcon from '../../assets/icons/gloves.svg';
 
 const DonationSection: React.FC = () => (
   <section className={styles.section}>
@@ -19,7 +20,7 @@ const DonationSection: React.FC = () => (
         <button className={styles.donateButton}>Donate Now</button>
       </form>
       <div className={styles.emojiContainer}>
-        <span className={styles.emoji}>🧪</span>
+        <img src={glovesIcon} alt="Gloves" className={styles.emoji} />
       </div>
     </div>
   </section>

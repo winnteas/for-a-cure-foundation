@@ -43,17 +43,3 @@ for-a-cure-foundation/
    ```bash
    npm test
    ```
-
-## Technologies Used
-
-- React 19.1.0
-- TypeScript 4.9.5
-- Create React App
-- Tailwind CSS (for styling)
-
-## Features
-
-- Responsive design
-- TypeScript for type safety
-- Component-based architecture
-- Modern React patterns

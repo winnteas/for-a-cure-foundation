@@ -1,26 +1,35 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './layouts/Navbar';
 import Footer from './layouts/Footer';
-import HeroSection from './pages/Home/HeroSection';
-import VisionMissionValues from './pages/Home/VisionMissionValues';
-import ImpactStats from './pages/Home/ImpactStats';
-import NewsSection from './pages/Home/NewsSection';
-import PartnersSection from './pages/Home/PartnersSection';
+import HeroSection from './features/hero/HeroSection';
+import VisionMissionValues from './features/visionmissionvalues/VisionMissionValues';
+import ImpactStats from './features/impact-stats/ImpactStats';
+import NewsSection from './features/news/NewsSection';
+import PartnersSection from './features/partners/PartnersSection';
 import DonationSection from './features/donation/DonationSection';
+import WhatWeDoSection from './pages/Home/about-us/WhatWeDo';
 import './App.css';
 
 const App: React.FC = () => {
   return (
-    <div>
+    <BrowserRouter>
       <Navbar />
-      <HeroSection />
-      <VisionMissionValues />
-      <ImpactStats />
-      <NewsSection />
-      <PartnersSection />
-      <DonationSection />
+      <Routes>
+        <Route path="/" element={
+          <>
+            <HeroSection />
+            <VisionMissionValues />
+            <ImpactStats />
+            <NewsSection />
+            <PartnersSection />
+            <DonationSection />
+          </>
+        } />
+        <Route path="/about/what-we-do" element={<WhatWeDoSection />} />
+      </Routes>
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 };
 

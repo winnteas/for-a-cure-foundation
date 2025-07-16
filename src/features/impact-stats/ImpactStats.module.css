@@ -1,0 +1,168 @@
+.section {
+  padding: 4rem 2rem;
+  background: #fff;
+}
+
+.impactContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.impactTitle {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.impactSubtitle {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #205B77;
+  margin-bottom: 0.2rem;
+}
+.impactMainTitle {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #205B77;
+}
+
+.impactBlueBox {
+  background: #e3f3fd;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(32, 91, 119, 0.08);
+  width: 100%;
+  padding: 3.5rem 2.5rem 3.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconRow {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+}
+.iconCard, .iconCardActive {
+  width: 140px;
+  height: 140px;
+  background: #fff;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(32,91,119,0.08);
+  position: relative;
+  transition: box-shadow 0.2s, background 0.2s;
+  border: none;
+  padding: 0;
+}
+.iconCard img, .iconCardActive img {
+  width: 64px;
+  height: 64px;
+}
+.iconCardActive {
+  background: #205B77;
+  box-shadow: 0 4px 16px rgba(32,91,119,0.18);
+}
+.iconCardActive img {
+  filter: brightness(0) invert(1);
+}
+.iconPointer {
+  position: absolute;
+  left: 50%;
+  bottom: -18px;
+  transform: translateX(-50%);
+  width: 36px;
+  height: 20px;
+  background: none;
+}
+.iconPointer::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 20px;
+  background: #205B77;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.impactGrid {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2.5rem;
+  width: 100%;
+  max-width: 1100px;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+.impactStatBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 1.5rem;
+}
+.impactStatLabel {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #205B77;
+  margin-bottom: 0.5rem;
+}
+.impactStatValue {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #205B77;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+.impactStatDesc {
+  font-size: 1.25rem;
+  color: #205B77;
+  opacity: 0.9;
+  margin-top: 0.5rem;
+}
+.impactImageBox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.impactImage {
+  width: 370px;
+  height: 250px;
+  object-fit: cover;
+  background: #fff;
+  border-radius: 14px;
+  border: 5px solid #fff;
+  box-shadow: 0 2px 12px rgba(32,91,119,0.10);
+}
+
+@media (max-width: 1100px) {
+  .impactBlueBox {
+    padding: 2rem 1rem;
+  }
+  .impactGrid {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: stretch;
+    padding: 0;
+  }
+  .impactImage {
+    width: 100%;
+    max-width: 370px;
+    margin: 0 auto;
+  }
+  .impactStatBox {
+    align-items: center;
+    padding-left: 0;
+    text-align: center;
+  }
+} 
