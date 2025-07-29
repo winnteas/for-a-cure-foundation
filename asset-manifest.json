@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/for-a-cure-foundation/static/css/main.4d67e4ce.css",
-    "main.js": "/for-a-cure-foundation/static/js/main.af789f87.js",
+    "main.js": "/for-a-cure-foundation/static/js/main.04aa05e7.js",
     "static/js/453.831e232c.chunk.js": "/for-a-cure-foundation/static/js/453.831e232c.chunk.js",
     "static/media/funds-photo.svg": "/for-a-cure-foundation/static/media/funds-photo.0273290fe01472640324984e444c1ce4.svg",
     "static/media/news-thumbnail2.svg": "/for-a-cure-foundation/static/media/news-thumbnail2.4f45a6790f05d74ee30b6deee4ea2081.svg",
@@ -39,11 +39,11 @@
     "static/media/close-button.svg": "/for-a-cure-foundation/static/media/close-button.aa34803b79ccbb380f985f8702ac9ffe.svg",
     "static/media/dropdown.svg": "/for-a-cure-foundation/static/media/dropdown.b38def64e4b7ec8e112d6a6d9f139deb.svg",
     "main.4d67e4ce.css.map": "/for-a-cure-foundation/static/css/main.4d67e4ce.css.map",
-    "main.af789f87.js.map": "/for-a-cure-foundation/static/js/main.af789f87.js.map",
+    "main.04aa05e7.js.map": "/for-a-cure-foundation/static/js/main.04aa05e7.js.map",
     "453.831e232c.chunk.js.map": "/for-a-cure-foundation/static/js/453.831e232c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4d67e4ce.css",
-    "static/js/main.af789f87.js"
+    "static/js/main.04aa05e7.js"
   ]
 }
