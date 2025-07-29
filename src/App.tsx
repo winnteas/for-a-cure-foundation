@@ -9,6 +9,8 @@ import NewsSection from './features/news/NewsSection';
 import PartnersSection from './features/partners/PartnersSection';
 import DonationSection from './features/donation/DonationSection';
 import WhatWeDoSection from './pages/Home/about-us/WhatWeDo';
+import CleoneOnTheFrontline from './pages/Home/about-us/CleoneOnTheFrontline';
+import OurPeople from './pages/Home/about-us/OurPeople';
 import './App.css';
 
 const App: React.FC = () => {
@@ -30,6 +32,8 @@ const App: React.FC = () => {
         <Route path="/" element={HomePageContent} />
         <Route path="/for-a-cure-foundation" element={HomePageContent} />
           <Route path="/about/what-we-do" element={<WhatWeDoSection />} />
+          <Route path="/about/cleone-on-the-frontline" element={<CleoneOnTheFrontline />} />
+          <Route path="/about/our-people" element={<OurPeople />} />
       </Routes>
       <Footer />
     </BrowserRouter>

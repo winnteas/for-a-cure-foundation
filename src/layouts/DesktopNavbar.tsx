@@ -50,9 +50,17 @@ const DesktopNavbar: React.FC = () => (
       </div>
       <div className={styles.navigationLinks}>
         <Link to="/" className={styles.navLink}>Home</Link>
-        <Link to="/about/what-we-do" className={styles.navLink}>
-          About Us<img src={dropdownIcon} alt="dropdown" style={{height: '0.4em', marginLeft: 2, verticalAlign: 'middle'}} />
-        </Link>
+        <div className={styles.navDropdown} tabIndex={0}>
+          <span className={styles.navLink} style={{display: 'flex', alignItems: 'center', cursor: 'pointer'}}>
+            About Us
+            <img src={dropdownIcon} alt="dropdown" style={{height: '0.4em', marginLeft: 2, verticalAlign: 'middle'}} />
+          </span>
+          <div className={styles.dropdownMenu}>
+            <Link to="/about/what-we-do" className={styles.dropdownItem}>What We Do</Link>
+            <Link to="/about/cleone-on-the-frontline" className={styles.dropdownItem}>Cleone on the frontline</Link>
+            <Link to="/about/our-people" className={styles.dropdownItem}>Our People</Link>
+          </div>
+        </div>
         <button className={styles.navLink}>Research</button>
         <button className={styles.navLink}>Get Involved <img src={dropdownIcon} alt="dropdown" style={{height: '0.4em', marginLeft: 2, verticalAlign: 'middle'}} /></button>
         <button className={styles.navLink}>News</button>

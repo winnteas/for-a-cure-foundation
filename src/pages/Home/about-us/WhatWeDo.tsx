@@ -3,12 +3,21 @@ import styles from './WhatWeDo.module.css';
 import researchImg1 from '../../../assets/partner.png'; // Placeholder, replace with actual
 import researchImg2 from '../../../assets/partner.png'; // Placeholder, replace with actual
 import heartImg from '../../../assets/partner.png'; // Placeholder, replace with actual
+import VisionMissionValues from '../../../features/visionmissionvalues/VisionMissionValues';
+import { Link } from 'react-router-dom';
 
 const WhatWeDoSection: React.FC = () => (
   <div className={styles.root}>
     <div className={styles.titleSection}>
       <h2 className={styles.title}>What We Do</h2>
     </div>
+    <nav className={styles.breadcrumb} aria-label="Breadcrumb">
+      <Link to="/">Home</Link>
+      <span className={styles['breadcrumb-separator']}>/</span>
+      <Link to="/about/what-we-do">About Us</Link>
+      <span className={styles['breadcrumb-separator']}>/</span>
+      <span aria-current="page">What We Do</span>
+    </nav>
     <div className={styles.featureRow}>
       <div className={styles.featureLeftBlue}>
         <h3 className={styles.featureTitle}>Science that<br/>Transforms Lives</h3>
@@ -33,23 +42,7 @@ const WhatWeDoSection: React.FC = () => (
         <button className={styles.orangeButton}>Donate Now</button>
       </div>
     </div>
-    <div className={styles.valuesRow}>
-      <div className={styles.valueCard}>
-        <div className={styles.valueIcon}></div>
-        <h4 className={styles.valueTitle}>Our Vision</h4>
-        <p className={styles.valueText}>To advance stem cell breakthroughs by funding vital research, building global partnerships, securing long-term investment, supporting innovation, and engaging diverse communities in advancing regenerative medicine.</p>
-      </div>
-      <div className={styles.valueCard}>
-        <div className={styles.valueIcon}></div>
-        <h4 className={styles.valueTitle}>Our Mission</h4>
-        <p className={styles.valueText}>A world where stem cell research delivers transformative treatments and cures, uniting scientists, communities, and funders to create lasting health outcomes and hope for generations to come.</p>
-      </div>
-      <div className={styles.valueCard}>
-        <div className={styles.valueIcon}></div>
-        <h4 className={styles.valueTitle}>Our Values</h4>
-        <p className={styles.valueText}>We value innovation, collaboration, and inclusivity in our mission to save lives. Guided by science, integrity, and care, we strive to make a difference responsibly and effectively.</p>
-      </div>
-    </div>
+    <VisionMissionValues/>
     <div className={styles.partnerSection}>
       <div className={styles.partnerTextBox}>
         <h3 className={styles.partnerTitle}>Become a Partner</h3>
