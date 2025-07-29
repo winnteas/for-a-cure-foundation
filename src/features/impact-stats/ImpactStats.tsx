@@ -6,12 +6,13 @@ import microscopeIcon from '../../assets/icons/impact-stats/microscope.svg';
 import dnaIcon from '../../assets/icons/impact-stats/dna.svg';
 import briefcaseIcon from '../../assets/icons/impact-stats/briefcase.svg';
 import fundsPhoto from '../../assets/icons/funds-photo.svg';
+import dots from '../../assets/icons/impact-stats/dot-grid.svg';
 
 const stats = [
   {
-    label: 'Raised',
+    label: 'Raising',
     value: '$15M+',
-    desc: 'Funds invested directly into life-saving research.',
+    desc: 'To directly fund live-saving research.',
     icon: moneyIcon,
     alt: 'Money',
     image: fundsPhoto,
@@ -58,7 +59,7 @@ const ImpactStats: React.FC = () => {
     <section className={styles.section}>
       <div className={styles.impactContainer}>
         <div className={styles.impactTitle}>
-          <span className={styles.impactSubtitle}>Your Contribution</span>
+          <span className={styles.impactMainTitle}>Your Contribution</span>
           <span className={styles.impactMainTitle}>Makes All The Difference</span>
         </div>
         <div className={styles.impactBlueBox}>
@@ -83,6 +84,7 @@ const ImpactStats: React.FC = () => {
             </div>
             <div className={styles.impactImageBox}>
               <img src={fundsPhoto} alt={activeStat.alt} className={styles.impactImage} />
+              <img src={dots} alt={activeStat.alt} className={styles.dotsImage} />
             </div>
           </div>
         </div>

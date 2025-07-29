@@ -20,7 +20,7 @@
   align-items: stretch;
   justify-content: space-between;
   padding: 0.5rem 3rem;
-  background: #3B6782;
+  background: #355C7D;
   border-radius: 0 0 1rem 1rem;
   position: relative;
 }
@@ -90,22 +90,22 @@
 }
 
 .searchButton {
-  background: #FF8A65;
-  color: #205B77;
+  background: var(--accent-orange);
+  color: var(--primary-blue);
   border-radius: 0;
   padding: 0 1rem;
 }
 
 .donateButton {
   background: #A8E6CF;
-  color: #205B77;
+  color: var(--primary-blue);
   border-radius: 0;
   padding: 0 2.5rem;
 }
 
 .memberButton {
   background: #E6F0FF;
-  color: #205B77;
+  color: var(--primary-blue);
   border-radius: 0;
   padding: 0 3.5rem;
   white-space: nowrap;
@@ -115,7 +115,7 @@
   background: #e67a5a;
 }
 .donateButton:hover {
-  background: #97D5BC;
+  background: var(--primary-green);
 }
 .memberButton:hover {
   background: #cfe2ff;
@@ -220,7 +220,7 @@
 .hamburgerLine {
   width: 2rem;
   height: 0.25rem;
-  background: #205B77;
+  background: var(--primary-blue);
   border-radius: 10px;
   transition: all 0.3s linear;
   position: relative;
@@ -300,7 +300,7 @@
   border: 1px solid #e0e0e0;
   font-size: 1.25rem;
   font-weight: 500;
-  color: #205B77;
+  color: var(--primary-blue);
   text-align: left;
   padding: 0;
   border-radius: 0.75rem;
@@ -343,11 +343,11 @@
 }
 .mobileMenuDropdownArrow {
   font-size: 1.2em;
-  color: #205B77;
+  color: var(--primary-blue);
 }
 
 .mobileMenuBottom {
-  background: #205B77;
+  background: var(--primary-blue);
   border-radius: 0 0 1rem 1rem;
   padding: 2rem 2rem 1.5rem 2rem;
   display: flex;
@@ -372,11 +372,11 @@
 }
 .donateButton {
   background: #A8E6CF;
-  color: #205B77;
+  color: var(--primary-blue);
 }
 .memberButton {
   background: #E6F0FF;
-  color: #205B77;
+  color: var(--primary-blue);
 }
 .mobileMenuSocials {
   display: flex;

@@ -5,7 +5,8 @@
 
 .container {
   max-width: 80rem;
-  margin: 0 auto;
+  margin: 2rem auto;
+  margin-bottom: 4rem;
 }
 
 .contentContainer {
@@ -113,29 +114,23 @@
   margin-right: -50vw;
   overflow: hidden;
   background: #F6FAFD;
-  padding: 2.5rem 0 2.5rem 0;
-  margin-bottom: 1rem;
+  padding: 5rem 0 5rem 0;
+  margin-bottom: 2rem;
 }
 
 .partnersCarousel {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 7rem;
-  width: 100%;
+  justify-content: space-around;
+  gap: 5rem;
 }
 
 .partnerLogoImg {
-  height: 5.5rem;
+  height: 4rem;
   width: auto;
   object-fit: contain;
-  filter: grayscale(100%);
   background: transparent;
   transition: filter 0.2s;
-}
-
-.partnerLogoImg:hover {
-  filter: grayscale(0%);
 }
 
 .viewAllButton, .container > button {

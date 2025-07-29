@@ -48,21 +48,14 @@
   display: block;
 }
 .categoryLabel {
-  /* Remove position, top, left */
-  position: static;
-  top: unset;
-  left: unset;
   display: inline-block;
-  margin: 0.7rem 0 0.2rem 1.2rem;
-  background: #3ad1b4;
-  color: #fff;
+  margin: 0.7rem 0.5rem;
+  background: #A7F3D0;
+  color: #0C4A6E;
   font-size: 0.95rem;
-  font-weight: 600;
-  border-radius: 8px;
-  padding: 0.25rem 1rem;
-  z-index: 2;
-  box-shadow: 0 2px 8px rgba(32,91,119,0.10);
-  letter-spacing: 0.01em;
+  border-radius: 3px;
+  padding: 0.25rem 0.5rem;
+  max-width: max-content;
 }
 .newsImageWrapper {
   position: relative;

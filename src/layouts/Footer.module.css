@@ -1,5 +1,5 @@
 .footer {
-  background: #205B77;
+  background: var(--primary-blue);
   color: #fff;
   padding: 3rem 0 0 0;
   margin-top: 0;

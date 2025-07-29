@@ -57,7 +57,7 @@ const MobileNavbar: React.FC = () => {
             <div className={styles.mobileMenuBottom}>
             <div className={styles.mobileMenuActions}>
                 <button className={`${styles.infoButton} ${styles.donateButton}`}>Donate</button>
-                <button className={`${styles.infoButton} ${styles.memberButton}`}>Be a Member</button>
+                <button className={`${styles.infoButton} ${styles.memberButton}`}>Be a Volunteer</button>
             </div>
             <div className={styles.mobileMenuSocials}>
                 <a href="#" className={styles.socialIcon} aria-label="Facebook">
