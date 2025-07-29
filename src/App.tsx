@@ -12,21 +12,24 @@ import WhatWeDoSection from './pages/Home/about-us/WhatWeDo';
 import './App.css';
 
 const App: React.FC = () => {
+  const HomePageContent = (
+    <>
+      <HeroSection />
+      <VisionMissionValues />
+      <ImpactStats />
+      <NewsSection />
+      <PartnersSection />
+      <DonationSection />
+    </>
+  );
+
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={
-          <>
-            <HeroSection />
-            <VisionMissionValues />
-            <ImpactStats />
-            <NewsSection />
-            <PartnersSection />
-            <DonationSection />
-          </>
-        } />
-        <Route path="/about/what-we-do" element={<WhatWeDoSection />} />
+        <Route path="/" element={HomePageContent} />
+        <Route path="/for-a-cure-foundation" element={HomePageContent} />
+          <Route path="/about/what-we-do" element={<WhatWeDoSection />} />
       </Routes>
       <Footer />
     </BrowserRouter>
