@@ -13,10 +13,10 @@ import CleoneOnTheFrontline from './pages/Home/about-us/CleoneOnTheFrontline';
 import OurPeople from './pages/Home/about-us/OurPeople';
 import ResearchPage from './pages/Home/Research';
 import ContactPage from './pages/Home/Contact';
-import DonatePage from './pages/Home/Donate';
+import DonatePage from './pages/get-involved/Donate';
 import NewsPage from './pages/Home/News';
-import VolunteerPage from './pages/Home/Volunteer';
-import OurFriendsPage from './pages/Home/OurFriends';
+import VolunteerPage from './pages/get-involved/Volunteer';
+import OurFriendsPage from './pages/get-involved/OurFriends';
 import './App.css';
 
 const App: React.FC = () => {

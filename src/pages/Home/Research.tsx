@@ -7,8 +7,9 @@ import brainIcon from '../../assets/research/brain.svg';
 import arthritisIcon from '../../assets/research/arthritis.svg';
 import spinalCordIcon from '../../assets/research/spinal-cord.svg';
 // import researchImage from '../../assets/research/research.svg'; // File too large, using placeholder
-import scientistImage from '../../assets/angie.png'; // Using angie.png for the scientist image
+import scientistImage from '../../assets/research/research.svg'; // Using angie.png for the scientist image
 import { Link } from 'react-router-dom';
+import ImpactStats from '../../features/impact-stats/ImpactStats';
 
 const ResearchPage: React.FC = () => (
   <div className={styles.root}>
@@ -51,19 +52,7 @@ const ResearchPage: React.FC = () => (
         </div>
       </div>
       <div className={styles.researchImageContainer}>
-        <div className={styles.researchImagePlaceholder}>
-          <div className={styles.stemCellVisualization}>
-            <div className={styles.cellGroup}>
-              <div className={styles.cell}></div>
-              <div className={styles.cell}></div>
-              <div className={styles.cell}></div>
-            </div>
-            <div className={styles.cellGroup}>
-              <div className={styles.cell}></div>
-              <div className={styles.cell}></div>
-            </div>
-          </div>
-        </div>
+        <img src={scientistImage} alt="Scientist working in laboratory" />
       </div>
     </div>
 
@@ -139,50 +128,8 @@ const ResearchPage: React.FC = () => (
     </div>
 
     {/* Contribution Section */}
-    <div className={styles.contributionSection}>
-      <h3 className={styles.sectionTitle}>Your Contribution Makes All The Difference</h3>
-      
-      <div className={styles.iconRow}>
-        <div className={styles.contributionIcon}>
-          <div className={styles.iconBackground}>
-            <span className={styles.iconText}>$</span>
-          </div>
-        </div>
-        <div className={styles.contributionIcon}>
-          <div className={styles.iconBackground}>
-            <span className={styles.iconText}>🧬</span>
-          </div>
-        </div>
-        <div className={styles.contributionIcon}>
-          <div className={styles.iconBackground}>
-            <span className={styles.iconText}>❤️</span>
-          </div>
-        </div>
-        <div className={styles.contributionIcon}>
-          <div className={styles.iconBackground}>
-            <span className={styles.iconText}>🏥</span>
-          </div>
-        </div>
-        <div className={styles.contributionIcon}>
-          <div className={styles.iconBackground}>
-            <span className={styles.iconText}>🔬</span>
-          </div>
-        </div>
-      </div>
-
-      <div className={styles.fundraisingBox}>
-        <div className={styles.fundraisingContent}>
-          <div className={styles.fundraisingText}>
-            <h4 className={styles.fundraisingTitle}>Raising $50M+</h4>
-            <p className={styles.fundraisingSubtitle}>To directly fund life-saving research.</p>
-          </div>
-          <div className={styles.fundraisingImage}>
-            <img src={scientistImage} alt="Scientist working in laboratory" />
-            <div className={styles.blueDots}></div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ImpactStats/>
+    
   </div>
 );
 

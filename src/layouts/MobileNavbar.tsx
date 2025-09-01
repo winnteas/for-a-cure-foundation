@@ -10,7 +10,11 @@ import xIcon from '../assets/icons/x.svg';
 
 const navLinks = [
   { label: 'Home', path: '/' },
-  { label: 'About Us', hasDropdown: true },
+  { label: 'About Us', hasDropdown: true, dropdownItems: [
+    { label: 'What We Do', path: '/about/what-we-do' },
+    { label: 'Cleone on the frontline', path: '/about/cleone-on-the-frontline' },
+    { label: 'Our People', path: '/about/our-people' }
+  ]},
   { label: 'Research', path: '/research' },
   { label: 'Get Involved', hasDropdown: true, dropdownItems: [
     { label: 'Donate', path: '/get-involved/donate' },
@@ -40,7 +44,7 @@ const MobileNavbar: React.FC = () => {
             <button className={styles.mobileMenuItem}>
               <span className={styles.mobileMenuItemContent}>{link.label}</span>
               <div className={styles.mobileMenuDropdownBox}>
-                <span className={styles.mobileMenuDropdownArrow}>▼</span>
+                <span className={styles.mobileMenuDropdownArrow}>^</span>
               </div>
             </button>
             {link.dropdownItems && (
@@ -101,30 +105,48 @@ const MobileNavbar: React.FC = () => {
         {isMenuOpen && (
         <div className={styles.mobileMenuCustom}>
             <div className={styles.mobileMenuCard}>
-            <div className={styles.mobileMenuGrid}>
-            {navLinks.map(renderNavItem)}
-            </div>
-            </div>
-            <div className={styles.mobileMenuBottom}>
-            <div className={styles.mobileMenuActions}>
+              {/* Header Section with Logo and Close Button */}
+              <div className={styles.mobileMenuHeader}>
+                <div className={styles.mobileMenuLogoSection}>
+                  <img src={compactLogo} alt="For A Cure Foundation Logo" className={styles.mobileMenuLogo} />
+                </div>
+                <button 
+                  className={styles.mobileMenuCloseButton}
+                  onClick={closeMenu}
+                  aria-label="Close menu"
+                >
+                  <img src={closeButton} alt="Close" className={styles.closeIcon} />
+                </button>
+              </div>
+              
+              {/* Navigation Links Section */}
+              <div className={styles.mobileMenuNavigation}>
+                {navLinks.map(renderNavItem)}
+              </div>
+              
+              {/* Call to Action Buttons Section */}
+              <div className={styles.mobileMenuActions}>
                 <button className={`${styles.infoButton} ${styles.donateButton}`}>Donate</button>
-                <button className={`${styles.infoButton} ${styles.memberButton}`}>Be a Volunteer</button>
-            </div>
-            <div className={styles.mobileMenuSocials}>
+                <button className={`${styles.infoButton} ${styles.memberButton}`}>Be a Member</button>
+              </div>
+              
+              {/* Social Media Icons Section */}
+              <div className={styles.mobileMenuSocials}>
                 <a href="#" className={styles.socialIcon} aria-label="Facebook">
-                <img src={facebookIcon} alt="Facebook" />
+                  <img src={facebookIcon} alt="Facebook" />
                 </a>
                 <a href="#" className={styles.socialIcon} aria-label="Instagram">
-                <img src={instagramIcon} alt="Instagram" />
+                  <img src={instagramIcon} alt="Instagram" />
                 </a>
                 <a href="#" className={styles.socialIcon} aria-label="X">
-                <img src={xIcon} alt="X" />
+                  <img src={xIcon} alt="X" />
                 </a>
-            </div>
+              </div>
             </div>
         </div>
         )}
     </div>
-)};
+    );
+};
 
 export default MobileNavbar; 

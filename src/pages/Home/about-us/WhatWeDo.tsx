@@ -1,69 +1,81 @@
 import React from 'react';
 import styles from './WhatWeDo.module.css';
-import researchImg1 from '../../../assets/angie.png'; // Scientist with petri dish
-import researchImg2 from '../../../assets/icons/funds-photo.svg'; // Lab scientists
+import { Link } from 'react-router-dom';
+import researchImg1 from '../../../assets/about-us/generate-discoveries.svg'; // Scientist with petri dish
+import researchImg2 from '../../../assets/about-us/transforms-lives.svg'; // 
 import heartImg from '../../../assets/partner.png'; // Partnership image
 import VisionMissionValues from '../../../features/visionmissionvalues/VisionMissionValues';
-import { Link } from 'react-router-dom';
+import PartnersSection from '../../../features/partners/PartnersSection';
+import PartnerWithUs from '../../../features/partners/PartnerWithUs';
 
 const WhatWeDoSection: React.FC = () => (
   <div className={styles.root}>
-    <div className={styles.titleSection}>
-      <h2 className={styles.title}>What We Do</h2>
-    </div>
-    
-    <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-      <Link to="/">Home</Link>
-      <span className={styles['breadcrumb-separator']}>/</span>
-      <Link to="/about/what-we-do">About Us</Link>
-      <span className={styles['breadcrumb-separator']}>/</span>
-      <span aria-current="page">What We Do</span>
-    </nav>
-
-    {/* Science that Transforms Lives Section */}
-    <div className={styles.featureRow}>
-      <div className={styles.featureLeftBlue}>
-        <h3 className={styles.featureTitle}>Science that<br/>Transforms Lives</h3>
-        <p className={styles.featureText}>
-          At For A Cure Foundation, we are at the forefront of science and technology, driving stem cell research and regenerative medicine to find cures for life-threatening diseases. Our goal is to accelerate innovative medical research and expedite discoveries to cure the major diseases of our time.
-        </p>
-        <button className={styles.orangeButton}>Discover Our Research</button>
-      </div>
-      <div className={styles.featureRightImg}>
-        <img src={researchImg1} alt="Scientist working with stem cell research" />
+    {/* Page Title Section */}
+    <div className={styles.pageTitleSection}>
+      <div className={styles.pageTitleContainer}>
+        <h1 className={styles.pageTitle}>What We Do</h1>
       </div>
     </div>
 
-    {/* Donations that Generate Discoveries Section */}
-    <div className={styles.featureRow}>
-      <div className={styles.featureLeftImg}>
-        <img src={researchImg2} alt="Scientists collaborating in laboratory" />
-      </div>
-      <div className={styles.featureRightWhite}>
-        <h3 className={styles.featureTitle}>Donations that<br/>Generate Discoveries</h3>
-        <p className={styles.featureText}>
-          We believe that cutting-edge stem cell research offers real hope for developing cures and therapies for a wide range of conditions. We direct our funds directly to laboratories, ensuring that support reaches where it's most needed to drive significant advances.
-        </p>
-        <button className={styles.orangeButton}>Donate Now</button>
+    {/* Science That Transforms Lives Section */}
+    <div className={styles.scienceSection}>
+      <div className={styles.scienceContainer}>
+        <div className={styles.scienceLeft}>
+          <nav className={styles.breadcrumbs}>
+            <Link to="/" className={styles.breadcrumbLink}>Home</Link>
+            <span className={styles.breadcrumbSeparator}> &gt; </span>
+            <Link to="/about" className={styles.breadcrumbLink}>About Us</Link>
+            <span className={styles.breadcrumbSeparator}> &gt; </span>
+            <span className={styles.breadcrumbCurrent}>What We Do</span>
+          </nav>
+          <h2 className={styles.scienceTitle}>Science That Transforms Lives</h2>
+          <p className={styles.scienceDescription}>
+            We focus on stem cell research and regenerative medicine to find cures for life-threatening diseases. 
+            Our foundation is dedicated to advancing scientific breakthroughs that can transform the lives of patients 
+            and their families through innovative medical solutions.
+          </p>
+          <button className={styles.discoverButton}>
+            Discover Our Research
+          </button>
+        </div>
+        <div className={styles.scienceRight}>
+          {/* <div className={styles.scienceImageContainer}> */}
+            <img src={researchImg1} alt="Scientist working with petri dish in laboratory" className={styles.scienceImage} />
+          {/* </div> */}
+        </div>
       </div>
     </div>
+
+    {/* Donations That Generate Discoveries Section */}
+    <div className={styles.donationsSection}>
+      <div className={styles.donationsContainer}>
+        <div className={styles.donationsLeft}>
+            <img src={researchImg2} alt="Group of scientists collaborating in laboratory" className={styles.donationsImage} />
+
+        </div>
+        <div className={styles.donationsRight}>
+          <h2 className={styles.donationsTitle}>Donations That Generate Discoveries</h2>
+          <p className={styles.donationsDescription}>
+            Your donations fund cutting-edge stem cell research and are directed to laboratories where they drive 
+            significant advances. Every contribution helps accelerate the development of life-saving treatments and 
+            brings us closer to finding cures for devastating diseases.
+          </p>
+          <button className={styles.donateButton}>
+            Donate Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+ 
 
     {/* Vision, Mission, Values Section */}
     <VisionMissionValues/>
 
-    {/* Become a Partner Section */}
-    <div className={styles.partnerSection}>
-      <div className={styles.partnerTextBox}>
-        <h3 className={styles.partnerTitle}>Become a Partner</h3>
-        <p className={styles.partnerText}>
-          Join us in driving life-changing research forward. As a partner, your support helps fund groundbreaking studies, accelerate new treatments, and bring hope to millions affected by serious diseases.
-        </p>
-        <button className={styles.orangeButton}>Join Us</button>
-      </div>
-      <div className={styles.partnerHeartImg}>
-        <img src={heartImg} alt="Partnership and collaboration" />
-      </div>
-    </div>
+    {/* Partner With Us Section */}
+   <PartnerWithUs/>
+
+
   </div>
 );
 

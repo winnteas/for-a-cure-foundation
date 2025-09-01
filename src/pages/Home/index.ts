@@ -6,7 +6,7 @@ export { default as PartnersSection } from '../../features/partners/PartnersSect
 export { default as WhatWeDoSection } from './about-us/WhatWeDo';
 export { default as ResearchPage } from './Research';
 export { default as ContactPage } from './Contact';
-export { default as DonatePage } from './Donate';
+export { default as DonatePage } from '../get-involved/Donate';
 export { default as NewsPage } from './News';
-export { default as VolunteerPage } from './Volunteer';
-export { default as OurFriendsPage } from './OurFriends'; 
+export { default as VolunteerPage } from '../get-involved/Volunteer';
+export { default as OurFriendsPage } from '../get-involved/OurFriends'; 

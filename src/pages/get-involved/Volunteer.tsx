@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Volunteer.module.css';
 import { Link } from 'react-router-dom';
+import volunteerImage from '../../assets/volunteer/volunteers.svg';
 
 const VolunteerPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -31,13 +32,7 @@ const VolunteerPage: React.FC = () => {
       <div className={styles.pageTitleSection}>
         <div className={styles.pageTitleContainer}>
           <h1 className={styles.pageTitle}>Volunteer</h1>
-          <nav className={styles.breadcrumbs}>
-            <Link to="/" className={styles.breadcrumbLink}>Home</Link>
-            <span className={styles.breadcrumbSeparator}> &gt; </span>
-            <Link to="/get-involved" className={styles.breadcrumbLink}>Get Involved</Link>
-            <span className={styles.breadcrumbSeparator}> &gt; </span>
-            <span className={styles.breadcrumbCurrent}>Volunteer</span>
-          </nav>
+      
         </div>
       </div>
 
@@ -45,6 +40,13 @@ const VolunteerPage: React.FC = () => {
       <div className={styles.heroSection}>
         <div className={styles.heroContainer}>
           <div className={styles.heroContent}>
+          <nav className={styles.breadcrumbs}>
+            <Link to="/" className={styles.breadcrumbLink}>Home</Link>
+            <span className={styles.breadcrumbSeparator}> &gt; </span>
+            <Link to="/get-involved" className={styles.breadcrumbLink}>Get Involved</Link>
+            <span className={styles.breadcrumbSeparator}> &gt; </span>
+            <span className={styles.breadcrumbCurrent}>Volunteer</span>
+          </nav>
             <h2 className={styles.heroTitle}>Volunteer With Us</h2>
             <p className={styles.heroDescription}>
               Join our passionate community of volunteers and help us make a real difference in the fight against disease. 
@@ -55,13 +57,7 @@ const VolunteerPage: React.FC = () => {
             </button>
           </div>
           <div className={styles.heroImage}>
-            <div className={styles.volunteerGrid}>
-              {Array.from({ length: 25 }, (_, i) => (
-                <div key={i} className={styles.volunteerPhoto}>
-                  <div className={styles.photoPlaceholder}></div>
-                </div>
-              ))}
-            </div>
+           <img src={volunteerImage} alt="Volunteer" />
           </div>
         </div>
       </div>

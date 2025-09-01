@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './OurPeople.module.css';
 import { Link } from 'react-router-dom';
 import angieImg from '../../../assets/angie.png'; // Angie's image
-import placeholderImg from '../../../assets/partner.png'; // Placeholder for other team members
+import placeholderImg from '../../../assets/partner.svg'; // Placeholder for other team members
 
 const teamMembers = [
   {

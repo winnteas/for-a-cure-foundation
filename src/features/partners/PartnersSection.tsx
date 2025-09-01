@@ -1,26 +1,17 @@
 import React from 'react';
 import styles from './PartnersSection.module.css';
 import Button from '../../components/Button';
-import partnerImg from '../../assets/partner.png';
 import mccables from '../../assets/sponsors/mccables.svg';
 import doyles from '../../assets/sponsors/doyles.svg';
 import twogb from '../../assets/sponsors/2gb.svg';
 import sunbury from '../../assets/sponsors/sunbury.svg';
 import jfk from '../../assets/sponsors/jfk.svg';
+import PartnerWithUs from './PartnerWithUs';
 
 const PartnersSection: React.FC = () => (
   <section className={styles.section}>
     <div className={styles.container}>
-      <div className={styles.contentContainer}>
-        <div className={styles.content}>
-          <h2 className={styles.sectionTitle}>Partner with Us</h2>
-          <p className={styles.sectionDescription}>Join us in driving life-changing research forward. As a partner, your support fuels breakthroughs and brings hope to millions affected by serious diseases.</p>
-          <Button variant="primary">Join Us</Button>
-        </div>
-        <div>
-          <img src={partnerImg} alt="Partner" style={{ width: '80%', height: '80%', objectFit: 'contain' }} />
-        </div>
-      </div>
+      <PartnerWithUs/>
       <div className={styles.partnersCarouselWrapper}>
         {/* <button className={styles.carouselArrow + ' ' + styles.carouselArrowLeft} aria-label="Scroll sponsors left">&#8592;</button> */}
         <div className={styles.partnersCarousel}>
