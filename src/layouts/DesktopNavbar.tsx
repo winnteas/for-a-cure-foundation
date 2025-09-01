@@ -61,10 +61,20 @@ const DesktopNavbar: React.FC = () => (
             <Link to="/about/our-people" className={styles.dropdownItem}>Our People</Link>
           </div>
         </div>
-        <button className={styles.navLink}>Research</button>
-        <button className={styles.navLink}>Get Involved <img src={dropdownIcon} alt="dropdown" style={{height: '0.4em', marginLeft: 2, verticalAlign: 'middle'}} /></button>
-        <button className={styles.navLink}>News</button>
-        <button className={styles.navLink}>Contact</button>
+        <Link to="/research" className={styles.navLink}>Research</Link>
+        <div className={styles.navDropdown} tabIndex={0}>
+          <span className={styles.navLink} style={{display: 'flex', alignItems: 'center', cursor: 'pointer'}}>
+            Get Involved
+            <img src={dropdownIcon} alt="dropdown" style={{height: '0.4em', marginLeft: 2, verticalAlign: 'middle'}} />
+          </span>
+          <div className={styles.dropdownMenu}>
+            <Link to="/get-involved/donate" className={styles.dropdownItem}>Donate</Link>
+            <Link to="/get-involved/volunteer" className={styles.dropdownItem}>Volunteer</Link>
+            <Link to="/get-involved/our-friends" className={styles.dropdownItem}>Our Friends</Link>
+          </div>
+        </div>
+        <Link to="/news" className={styles.navLink}>News</Link>
+        <Link to="/contact" className={styles.navLink}>Contact</Link>
       </div>
     </nav>
   </div>

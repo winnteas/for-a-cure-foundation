@@ -3,4 +3,10 @@ export { default as VisionMissionValues } from '../../features/visionmissionvalu
 export { default as ImpactStats } from '../../features/impact-stats/ImpactStats';
 export { default as NewsSection } from '../../features/news/NewsSection';
 export { default as PartnersSection } from '../../features/partners/PartnersSection';
-export { default as WhatWeDoSection } from './about-us/WhatWeDo'; 
+export { default as WhatWeDoSection } from './about-us/WhatWeDo';
+export { default as ResearchPage } from './Research';
+export { default as ContactPage } from './Contact';
+export { default as DonatePage } from './Donate';
+export { default as NewsPage } from './News';
+export { default as VolunteerPage } from './Volunteer';
+export { default as OurFriendsPage } from './OurFriends'; 

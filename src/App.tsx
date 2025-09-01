@@ -11,6 +11,12 @@ import DonationSection from './features/donation/DonationSection';
 import WhatWeDoSection from './pages/Home/about-us/WhatWeDo';
 import CleoneOnTheFrontline from './pages/Home/about-us/CleoneOnTheFrontline';
 import OurPeople from './pages/Home/about-us/OurPeople';
+import ResearchPage from './pages/Home/Research';
+import ContactPage from './pages/Home/Contact';
+import DonatePage from './pages/Home/Donate';
+import NewsPage from './pages/Home/News';
+import VolunteerPage from './pages/Home/Volunteer';
+import OurFriendsPage from './pages/Home/OurFriends';
 import './App.css';
 
 const App: React.FC = () => {
@@ -31,9 +37,19 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={HomePageContent} />
         <Route path="/for-a-cure-foundation" element={HomePageContent} />
-          <Route path="/about/what-we-do" element={<WhatWeDoSection />} />
-          <Route path="/about/cleone-on-the-frontline" element={<CleoneOnTheFrontline />} />
-          <Route path="/about/our-people" element={<OurPeople />} />
+        <Route path="/about">
+          <Route path="what-we-do" element={<WhatWeDoSection />} />
+          <Route path="cleone-on-the-frontline" element={<CleoneOnTheFrontline />} />
+          <Route path="our-people" element={<OurPeople />} />
+        </Route>
+        <Route path="/research" element={<ResearchPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/get-involved">
+          <Route path="donate" element={<DonatePage />} />
+          <Route path="volunteer" element={<VolunteerPage />} />
+          <Route path="our-friends" element={<OurFriendsPage />} />
+        </Route>
+        <Route path="/news" element={<NewsPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>

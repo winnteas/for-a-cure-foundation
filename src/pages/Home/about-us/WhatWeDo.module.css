@@ -8,11 +8,14 @@
   padding: 5rem 0;
   text-align: center;
 }
+
 .title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 900;
   color: #205B77;
   margin: 0;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
 }
 
 .breadcrumb {
@@ -23,16 +26,19 @@
   margin: 1.5rem 0 1.5rem 2rem;
   gap: 0.5rem;
 }
+
 .breadcrumb a {
   color: #205B77;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
 }
+
 .breadcrumb a:hover {
   color: #FF8A65;
   text-decoration: underline;
 }
+
 .breadcrumb-separator {
   margin: 0 0.3rem;
   color: #8bb8d6;
@@ -44,20 +50,23 @@
   justify-content: center;
   align-items: stretch;
   max-width: 1200px;
-  margin: 0 auto 2.5rem auto;
+  margin: 0 auto 3rem auto;
   gap: 0;
+  min-height: 400px;
 }
+
 .featureLeftBlue {
   background: #205B77;
   color: #fff;
   flex: 1;
-  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+  padding: 3rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
 }
+
 .featureRightImg {
   flex: 1;
   background: #fff;
@@ -68,14 +77,16 @@
   border-bottom-right-radius: 16px;
   overflow: hidden;
 }
+
 .featureRightImg img {
   width: 100%;
   height: 100%;
-  max-width: 420px;
-  max-height: 320px;
+  max-width: 500px;
+  max-height: 400px;
   object-fit: cover;
   border-radius: 0 16px 16px 0;
 }
+
 .featureLeftImg {
   flex: 1;
   background: #fff;
@@ -86,50 +97,62 @@
   border-bottom-left-radius: 16px;
   overflow: hidden;
 }
+
 .featureLeftImg img {
   width: 100%;
   height: 100%;
-  max-width: 420px;
-  max-height: 320px;
+  max-width: 500px;
+  max-height: 400px;
   object-fit: cover;
   border-radius: 16px 0 0 16px;
 }
+
 .featureRightWhite {
   background: #fff;
   color: #205B77;
   flex: 1;
-  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+  padding: 3rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
 }
+
 .featureTitle {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 900;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
 }
+
 .featureText {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+  opacity: 0.95;
 }
+
 .orangeButton {
-  background: var(--accent-orange, #FF8A65);
+  background: #FF8A65;
   color: #fff;
-  padding: 0.75rem 2rem;
-  border-radius: 0.3rem;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
   font-size: 1.1rem;
   font-weight: 600;
   border: none;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.3s ease;
   margin-top: auto;
   align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
+
 .orangeButton:hover {
   background: #E67A5A;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 138, 101, 0.3);
 }
 
 .valuesRow {
@@ -139,6 +162,7 @@
   max-width: 1200px;
   margin: 0 auto 3rem auto;
 }
+
 .valueCard {
   background: #fff;
   border-radius: 12px;
@@ -150,6 +174,7 @@
   flex-direction: column;
   align-items: flex-start;
 }
+
 .valueIcon {
   width: 40px;
   height: 40px;
@@ -157,12 +182,14 @@
   border-radius: 50%;
   margin-bottom: 1rem;
 }
+
 .valueTitle {
   font-size: 1.2rem;
   font-weight: 700;
   color: #205B77;
   margin-bottom: 0.5rem;
 }
+
 .valueText {
   color: #205B77;
   font-size: 1rem;
@@ -175,8 +202,10 @@
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto 3rem auto;
-  gap: 2.5rem;
+  gap: 3rem;
+  padding: 0 2rem;
 }
+
 .partnerTextBox {
   flex: 1;
   display: flex;
@@ -184,43 +213,177 @@
   align-items: flex-start;
   justify-content: center;
 }
+
 .partnerTitle {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 900;
   color: #FF8A65;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
 }
+
 .partnerText {
   color: #205B77;
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+  opacity: 0.95;
 }
+
 .partnerHeartImg {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .partnerHeartImg img {
   width: 100%;
-  max-width: 340px;
+  max-width: 400px;
   height: auto;
   object-fit: contain;
 }
 
+/* Newsletter Section */
+.newsletterSection {
+  background: #205B77;
+  padding: 4rem 0;
+  margin-top: 3rem;
+}
+
+.newsletterContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 0 2rem;
+}
+
+.newsletterText {
+  flex: 1;
+}
+
+.newsletterTitle {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.newsletterForm {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  max-width: 400px;
+}
+
+.newsletterInput {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.newsletterInput:focus {
+  box-shadow: 0 0 0 3px rgba(255, 138, 101, 0.3);
+}
+
+.newsletterButton {
+  background: #FF8A65;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.newsletterButton:hover {
+  background: #E67A5A;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 138, 101, 0.3);
+}
+
+.newsletterButton svg {
+  width: 16px;
+  height: 16px;
+}
+
 @media (max-width: 900px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
   .featureRow, .valuesRow, .partnerSection {
     flex-direction: column;
     gap: 1.5rem;
     max-width: 98vw;
     padding: 0 0.5rem;
   }
+  
   .featureLeftBlue, .featureRightWhite, .featureLeftImg, .featureRightImg {
     border-radius: 16px !important;
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem;
   }
+  
+  .featureTitle {
+    font-size: 2rem;
+  }
+  
   .partnerHeartImg img {
-    max-width: 220px;
+    max-width: 300px;
+  }
+  
+  .newsletterContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .newsletterTitle {
+    font-size: 2rem;
+  }
+  
+  .newsletterForm {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .titleSection {
+    padding: 3rem 0;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .featureTitle {
+    font-size: 1.8rem;
+  }
+  
+  .partnerTitle {
+    font-size: 2rem;
+  }
+  
+  .newsletterTitle {
+    font-size: 1.8rem;
+  }
+  
+  .breadcrumb {
+    margin: 1rem 0 1rem 1rem;
+    font-size: 0.9rem;
   }
 } 

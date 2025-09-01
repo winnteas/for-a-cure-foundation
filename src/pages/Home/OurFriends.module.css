@@ -1,0 +1,455 @@
+.root {
+  background: #fff;
+  width: 100%;
+}
+
+/* Page Title Section */
+.pageTitleSection {
+  background: #d2eafd;
+  padding: 3rem 0;
+}
+
+.pageTitleContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.breadcrumbLink {
+  color: #205B77;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumbLink:hover {
+  color: #FF8A65;
+}
+
+.breadcrumbSeparator {
+  color: #999;
+}
+
+.breadcrumbCurrent {
+  color: #666;
+  font-weight: 600;
+}
+
+.pageTitle {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #205B77;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Main Content Area */
+.mainContent {
+  padding: 4rem 0;
+  background: #fff;
+}
+
+.contentContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.introSection {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.introTitle {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #205B77;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.introDescription {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Partners Grid */
+.partnersGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.partnerLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(32, 91, 119, 0.1);
+  transition: all 0.3s ease;
+}
+
+.partnerLogo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(32, 91, 119, 0.15);
+}
+
+.logoImage {
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.partnerLogo:hover .logoImage {
+  filter: grayscale(0%);
+}
+
+/* Custom Logo Styles */
+.felliaMelasLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.felliaText {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000;
+  text-transform: lowercase;
+}
+
+.verticalLines {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.verticalLine {
+  width: 2px;
+  height: 20px;
+  background: #000;
+}
+
+.melasText {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000;
+  text-transform: lowercase;
+}
+
+.galleryText {
+  font-size: 0.9rem;
+  color: #666;
+  text-transform: lowercase;
+}
+
+.alchemyPartnersLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.alchemyIcon {
+  width: 60px;
+  height: 60px;
+  background: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.alchemyText {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.morganBoxingLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.starsContainer {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.star {
+  color: #FFD700;
+  font-size: 1.2rem;
+}
+
+.morganText {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+.boxingText {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #666;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.nswTafeLogo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nswGovernmentLogo {
+  display: flex;
+  align-items: center;
+}
+
+.nswCircle {
+  width: 50px;
+  height: 50px;
+  background: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.tafeText {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #000;
+  letter-spacing: 2px;
+}
+
+.lionsDenLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.lionIcon {
+  width: 60px;
+  height: 60px;
+  border: 3px solid #000;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.lionHead {
+  width: 40px;
+  height: 40px;
+  background: #000;
+  border-radius: 50%;
+  position: relative;
+}
+
+.lionHead::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 12px solid #000;
+}
+
+.lionsDenText {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Newsletter Section */
+.newsletterSection {
+  background: #205B77;
+  padding: 4rem 0;
+  margin-top: 3rem;
+}
+
+.newsletterContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 0 2rem;
+}
+
+.newsletterText {
+  flex: 1;
+}
+
+.newsletterTitle {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.newsletterForm {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  max-width: 400px;
+}
+
+.newsletterInput {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.newsletterInput:focus {
+  box-shadow: 0 0 0 3px rgba(255, 138, 101, 0.3);
+}
+
+.newsletterButton {
+  background: #FF8A65;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.newsletterButton:hover {
+  background: #E67A5A;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 138, 101, 0.3);
+}
+
+.newsletterButton svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .partnersGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .pageTitle {
+    font-size: 2.5rem;
+  }
+  
+  .introTitle {
+    font-size: 2rem;
+  }
+  
+  .partnersGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .newsletterContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .newsletterTitle {
+    font-size: 2rem;
+  }
+  
+  .newsletterForm {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .pageTitleSection {
+    padding: 2rem 0;
+  }
+  
+  .pageTitle {
+    font-size: 2rem;
+  }
+  
+  .mainContent {
+    padding: 2rem 0;
+  }
+  
+  .introTitle {
+    font-size: 1.8rem;
+  }
+  
+  .partnersGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .partnerLogo {
+    min-height: 100px;
+    padding: 1rem;
+  }
+  
+  .newsletterTitle {
+    font-size: 1.8rem;
+  }
+  
+  .contentContainer {
+    padding: 0 1rem;
+  }
+} 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import compactLogo from '../assets/icons/compact-logo.svg';
 import hamburgerMenu from '../assets/icons/hamburger-menu.svg';
@@ -8,24 +9,83 @@ import instagramIcon from '../assets/icons/instagram.svg';
 import xIcon from '../assets/icons/x.svg';
 
 const navLinks = [
-  { label: 'Home' },
+  { label: 'Home', path: '/' },
   { label: 'About Us', hasDropdown: true },
-  { label: 'Research' },
-  { label: 'Get Involved', hasDropdown: true },
-  { label: 'News' },
-  { label: 'Contact' },
+  { label: 'Research', path: '/research' },
+  { label: 'Get Involved', hasDropdown: true, dropdownItems: [
+    { label: 'Donate', path: '/get-involved/donate' },
+    { label: 'Volunteer', path: '/get-involved/volunteer' },
+    { label: 'Our Friends', path: '/get-involved/our-friends' }
+  ]},
+  { label: 'News', path: '/news' },
+  { label: 'Contact', path: '/contact' },
 ];
 
 const MobileNavbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const location = useLocation();
 
     const toggleMobileMenu = () => {
       setIsMenuOpen(!isMenuOpen);
     };
 
+    const closeMenu = () => {
+      setIsMenuOpen(false);
+    };
+
+    const renderNavItem = (link: any) => {
+      if (link.hasDropdown) {
+        return (
+          <div key={link.label} className={styles.mobileMenuDropdown}>
+            <button className={styles.mobileMenuItem}>
+              <span className={styles.mobileMenuItemContent}>{link.label}</span>
+              <div className={styles.mobileMenuDropdownBox}>
+                <span className={styles.mobileMenuDropdownArrow}>▼</span>
+              </div>
+            </button>
+            {link.dropdownItems && (
+              <div className={styles.mobileDropdownItems}>
+                {link.dropdownItems.map((item: any) => (
+                  <Link 
+                    key={item.label} 
+                    to={item.path} 
+                    className={styles.mobileDropdownItem}
+                    onClick={closeMenu}
+                  >
+                    <span className={styles.mobileMenuItemContent}>{item.label}</span>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        );
+      }
+      
+      if (link.path) {
+        return (
+          <Link 
+            key={link.label} 
+            to={link.path} 
+            className={styles.mobileMenuItem}
+            onClick={closeMenu}
+          >
+            <span className={styles.mobileMenuItemContent}>{link.label}</span>
+          </Link>
+        );
+      }
+      
+      return (
+        <button key={link.label} className={styles.mobileMenuItem}>
+          <span className={styles.mobileMenuItemContent}>{link.label}</span>
+        </button>
+      );
+    };
+
     return (
     <div className={styles.mobileNavbar + ' ' + styles.navbar}>
-        <img src={compactLogo} alt="For A Cure Foundation Compact Logo" className={styles.mobileNavbarLogo} />
+        <Link to="/">
+          <img src={compactLogo} alt="For A Cure Foundation Compact Logo" className={styles.mobileNavbarLogo} />
+        </Link>
         <button
         className={styles.mobileHamburgerButton}
         onClick={toggleMobileMenu}
@@ -42,16 +102,7 @@ const MobileNavbar: React.FC = () => {
         <div className={styles.mobileMenuCustom}>
             <div className={styles.mobileMenuCard}>
             <div className={styles.mobileMenuGrid}>
-            {navLinks.map((link, idx) => (
-                <button key={link.label} className={styles.mobileMenuItem}>
-                    <span className={styles.mobileMenuItemContent}>{link.label}</span>
-                    {link.hasDropdown && (
-                        <div className={styles.mobileMenuDropdownBox}>
-                            <span className={styles.mobileMenuDropdownArrow}>▼</span>
-                        </div>
-                    )}
-                </button>
-            ))}
+            {navLinks.map(renderNavItem)}
             </div>
             </div>
             <div className={styles.mobileMenuBottom}>
