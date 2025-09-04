@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './OurFriends.module.css';
 import { Link } from 'react-router-dom';
+import PageTitleSection from '../../components/PageTitleSection';
 
 // Import sponsor images
 import sponsor2gb from '../../assets/sponsors/2gb.svg';
@@ -13,18 +14,15 @@ const OurFriendsPage: React.FC = () => {
   return (
     <div className={styles.root}>
       {/* Page Title Section */}
-      <div className={styles.pageTitleSection}>
-        <div className={styles.pageTitleContainer}>
-          <nav className={styles.breadcrumbs}>
-            <Link to="/" className={styles.breadcrumbLink}>Home</Link>
-            <span className={styles.breadcrumbSeparator}> &gt; </span>
-            <Link to="/get-involved" className={styles.breadcrumbLink}>Get Involved</Link>
-            <span className={styles.breadcrumbSeparator}> &gt; </span>
-            <span className={styles.breadcrumbCurrent}>Our Friends</span>
-          </nav>
-          <h1 className={styles.pageTitle}>Our Friends</h1>
-        </div>
-      </div>
+      <PageTitleSection title="Our Friends">
+        <nav className={styles.breadcrumbs}>
+          <Link to="/" className={styles.breadcrumbLink}>Home</Link>
+          <span className={styles.breadcrumbSeparator}> &gt; </span>
+          <Link to="/get-involved" className={styles.breadcrumbLink}>Get Involved</Link>
+          <span className={styles.breadcrumbSeparator}> &gt; </span>
+          <span className={styles.breadcrumbCurrent}>Our Friends</span>
+        </nav>
+      </PageTitleSection>
 
       {/* Main Content Area */}
       <div className={styles.mainContent}>

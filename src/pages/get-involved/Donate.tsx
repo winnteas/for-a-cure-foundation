@@ -2,13 +2,12 @@ import React from 'react';
 import styles from './Donate.module.css';
 import { Link } from 'react-router-dom';
 import DonationSection from '../../features/donation/DonationSection';
+import PageTitleSection from '../../components/PageTitleSection';
 
 const DonatePage: React.FC = () => (
   <div className={styles.root}>
     {/* Hero/Banner Section */}
-    <div className={styles.titleSection}>
-      <h2 className={styles.title}>Donate</h2>
-    </div>
+    <PageTitleSection title="Donate"/>
 
     {/* Breadcrumbs */}
     <nav className={styles.breadcrumb} aria-label="Breadcrumb">

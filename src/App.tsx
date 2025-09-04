@@ -8,13 +8,13 @@ import ImpactStats from './features/impact-stats/ImpactStats';
 import NewsSection from './features/news/NewsSection';
 import PartnersSection from './features/partners/PartnersSection';
 import DonationSection from './features/donation/DonationSection';
-import WhatWeDoSection from './pages/Home/about-us/WhatWeDo';
-import CleoneOnTheFrontline from './pages/Home/about-us/CleoneOnTheFrontline';
-import OurPeople from './pages/Home/about-us/OurPeople';
-import ResearchPage from './pages/Home/Research';
-import ContactPage from './pages/Home/Contact';
+import WhatWeDoSection from './pages/about-us/WhatWeDo';
+import CleoneOnTheFrontline from './pages/about-us/CleoneOnTheFrontline';
+import OurPeople from './pages/about-us/OurPeople';
+import ResearchPage from './pages/Research';
+import ContactPage from './pages/Contact';
 import DonatePage from './pages/get-involved/Donate';
-import NewsPage from './pages/Home/News';
+import NewsPage from './pages/News';
 import VolunteerPage from './pages/get-involved/Volunteer';
 import OurFriendsPage from './pages/get-involved/OurFriends';
 import './App.css';
@@ -28,6 +28,7 @@ const App: React.FC = () => {
       <NewsSection />
       <PartnersSection />
       <DonationSection />
+      <div className="whiteDivider"></div>
     </>
   );
 

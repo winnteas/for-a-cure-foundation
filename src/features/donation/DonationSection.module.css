@@ -1,6 +1,6 @@
 .section {
-  background: #f4f8fb;
-  border-radius: 2rem;
+  background: transparent;
+  border-radius: 0;
   padding: 3.5rem 2.5rem;
   display: flex;
   justify-content: center;
@@ -8,11 +8,17 @@
   margin: 2rem auto;
   max-width: 1100px;
 }
+
 .donationContainer {
   display: flex;
   width: 100%;
   gap: 2.5rem;
   align-items: stretch;
+  background: var(--primary-blue);
+  border-radius: 2rem;
+  padding: 2.5rem;
+  box-shadow: 0 8px 24px rgba(12, 74, 110, 0.15);
+  color: #fff;
 }
 .leftCol {
   flex: 1.2;
@@ -44,30 +50,29 @@
 .heading {
   font-size: 2.5rem;
   font-weight: 900;
-  color: #205B77;
+  color: #fff;
   margin-bottom: 1.2rem;
 }
 .subtitle {
   font-size: 1.35rem;
   font-weight: 700;
-  color: #205B77;
+  color: #fff;
   margin-bottom: 0.7rem;
 }
 .tabToggle {
   display: flex;
   margin-bottom: 1.2rem;
-  background: var(--primary-blue);
+  background: #0b3b56;
   border-radius: 0.8rem;
   overflow: hidden;
   width: 500px;
-  border: 5px solid var(--primary-blue) ;
+  border: 5px solid #0b3b56 ;
 }
 .tabToggle button {
   flex: 1;
   padding: 0.8rem 0;
   font-size: 1.1rem;
   font-weight: 700;
-  /* background: #F0F9FF; */
   background: transparent;
   border: none;
   color: white;
@@ -76,9 +81,7 @@
   border-radius: 10px;
 }
 .tabActive {
-  /* background: #205B77; */
   background: #F0F9FF !important;
-  /* z-index: 9; */
   color:  var(--primary-blue) !important;
 }
 .amountRow {
@@ -122,7 +125,7 @@
 .paymentLabel {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #205B77;
+  color: #fff;
   margin: 1.2rem 0 0.5rem 0;
 }
 .paymentBox {
@@ -147,7 +150,7 @@
 }
 .cardLabel {
   font-size: 1rem;
-  color: #205B77;
+  color: #fff;
   margin-bottom: 0.3rem;
 }
 .cardInputBox {

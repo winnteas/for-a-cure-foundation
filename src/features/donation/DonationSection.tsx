@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './DonationSection.module.css';
 import heartHandIcon from '../../assets/icons/impact-stats/heart.svg'; // Placeholder for top icon
-import petriDishImg from '../../assets/partner.svg'; // Placeholder for petri dish image
+import petriDishImg from '../../assets/donate/hands.svg'; // Placeholder for petri dish image
 import cardIcon from '../../assets/icons/impact-stats/money.svg'; // Placeholder for card icons
 
 const DonationSection: React.FC = () => {

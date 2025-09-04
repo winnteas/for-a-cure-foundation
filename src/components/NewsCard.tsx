@@ -19,6 +19,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ title, date, desc, category, catego
     <span className={styles['categoryLabel'] + ' ' + styles[categoryType]}>{category}</span>
     <div className={styles.newsContent}>
       <h3 className={styles.newsTitle}>{title}</h3>
+      <div className={styles.line}></div>
       <div className={styles.newsBottomRow}>
         <span className={styles.newsDateRow}>
           <span className={styles.calendarIcon}>

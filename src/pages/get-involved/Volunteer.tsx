@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './Volunteer.module.css';
 import { Link } from 'react-router-dom';
 import volunteerImage from '../../assets/volunteer/volunteers.svg';
+import PageTitleSection from '../../components/PageTitleSection';
 
 const VolunteerPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -29,12 +30,7 @@ const VolunteerPage: React.FC = () => {
   return (
     <div className={styles.root}>
       {/* Page Title Section */}
-      <div className={styles.pageTitleSection}>
-        <div className={styles.pageTitleContainer}>
-          <h1 className={styles.pageTitle}>Volunteer</h1>
-      
-        </div>
-      </div>
+      <PageTitleSection title="Volunteer" />
 
       {/* Hero Section */}
       <div className={styles.heroSection}>

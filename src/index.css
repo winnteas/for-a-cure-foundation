@@ -66,3 +66,9 @@ p, span, div, button, input, textarea, select {
   color: #fff;
   font-size: 0.75rem;
 }
+
+.whiteDivider {
+  background: #fff;
+  width: 100%;
+  padding: 3rem 0;
+}

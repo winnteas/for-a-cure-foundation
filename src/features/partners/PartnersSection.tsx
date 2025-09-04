@@ -12,18 +12,20 @@ const PartnersSection: React.FC = () => (
   <section className={styles.section}>
     <div className={styles.container}>
       <PartnerWithUs/>
-      <div className={styles.partnersCarouselWrapper}>
-        {/* <button className={styles.carouselArrow + ' ' + styles.carouselArrowLeft} aria-label="Scroll sponsors left">&#8592;</button> */}
-        <div className={styles.partnersCarousel}>
-          <img src={sunbury} alt="Sunbury Primary School" className={styles.partnerLogoImg} />
-          <img src={twogb} alt="2GB Sydney" className={styles.partnerLogoImg} />
-          <img src={doyles} alt="Doyles" className={styles.partnerLogoImg} />
-          <img src={mccables} alt="MC Cables" className={styles.partnerLogoImg} />
-          <img src={jfk} alt="JFK" className={styles.partnerLogoImg} />
+      <div className={styles.bottomContainer}>
+        <div className={styles.partnersCarouselWrapper}>
+          {/* <button className={styles.carouselArrow + ' ' + styles.carouselArrowLeft} aria-label="Scroll sponsors left">&#8592;</button> */}
+          <div className={styles.partnersCarousel}>
+            <img src={sunbury} alt="Sunbury Primary School" className={styles.partnerLogoImg} />
+            <img src={twogb} alt="2GB Sydney" className={styles.partnerLogoImg} />
+            <img src={doyles} alt="Doyles" className={styles.partnerLogoImg} />
+            <img src={mccables} alt="MC Cables" className={styles.partnerLogoImg} />
+            <img src={jfk} alt="JFK" className={styles.partnerLogoImg} />
+          </div>
+          {/* <button className={styles.carouselArrow + ' ' + styles.carouselArrowRight} aria-label="Scroll sponsors right">&#8594;</button> */}
         </div>
-        {/* <button className={styles.carouselArrow + ' ' + styles.carouselArrowRight} aria-label="Scroll sponsors right">&#8594;</button> */}
+        <Button variant="primary">View All Partners</Button>
       </div>
-      <Button variant="primary">View All Partners</Button>
     </div>
   </section>
 );
