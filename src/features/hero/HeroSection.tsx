@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => (
   >
     <div className={styles.heroContent}>
       <h1 className={styles.heroTitle}>
-        <span >Together</span>, <br />
+        <span className={styles.together}>Together,</span> <br />
         We Can Advance <br />
         Life-Saving Research!
       </h1>

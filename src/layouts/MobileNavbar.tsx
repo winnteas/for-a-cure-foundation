@@ -27,6 +27,7 @@ const navLinks = [
 
 const MobileNavbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [openSections, setOpenSections] = useState<{ [label: string]: boolean }>({});
     const location = useLocation();
 
     const toggleMobileMenu = () => {
@@ -37,17 +38,23 @@ const MobileNavbar: React.FC = () => {
       setIsMenuOpen(false);
     };
 
+    const toggleSection = (label: string) => {
+      setOpenSections(prev => ({ ...prev, [label]: !prev[label] }));
+    };
+
     const renderNavItem = (link: any) => {
       if (link.hasDropdown) {
         return (
           <div key={link.label} className={styles.mobileMenuDropdown}>
-            <button className={styles.mobileMenuItem}>
+            <button
+              type="button"
+              className={styles.mobileMenuItem}
+              aria-expanded={!!openSections[link.label]}
+              onClick={() => toggleSection(link.label)}
+            >
               <span className={styles.mobileMenuItemContent}>{link.label}</span>
-              <div className={styles.mobileMenuDropdownBox}>
-                <span className={styles.mobileMenuDropdownArrow}>^</span>
-              </div>
             </button>
-            {link.dropdownItems && (
+            {link.dropdownItems && openSections[link.label] && (
               <div className={styles.mobileDropdownItems}>
                 {link.dropdownItems.map((item: any) => (
                   <Link 

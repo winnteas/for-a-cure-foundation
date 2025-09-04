@@ -71,7 +71,7 @@
 }
 .newsTitle {
   font-size: 1.1rem;
-  font-weight: 700;
+  /* font-weight: 700; */
   color: #205B77;
   padding-bottom: 1rem;
   /* margin-bottom: 0.7rem; */
@@ -98,7 +98,7 @@
 }
 .readMore {
   color: #205B77;
-  font-weight: 600;
+  /* font-weight: 600; */
   font-size: 1.05rem;
   text-decoration: none;
   display: flex;
