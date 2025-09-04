@@ -107,12 +107,7 @@
 .bottomContainer {
   background-color: #fff !important;
   width: 100%;
-  position: static;
-  left: auto;
-  right: auto;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 5rem 0 2rem 0;
+  padding: 0;
 }
 
 .partnersCarouselWrapper {
@@ -123,8 +118,8 @@
   margin-left: 0;
   margin-right: 0;
   overflow: hidden;
-  background: transparent;
-  padding: 0;
+  background: #F1F5F9;
+  padding: 5rem 0 5rem 0;
   margin-bottom: 2rem;
 }
 
@@ -133,6 +128,7 @@
   align-items: center;
   justify-content: space-around;
   gap: 5rem;
+  padding: 0 6rem;
 }
 
 .partnerLogoImg {
@@ -141,6 +137,7 @@
   object-fit: contain;
   background: transparent;
   transition: filter 0.2s;
+  flex-shrink: 0;
 }
 
 .viewAllButton, .container > button {
@@ -176,12 +173,6 @@
   cursor: pointer;
   transition: background 0.2s;
 }
-.carouselArrow:hover {
-  background: #E67A5A;
-}
-.carouselArrowLeft {
-  left: 2rem;
-}
-.carouselArrowRight {
-  right: 2rem;
-} 
+.carouselArrow:hover { background: #E67A5A; }
+.carouselArrowLeft { left: 2rem; }
+.carouselArrowRight { right: 2rem; } 

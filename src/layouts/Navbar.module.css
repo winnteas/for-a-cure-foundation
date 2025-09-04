@@ -602,14 +602,11 @@
 }
 
 .mobileMenuDropdownBox {
-  display: flex;
-  align-items: center;
+  display: none;
 }
 
 .mobileMenuDropdownArrow {
-  color: #205B77;
-  font-size: 1rem;
-  font-weight: bold;
+  display: none;
 }
 
 .mobileMenuDropdown {
@@ -642,6 +639,11 @@
 .mobileDropdownItem:hover {
   background: #e9ecef;
   color: var(--primary-blue);
+}
+
+.mobileDropdownItem:focus-visible {
+  outline: 2px solid #d2eafd;
+  outline-offset: 2px;
 }
 
 .mobileDropdownItem .mobileMenuItemContent {

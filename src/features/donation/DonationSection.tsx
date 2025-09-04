@@ -60,21 +60,22 @@ const DonationSection: React.FC = () => {
             min={1}
           />
           <div className={styles.paymentLabel}>Payment Method</div>
-          <div className={styles.paymentBox}>
+          {/* <div className={styles.paymentBox}>
             <span className={styles.paymentIcon}><img src={cardIcon} alt="Card" /></span>
             <span className={styles.paymentText}>Card</span>
-          </div>
-          <div className={styles.cardLabel}>Card number</div>
+          </div> */}
+          {/* <div className={styles.cardLabel}>Card number</div>
           <div className={styles.cardInputBox}>
             <input className={styles.cardInput} placeholder="1234 1234 1234 1234" />
             <img src={cardIcon} alt="Card icons" className={styles.cardIcons} />
-          </div>
-          <button className={styles.donateBtn}>Donate Now</button>
+          </div> */}
+          {/* <button className={styles.donateBtn}>Donate Now</button> */}
         </div>
         <div className={styles.rightCol}>
-          <img src={petriDishImg} alt="Petri Dish" className={styles.petriImg} />
+          <img src={petriDishImg} alt="unitedHands" className={styles.unitedHands} />
         </div>
       </div>
+      
     </section>
   );
 };

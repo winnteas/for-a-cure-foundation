@@ -1,5 +1,5 @@
 .section {
-  background: transparent;
+  background: #fff;
   border-radius: 0;
   padding: 3.5rem 2.5rem;
   display: flex;
@@ -14,11 +14,11 @@
   width: 100%;
   gap: 2.5rem;
   align-items: stretch;
-  background: var(--primary-blue);
+  background: #F1F5F9;
   border-radius: 2rem;
   padding: 2.5rem;
-  box-shadow: 0 8px 24px rgba(12, 74, 110, 0.15);
-  color: #fff;
+  box-shadow: 0 8px 24px rgba(12, 74, 110, 0.08);
+  color: inherit;
 }
 .leftCol {
   flex: 1.2;
@@ -50,13 +50,13 @@
 .heading {
   font-size: 2.5rem;
   font-weight: 900;
-  color: #fff;
+  color: #205B77;
   margin-bottom: 1.2rem;
 }
 .subtitle {
   font-size: 1.35rem;
   font-weight: 700;
-  color: #fff;
+  color: #205B77;
   margin-bottom: 0.7rem;
 }
 .tabToggle {
@@ -125,7 +125,7 @@
 .paymentLabel {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #fff;
+  color: #205B77;
   margin: 1.2rem 0 0.5rem 0;
 }
 .paymentBox {
@@ -150,7 +150,7 @@
 }
 .cardLabel {
   font-size: 1rem;
-  color: #fff;
+  color: #205B77;
   margin-bottom: 0.3rem;
 }
 .cardInputBox {
