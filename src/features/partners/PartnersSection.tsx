@@ -11,6 +11,9 @@ import morgan from '../../assets/sponsors/morgan.svg';
 import alchemy from '../../assets/sponsors/alchemy-partners.svg';
 import fellia from '../../assets/sponsors/fellia-melas-gallery.svg';
 import lionsden from '../../assets/sponsors/lions-den-academy.svg';
+import arrowLeft from '../../assets/sponsors/arrow-left.svg';
+import arrowRight from '../../assets/sponsors/arrow-right.svg';
+
 import PartnerWithUs from './PartnerWithUs';
 
 const sponsors = [
@@ -39,17 +42,23 @@ const PartnersSection: React.FC = () => {
     <section className={styles.section}>
       <div className={styles.container}>
         <PartnerWithUs/>
+        <div className="whiteDivider"></div>
         <div className={styles.bottomContainer}>
           <div className={styles.partnersCarouselWrapper}>
-            <button className={styles.carouselArrow + ' ' + styles.carouselArrowLeft} aria-label="Scroll sponsors left" onClick={() => scrollByAmount(-300)}>&#8592;</button>
-            <div className={styles.partnersCarousel} ref={carouselRef} style={{ overflowX: 'auto', scrollBehavior: 'smooth' }}>
+            <button aria-label="Scroll sponsors left" className={styles.arrow + ' ' + styles.carouselArrowLeft} onClick={() => scrollByAmount(-300)}>
+            <img src={arrowLeft} alt="Left arrow"/>
+            </button>
+            <div className={styles.partnersCarousel} ref={carouselRef} style={{ overflowX: 'auto', scrollBehavior: 'smooth', scrollbarWidth: 'none' }}>
               {sponsors.map((s, i) => (
                 <img key={i} src={s.src} alt={s.alt} className={styles.partnerLogoImg} />
               ))}
             </div>
-            <button className={styles.carouselArrow + ' ' + styles.carouselArrowRight} aria-label="Scroll sponsors right" onClick={() => scrollByAmount(300)}>&#8594;</button>
+            <button aria-label="Scroll sponsors right" className={styles.arrow + ' ' + styles.carouselArrowRight} onClick={() => scrollByAmount(-300)}>
+            <img src={arrowRight} alt="Right arrow"/>
+            </button>
           </div>
           <Button variant="primary">View All Partners</Button>
+          <div className="whiteDivider"></div>
         </div>
       </div>
     </section>

@@ -15,7 +15,6 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  align-items: column;
   /* max-width: 80rem;
   margin: 2rem auto;
   margin-bottom: 4rem; */
@@ -53,6 +52,10 @@
   max-width: 28rem;
   color: #fff;
   line-height: 1.6;
+}
+
+.partnersCarousel::-webkit-scrollbar {
+  display: none;
 }
 
 .joinButton {
@@ -120,6 +123,10 @@
   background-color: #fff !important;
   width: 100%;
   padding: 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .partnersCarouselWrapper {
@@ -141,6 +148,21 @@
   justify-content: space-around;
   gap: 5rem;
   padding: 0 6rem;
+}
+
+.arrow {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
 .partnerLogoImg {
