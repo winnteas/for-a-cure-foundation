@@ -7,18 +7,20 @@ import phoneIcon from '../assets/contact/phone.svg';
 import socialsIcon from '../assets/contact/socials.svg';
 import PageTitleSection from '../components/PageTitleSection';
 import Button from '../components/Button';
+import Breadcrumb from '../components/breadcrumb/Breadcrumb';
 
-const ContactPage: React.FC = () => (
+const ContactPage: React.FC = () => {
+  const breadcrumbItems = [
+    { label: 'Home', link: '/' },
+    { label: 'Contact', link: ''}
+  ]
+  return (
+  
   <div className={styles.root}>
     {/* Hero/Banner Section */}
     <PageTitleSection title="Contact" />
 
-    {/* Breadcrumbs */}
-    <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-      <Link to="/">Home</Link>
-      <span className={styles['breadcrumb-separator']}>/</span>
-      <span aria-current="page">Contact</span>
-    </nav>
+    <Breadcrumb items={breadcrumbItems}></Breadcrumb>
 
     {/* Main Content Area */}
     <div className={styles.mainContent}>
@@ -120,6 +122,8 @@ const ContactPage: React.FC = () => (
       </div>
     </div>
   </div>
+
 );
+};
 
 export default ContactPage; 

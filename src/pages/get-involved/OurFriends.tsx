@@ -13,6 +13,7 @@ import morgan from '../../assets/sponsors/morgan.svg';
 import alchemy from '../../assets/sponsors/alchemy-partners.svg';
 import fellia from '../../assets/sponsors/fellia-melas-gallery.svg';
 import lionsden from '../../assets/sponsors/lions-den-academy.svg';
+import Breadcrumb from '../../components/breadcrumb/Breadcrumb';
 
 const OurFriendsPage: React.FC = () => {
 
@@ -28,18 +29,18 @@ const OurFriendsPage: React.FC = () => {
     { src: fellia, alt: 'Fellia Melas Gallery' },
     { src: lionsden, alt: "Lion's Den Academy" },
   ];
+
+  const breadcrumbItems = [
+    { label: 'Home', link: '/' },
+    { label: 'Get Involved', link: "/get-involved" },
+    { label: 'Our Friends', link: ""}
+
+  ]
   return (
     <div className={styles.root}>
       {/* Page Title Section */}
       <PageTitleSection title="Our Friends"/>
-
-      <nav className={styles.breadcrumbs}>
-          <Link to="/" className={styles.breadcrumbLink}>Home</Link>
-          <span className={styles.breadcrumbSeparator}> &gt; </span>
-          <Link to="/get-involved" className={styles.breadcrumbLink}>Get Involved</Link>
-          <span className={styles.breadcrumbSeparator}> &gt; </span>
-          <span className={styles.breadcrumbCurrent}>Our Friends</span>
-        </nav>
+      <Breadcrumb items={breadcrumbItems}></Breadcrumb>
 
       {/* Main Content Area */}
       <div className={styles.mainContent}>

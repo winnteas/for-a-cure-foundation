@@ -6,6 +6,7 @@ import NewsCard from '../components/NewsCard';
 import thumb1 from '../assets/news-thumbnails/news-thumbnail1.svg';
 import thumb2 from '../assets/news-thumbnails/news-thumbnail2.svg';
 import thumb3 from '../assets/news-thumbnails/news-thumbnail-3.svg';
+import Breadcrumb from '../components/breadcrumb/Breadcrumb';
 
 const cards = [
   { title: 'Stem cells: What they are and what they do', date: 'Jun 08,2025', desc: '', category: 'Categoria', categoryType: 'categoria' as const, image: thumb1 },
@@ -16,16 +17,18 @@ const cards = [
   { title: 'Stem cells: What they are and what they do', date: 'Jun 08,2025', desc: '', category: 'Event', categoryType: 'event' as const, image: thumb3 },
 ];
 
+const breadcrumbItems = [
+  { label: 'Home', link: '/' },
+  { label: 'News', link: ''},
+]
+
 const NewsListPage: React.FC = () => (
   <div className={styles.root}>
     <PageTitleSection title="News" />
+    <Breadcrumb items={breadcrumbItems}></Breadcrumb>
+
 
     <div className={styles.container}>
-      <nav className={styles.breadcrumbs} aria-label="Breadcrumb">
-        <Link to="/" className={styles.breadcrumbLink}>Home</Link>
-        <span className={styles.breadcrumbSeparator}>/</span>
-        <span className={styles.breadcrumbCurrent}>News</span>
-      </nav>
 
       <div className={styles.header}>
         <h2 className={styles.title}>Stories Of Impact</h2>

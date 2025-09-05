@@ -7,8 +7,16 @@ import VisionMissionValues from '../../features/visionmissionvalues/VisionMissio
 import PartnerWithUs from '../../features/partners/PartnerWithUs';
 import PageTitleSection from '../../components/PageTitleSection';
 import Button from '../../components/Button';
+import Breadcrumb from '../../components/breadcrumb/Breadcrumb';
 
-const WhatWeDoSection: React.FC = () => (
+const WhatWeDoSection: React.FC = () => {
+  const breadcrumbItems = [
+    { label: 'Home', link: '/' },
+    { label: 'About Us', link: '/about'},
+    { label: 'What We Do', link: ''},
+
+  ]
+  return (
   <div className={styles.root}>
     {/* Page Title Section */}
     <PageTitleSection title="What We Do" />
@@ -17,13 +25,8 @@ const WhatWeDoSection: React.FC = () => (
     <div className={styles.scienceSection}>
       <div className={styles.scienceContainer}>
         <div className={styles.scienceLeft}>
-          <nav className={styles.breadcrumbs}>
-            <Link to="/" className={styles.breadcrumbLink}>Home</Link>
-            <span className={styles.breadcrumbSeparator}> &gt; </span>
-            <Link to="/about" className={styles.breadcrumbLink}>About Us</Link>
-            <span className={styles.breadcrumbSeparator}> &gt; </span>
-            <span className={styles.breadcrumbCurrent}>What We Do</span>
-          </nav>
+          
+    <Breadcrumb items={breadcrumbItems} whiteLinks={true}></Breadcrumb>
           <h2 className={styles.scienceTitle}>Science That Transforms Lives</h2>
           <p className={styles.scienceDescription}>
             We focus on stem cell research and regenerative medicine to find cures for life-threatening diseases. 
@@ -75,5 +78,6 @@ const WhatWeDoSection: React.FC = () => (
 
   </div>
 );
+};
 
 export default WhatWeDoSection; 

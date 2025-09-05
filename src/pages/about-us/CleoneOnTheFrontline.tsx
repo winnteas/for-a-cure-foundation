@@ -4,17 +4,19 @@ import { Link } from 'react-router-dom';
 import cleoneImg from '../../assets/angie.png'; // Placeholder image
 import PageTitleSection from '../../components/PageTitleSection';
 import breadcrumbSeparator from '../../assets/breadcrumb-arrow.svg'
+import Breadcrumb from '../../components/breadcrumb/Breadcrumb';
 
-const CleoneOnTheFrontline: React.FC = () => (
+const CleoneOnTheFrontline: React.FC = () => {
+  const breadcrumbItems = [
+    { label: 'Home', link: '/' },
+    { label: 'About Us', link: '/about/what-we-do' },
+    { label: 'Cleone On The Frontline', link: ''}
+  ]
+  return (
   <div className={styles.root}>
     <PageTitleSection title="Cleone On The Frontline" />
-    <nav className={styles.breadcrumb} aria-labl="Breadcrumb">
-      <Link to="/">Home</Link>
-      <img src={breadcrumbSeparator} className={styles.breadcrumbSeparator} alt="separator"/>
-      <Link to="/about/what-we-do">About Us</Link>
-      <img src={breadcrumbSeparator} className={styles.breadcrumbSeparator} alt="separator"/>
-      <span aria-current="page" className={styles.currentPage}>Cleone On The Frontline</span>
-    </nav>
+
+    <Breadcrumb items={breadcrumbItems}/>
     <div className={styles.contentRow}>
       <div className={styles.imageCol}>
         <img src={cleoneImg} alt="Angie Cleone" className={styles.cleoneImg} />
@@ -66,5 +68,6 @@ const CleoneOnTheFrontline: React.FC = () => (
     </div>
   </div>
 );
+};
 
 export default CleoneOnTheFrontline; 

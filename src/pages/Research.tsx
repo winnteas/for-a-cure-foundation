@@ -12,18 +12,20 @@ import { Link } from 'react-router-dom';
 import ImpactStats from '../features/impact-stats/ImpactStats';
 import PageTitleSection from '../components/PageTitleSection';
 import Button from '../components/Button/Button';
+import Breadcrumb from '../components/breadcrumb/Breadcrumb';
+
+const breadcrumbItems = [
+  { label: 'Home', link: '/' },
+  { label: 'Research', link: ''},
+]
 
 const ResearchPage: React.FC = () => (
+  
   <div className={styles.root}>
     {/* Hero/Banner Section */}
     <PageTitleSection title="Research" />
 
-    {/* Breadcrumbs */}
-    <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-      <Link to="/">Home</Link>
-      <span className={styles['breadcrumb-separator']}>/</span>
-      <span aria-current="page">Research</span>
-    </nav>
+    <Breadcrumb items={breadcrumbItems}></Breadcrumb>
 
     {/* Stem Cells For A Cure Section */}
     <div className={styles.stemCellsSection}>

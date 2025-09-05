@@ -3,20 +3,20 @@ import styles from './Donate.module.css';
 import { Link } from 'react-router-dom';
 import DonationSection from '../../features/donation/DonationSection';
 import PageTitleSection from '../../components/PageTitleSection';
+import Breadcrumb from '../../components/breadcrumb/Breadcrumb';
 
-const DonatePage: React.FC = () => (
+const DonatePage: React.FC = () => { 
+  const breadcrumbItems = [
+    { label: 'Home', link: '/' },
+    { label: 'Get Involved', link: '/get-involved'},
+    { label: 'Donate', link: ''}
+  ]
+  return (
   <div className={styles.root}>
     {/* Hero/Banner Section */}
     <PageTitleSection title="Donate"/>
 
-    {/* Breadcrumbs */}
-    <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-      <Link to="/">Home</Link>
-      <span className={styles['breadcrumb-separator']}>/</span>
-      <Link to="/get-involved">Get Involved</Link>
-      <span className={styles['breadcrumb-separator']}>/</span>
-      <span aria-current="page">Donate</span>
-    </nav>
+    <Breadcrumb items={breadcrumbItems}></Breadcrumb>
 
     {/* Main Content - Reusing DonationSection Component */}
     <div className={styles.mainContent}>
@@ -139,5 +139,6 @@ const DonatePage: React.FC = () => (
     </div>
   </div>
 );
+};
 
 export default DonatePage; 

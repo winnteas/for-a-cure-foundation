@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import volunteerImage from '../../assets/volunteer/volunteers.svg';
 import PageTitleSection from '../../components/PageTitleSection';
 import Button from '../../components/Button';
+import Breadcrumb from '../../components/breadcrumb/Breadcrumb';
 
 const VolunteerPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -41,6 +42,12 @@ const VolunteerPage: React.FC = () => {
     console.log('Form submitted:', formData);
   };
 
+  const breadcrumbItems = [
+    { label: 'Home', link: '/' },
+    { label: 'Get Involved', link: ''},
+    { label: 'Volunteer', link: '/volunteer'}
+  ]
+
   return (
     <div className={styles.root}>
       {/* Page Title Section */}
@@ -50,13 +57,7 @@ const VolunteerPage: React.FC = () => {
       <div className={styles.heroSection}>
         <div className={styles.heroContainer}>
           <div className={styles.heroContent}>
-          <nav className={styles.breadcrumbs}>
-            <Link to="/" className={styles.breadcrumbLink}>Home</Link>
-            <span className={styles.breadcrumbSeparator}> &gt; </span>
-            <Link to="/get-involved" className={styles.breadcrumbLink}>Get Involved</Link>
-            <span className={styles.breadcrumbSeparator}> &gt; </span>
-            <span className={styles.breadcrumbCurrent}>Volunteer</span>
-          </nav>
+          <Breadcrumb items={breadcrumbItems} whiteLinks={true}></Breadcrumb>
             <h2 className={styles.heroTitle}>Volunteer With Us</h2>
             <p className={styles.heroDescription}>
               Join our passionate community of volunteers and help us make a real difference in the fight against disease. 

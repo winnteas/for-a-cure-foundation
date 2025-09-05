@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import angieImg from '../../assets/angie.png'; // Angie's image
 import placeholderImg from '../../assets/partner.svg'; // Placeholder for other team members
 import PageTitleSection from '../../components/PageTitleSection';
+import Breadcrumb from '../../components/breadcrumb/Breadcrumb';
 
 const teamMembers = [
   {
@@ -80,16 +81,16 @@ const teamMembers = [
   }
 ];
 
+const breadcrumbItems = [
+  { label: 'Home', link: '/' },
+  { label: 'About Us', link: '/about'},
+  { label: 'Our People', link: ''},
+]
+
 const OurPeople: React.FC = () => (
   <div className={styles.root}>
     <PageTitleSection title="Our People"/>
-    <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-      <Link to="/">Home</Link>
-      <span className={styles['breadcrumb-separator']}>/</span>
-      <Link to="/about/what-we-do">About Us</Link>
-      <span className={styles['breadcrumb-separator']}>/</span>
-      <span aria-current="page">Our People</span>
-    </nav>
+    <Breadcrumb items={breadcrumbItems}></Breadcrumb>
     
     <div className={styles.boardSection}>
       <h3 className={styles.sectionTitle}>Board and Team</h3>
