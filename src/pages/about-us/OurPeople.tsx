@@ -3,6 +3,7 @@ import styles from './OurPeople.module.css';
 import { Link } from 'react-router-dom';
 import angieImg from '../../assets/angie.png'; // Angie's image
 import placeholderImg from '../../assets/partner.svg'; // Placeholder for other team members
+import PageTitleSection from '../../components/PageTitleSection';
 
 const teamMembers = [
   {
@@ -81,9 +82,7 @@ const teamMembers = [
 
 const OurPeople: React.FC = () => (
   <div className={styles.root}>
-    <div className={styles.titleSection}>
-      <h2 className={styles.title}>Our People</h2>
-    </div>
+    <PageTitleSection title="Our People"/>
     <nav className={styles.breadcrumb} aria-label="Breadcrumb">
       <Link to="/">Home</Link>
       <span className={styles['breadcrumb-separator']}>/</span>

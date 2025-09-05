@@ -10,6 +10,7 @@ import phoneIcon from '../assets/icons/phone.svg';
 import mailIcon from '../assets/icons/mail.svg';
 import externalLinkWhite from '../assets/icons/external-link-white.svg';
 import { Link } from 'react-router-dom';
+import Button from '../components/Button';
 
 // You can use react-icons or inline SVGs for icons. Here, we'll use inline SVGs for simplicity.
 

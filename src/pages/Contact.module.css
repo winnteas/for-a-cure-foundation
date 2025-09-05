@@ -205,25 +205,22 @@
 }
 
 .submitButton {
-  background: #FF8A65;
-  color: #fff;
-  padding: 1rem 2rem;
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
   border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-top: 1rem;
-  align-self: flex-start;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  text-align: center;
+  background: var(--accent-orange);
+  color: #0F172A;
 }
 
 .submitButton:hover {
-  background: #E67A5A;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 138, 101, 0.3);
+  background: #e67a5a;
 }
 
 /* Newsletter Section */

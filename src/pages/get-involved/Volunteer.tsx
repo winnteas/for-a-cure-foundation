@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Volunteer.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import volunteerImage from '../../assets/volunteer/volunteers.svg';
 import PageTitleSection from '../../components/PageTitleSection';
+import Button from '../../components/Button';
 
 const VolunteerPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +13,19 @@ const VolunteerPage: React.FC = () => {
     phone: '',
     message: ''
   });
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -48,9 +62,18 @@ const VolunteerPage: React.FC = () => {
               Join our passionate community of volunteers and help us make a real difference in the fight against disease. 
               Your time, skills, and dedication are invaluable to our mission of finding cures and supporting those affected.
             </p>
-            <button className={styles.getStartedButton}>
-              Get Started
-            </button>
+     <Button
+  variant="primary"
+  onClick={() => {
+    const el = document.querySelector('#contact-form');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }}
+>
+  Get Started
+</Button>
+
           </div>
           <div className={styles.heroImage}>
            <img src={volunteerImage} alt="Volunteer" />
@@ -147,7 +170,7 @@ const VolunteerPage: React.FC = () => {
       </div>
 
       {/* Contact Form Section */}
-      <div className={styles.contactSection}>
+      <div className={styles.contactSection} id="contact-form">
         <div className={styles.contactContainer}>
           <h2 className={styles.sectionTitle}>Let's Team Up</h2>
           <p className={styles.sectionDescription}>

@@ -11,6 +11,7 @@ import scientistImage from '../assets/research/research.svg'; // Using angie.png
 import { Link } from 'react-router-dom';
 import ImpactStats from '../features/impact-stats/ImpactStats';
 import PageTitleSection from '../components/PageTitleSection';
+import Button from '../components/Button/Button';
 
 const ResearchPage: React.FC = () => (
   <div className={styles.root}>
@@ -61,7 +62,9 @@ const ResearchPage: React.FC = () => (
       <p className={styles.sectionSubtitle}>
         Join us in supporting cutting-edge research that brings us closer to a cure.
       </p>
-      <button className={styles.supportButton}>Support Our Research</button>
+      <Link to="/get-involved/donate">
+         <Button variant="primary">Support Our Research</Button>
+      </Link>
       
       <div className={styles.researchAreasGrid}>
         <div className={styles.researchArea}>

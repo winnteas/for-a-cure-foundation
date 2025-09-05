@@ -24,26 +24,7 @@
   line-height: 1.2;
 }
 
-/* Science That Transforms Lives Section */
-.scienceSection {
-  background: var(--primary-blue);
-  /* padding: 4rem 0; */
-}
 
-.scienceContainer {
-  display: flex;
-  min-height: 500px;
-  background: var(--primary-blue);
-}
-
-.scienceLeft {
-  background: #205B77;
-  color: #fff;
-  padding: 0rem 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
 .breadcrumbs {
   display: flex;
@@ -73,19 +54,7 @@
   font-weight: 600;
 }
 
-.scienceTitle {
-  font-size: 2.5rem;
-  font-weight: 900;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
-}
 
-.scienceDescription {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-  opacity: 0.95;
-}
 
 .discoverButton {
   background: #FF8A65;
@@ -108,6 +77,31 @@
   box-shadow: 0 4px 12px rgba(255, 138, 101, 0.3);
 }
 
+
+
+/* Science That Transforms Lives Section */
+.scienceSection {
+  background: var(--primary-blue);
+  /* padding: 4rem 0; */
+}
+
+.scienceContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-height: 500px;
+  background: var(--primary-blue);
+}
+
+.scienceLeft {
+  background: var(--primary-blue);
+  color: #fff;
+  padding: 0rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .scienceRight {
   background: #d2eafd;
   display: flex;
@@ -125,21 +119,39 @@
 .scienceImage {
   height: 100%; 
   object-fit: cover;
+  width: 50vw;
+}
+
+.scienceTitle {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.scienceDescription {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.95;
 }
 
 /* Donations That Generate Discoveries Section */
 .donationsSection {
-  background: linear-gradient(90deg, #d2eafd 0%, #d2eafd 50%, #fff 50%, #fff 100%);
-  padding: 4rem 0;
+  background: #fff;
+  /* padding: 4rem 0; */
 }
 
 .donationsContainer {
   display: flex;
+  flex-direction: row;
   min-height: 500px;
+  align-items: center;
+  justify-content: center;
 }
 
 .donationsLeft {
-  background: #d2eafd;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,10 +163,11 @@
 .donationsImage {
   height: 100%; 
   object-fit: cover;
+  width: 50vw;
 }
 
 .donationsRight {
-  background: #d2eafd;
+  background: #fff;
   color: #fff;
   padding: 0rem 3rem;
   display: flex;

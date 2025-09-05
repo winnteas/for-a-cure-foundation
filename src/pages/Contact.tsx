@@ -6,6 +6,7 @@ import locationIcon from '../assets/contact/location.svg';
 import phoneIcon from '../assets/contact/phone.svg';
 import socialsIcon from '../assets/contact/socials.svg';
 import PageTitleSection from '../components/PageTitleSection';
+import Button from '../components/Button';
 
 const ContactPage: React.FC = () => (
   <div className={styles.root}>
@@ -109,7 +110,8 @@ const ContactPage: React.FC = () => (
                 required
               ></textarea>
             </div>
-            
+
+
             <button type="submit" className={styles.submitButton}>
               Send
             </button>

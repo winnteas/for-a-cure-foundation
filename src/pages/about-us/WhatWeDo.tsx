@@ -6,6 +6,7 @@ import researchImg2 from '../../assets/about-us/transforms-lives.svg'; //
 import VisionMissionValues from '../../features/visionmissionvalues/VisionMissionValues';
 import PartnerWithUs from '../../features/partners/PartnerWithUs';
 import PageTitleSection from '../../components/PageTitleSection';
+import Button from '../../components/Button';
 
 const WhatWeDoSection: React.FC = () => (
   <div className={styles.root}>
@@ -29,9 +30,9 @@ const WhatWeDoSection: React.FC = () => (
             Our foundation is dedicated to advancing scientific breakthroughs that can transform the lives of patients 
             and their families through innovative medical solutions.
           </p>
-          <button className={styles.discoverButton}>
-            Discover Our Research
-          </button>
+          <Link to="/research">
+            <Button variant="primary">Discover Our Research</Button>
+          </Link>
         </div>
         <div className={styles.scienceRight}>
           {/* <div className={styles.scienceImageContainer}> */}
@@ -55,17 +56,18 @@ const WhatWeDoSection: React.FC = () => (
             significant advances. Every contribution helps accelerate the development of life-saving treatments and 
             brings us closer to finding cures for devastating diseases.
           </p>
-          <button className={styles.donateButton}>
-            Donate Now
-          </button>
+          <Link to="/get-involved/donate">
+            <Button variant="primary">Donate Now</Button>
+          </Link>
         </div>
       </div>
     </div>
 
  
-
+    <div className="whiteDivider"></div>
     {/* Vision, Mission, Values Section */}
     <VisionMissionValues/>
+    <div className="whiteDivider"></div>
 
     {/* Partner With Us Section */}
    <PartnerWithUs/>
