@@ -18,6 +18,7 @@ import NewsPage from './pages/News';
 import VolunteerPage from './pages/get-involved/Volunteer';
 import OurFriendsPage from './pages/get-involved/OurFriends';
 import './App.css';
+import ScrollToTop from './components/ScrollToTop';
 
 const App: React.FC = () => {
   const HomePageContent = (
@@ -34,6 +35,7 @@ const App: React.FC = () => {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={HomePageContent} />

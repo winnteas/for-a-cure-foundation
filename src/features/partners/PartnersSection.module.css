@@ -1,12 +1,24 @@
 .section {
-  padding: 4rem 2rem;
+  /* padding: 4rem 2rem; */
+  background-color: var(--primary-white);
+}
+
+.partnerWithUsSection {
   background-color: var(--primary-blue);
+  width: 100vw;
+  padding: 3rem 2rem;
+  background-size: cover;
+  background-position: center;
 }
 
 .container {
-  max-width: 80rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: column;
+  /* max-width: 80rem;
   margin: 2rem auto;
-  margin-bottom: 4rem;
+  margin-bottom: 4rem; */
 }
 
 .contentContainer {
