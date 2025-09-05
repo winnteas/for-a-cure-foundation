@@ -247,7 +247,7 @@
 }
 
 /* Tablet/mobile: show mobile, hide desktop */
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   .desktopNavbar {
     display: none;
   }
@@ -736,7 +736,7 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .mobileNavbar {
     display: flex;
     align-items: center;

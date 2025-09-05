@@ -32,11 +32,16 @@
   color: #FF8A65;
   text-decoration: underline;
 }
-.breadcrumb-separator {
-  margin: 0 0.3rem;
-  color: #8bb8d6;
-  font-size: 1.1em;
+
+.breadcrumbSeparator {
+  max-width: 20px;
+  max-height: 20px;
 }
+
+.currentPage {
+  color: var(--accent-orange);
+}
+
 .contentRow {
   display: flex;
   max-width: 1200px;

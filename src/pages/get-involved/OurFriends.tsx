@@ -3,26 +3,43 @@ import styles from './OurFriends.module.css';
 import { Link } from 'react-router-dom';
 import PageTitleSection from '../../components/PageTitleSection';
 
-// Import sponsor images
-import sponsor2gb from '../../assets/sponsors/2gb.svg';
-import sponsorDoyles from '../../assets/sponsors/doyles.svg';
-import sponsorMccables from '../../assets/sponsors/mccables.svg';
-import sponsorSunbury from '../../assets/sponsors/sunbury.svg';
-import sponsorJfk from '../../assets/sponsors/jfk.svg';
+import mccables from '../../assets/sponsors/mccables.svg';
+import doyles from '../../assets/sponsors/doyles.svg';
+import twogb from '../../assets/sponsors/2gb.svg';
+import sunbury from '../../assets/sponsors/sunbury.svg';
+import jfk from '../../assets/sponsors/jfk.svg';
+import tafe from '../../assets/sponsors/tafe.svg';
+import morgan from '../../assets/sponsors/morgan.svg';
+import alchemy from '../../assets/sponsors/alchemy-partners.svg';
+import fellia from '../../assets/sponsors/fellia-melas-gallery.svg';
+import lionsden from '../../assets/sponsors/lions-den-academy.svg';
 
 const OurFriendsPage: React.FC = () => {
+
+  const sponsors = [
+    { src: sunbury, alt: 'Sunbury Primary School' },
+    { src: twogb, alt: '2GB Sydney' },
+    { src: doyles, alt: 'Doyles' },
+    { src: mccables, alt: 'MC Cables' },
+    { src: jfk, alt: 'JFK Automation' },
+    { src: tafe, alt: 'TAFE' },
+    { src: morgan, alt: 'Morgan Boxing' },
+    { src: alchemy, alt: 'Alchemy Partners' },
+    { src: fellia, alt: 'Fellia Melas Gallery' },
+    { src: lionsden, alt: "Lion's Den Academy" },
+  ];
   return (
     <div className={styles.root}>
       {/* Page Title Section */}
-      <PageTitleSection title="Our Friends">
-        <nav className={styles.breadcrumbs}>
+      <PageTitleSection title="Our Friends"/>
+
+      <nav className={styles.breadcrumbs}>
           <Link to="/" className={styles.breadcrumbLink}>Home</Link>
           <span className={styles.breadcrumbSeparator}> &gt; </span>
           <Link to="/get-involved" className={styles.breadcrumbLink}>Get Involved</Link>
           <span className={styles.breadcrumbSeparator}> &gt; </span>
           <span className={styles.breadcrumbCurrent}>Our Friends</span>
         </nav>
-      </PageTitleSection>
 
       {/* Main Content Area */}
       <div className={styles.mainContent}>
@@ -37,78 +54,9 @@ const OurFriendsPage: React.FC = () => {
 
           {/* Partner Logos Grid */}
           <div className={styles.partnersGrid}>
-            {/* Row 1 */}
-            <div className={styles.partnerLogo}>
-              <img src={sponsor2gb} alt="2GB Sydney" className={styles.logoImage} />
-            </div>
-            
-            <div className={styles.partnerLogo}>
-              <img src={sponsorDoyles} alt="Doyles EST 1885" className={styles.logoImage} />
-            </div>
-            
-            <div className={styles.partnerLogo}>
-              <img src={sponsorMccables} alt="MC" className={styles.logoImage} />
-            </div>
-            
-            <div className={styles.partnerLogo}>
-              <div className={styles.felliaMelasLogo}>
-                <span className={styles.felliaText}>fellia</span>
-                <div className={styles.verticalLines}>
-                  <div className={styles.verticalLine}></div>
-                  <div className={styles.verticalLine}></div>
-                </div>
-                <span className={styles.melasText}>melas</span>
-                <span className={styles.galleryText}>gallery</span>
-              </div>
-            </div>
-
-            {/* Row 2 */}
-            <div className={styles.partnerLogo}>
-              <div className={styles.alchemyPartnersLogo}>
-                <div className={styles.alchemyIcon}>A</div>
-                <span className={styles.alchemyText}>Alchemy Partners</span>
-              </div>
-            </div>
-            
-            <div className={styles.partnerLogo}>
-              <div className={styles.morganBoxingLogo}>
-                <div className={styles.starsContainer}>
-                  <span className={styles.star}>★</span>
-                  <span className={styles.star}>★</span>
-                </div>
-                <span className={styles.morganText}>MORGAN</span>
-                <span className={styles.boxingText}>BOXING & FITNESS EQUIPMENT</span>
-              </div>
-            </div>
-            
-            <div className={styles.partnerLogo}>
-              <img src={sponsorJfk} alt="JFK Automation" className={styles.logoImage} />
-            </div>
-            
-            <div className={styles.partnerLogo}>
-              <img src={sponsorSunbury} alt="Sunbury Primary School" className={styles.logoImage} />
-            </div>
-
-            {/* Row 3 */}
-            <div className={styles.partnerLogo}>
-              <div className={styles.nswTafeLogo}>
-                <div className={styles.nswGovernmentLogo}>
-                  <div className={styles.nswCircle}>
-                    <span className={styles.nswText}>NSW</span>
-                  </div>
-                </div>
-                <span className={styles.tafeText}>TAFE</span>
-              </div>
-            </div>
-            
-            <div className={styles.partnerLogo}>
-              <div className={styles.lionsDenLogo}>
-                <div className={styles.lionIcon}>
-                  <div className={styles.lionHead}></div>
-                </div>
-                <span className={styles.lionsDenText}>LION'S DEN ACADEMY</span>
-              </div>
-            </div>
+          {sponsors.map((s, i) => (
+                <img key={i} src={s.src} alt={s.alt} className={styles.logoImage} />
+              ))}
           </div>
         </div>
       </div>

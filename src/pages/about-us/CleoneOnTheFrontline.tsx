@@ -3,16 +3,17 @@ import styles from './CleoneOnTheFrontline.module.css';
 import { Link } from 'react-router-dom';
 import cleoneImg from '../../assets/angie.png'; // Placeholder image
 import PageTitleSection from '../../components/PageTitleSection';
+import breadcrumbSeparator from '../../assets/breadcrumb-arrow.svg'
 
 const CleoneOnTheFrontline: React.FC = () => (
   <div className={styles.root}>
     <PageTitleSection title="Cleone On The Frontline" />
-    <nav className={styles.breadcrumb} aria-label="Breadcrumb">
+    <nav className={styles.breadcrumb} aria-labl="Breadcrumb">
       <Link to="/">Home</Link>
-      <span className={styles['breadcrumb-separator']}>/</span>
+      <img src={breadcrumbSeparator} className={styles.breadcrumbSeparator} alt="separator"/>
       <Link to="/about/what-we-do">About Us</Link>
-      <span className={styles['breadcrumb-separator']}>/</span>
-      <span aria-current="page">Cleone On The Frontline</span>
+      <img src={breadcrumbSeparator} className={styles.breadcrumbSeparator} alt="separator"/>
+      <span aria-current="page" className={styles.currentPage}>Cleone On The Frontline</span>
     </nav>
     <div className={styles.contentRow}>
       <div className={styles.imageCol}>
