@@ -9,6 +9,7 @@ import locationIcon from '../assets/icons/location.svg';
 import phoneIcon from '../assets/icons/phone.svg';
 import mailIcon from '../assets/icons/mail.svg';
 import externalLinkWhite from '../assets/icons/external-link-white.svg';
+import { Link } from 'react-router-dom';
 
 // You can use react-icons or inline SVGs for icons. Here, we'll use inline SVGs for simplicity.
 
@@ -30,10 +31,10 @@ const Footer: React.FC = () => (
       <div className={styles.linksSection}>
         <div className={styles.sectionTitle}>Quick Links</div>
         <ul className={styles.linksList + ' smallText'}>
-          <li className={styles.linkItem}><img src={externalLinkWhite} alt="external link"/> About Us</li>
-          <li className={styles.linkItem}><img src={externalLinkWhite} alt="external link" /> Research</li>
-          <li className={styles.linkItem}><img src={externalLinkWhite} alt="external link" /> News</li>
-          <li className={styles.linkItem}><img src={externalLinkWhite} alt="external link" /> Get Involved</li>
+          <Link className={styles.linkItem} to="/about/what-we-do"><img src={externalLinkWhite} alt="external link"/> About Us</Link>
+          <Link className={styles.linkItem} to="/research"><img src={externalLinkWhite} alt="external link"/>Research</Link>
+          <Link className={styles.linkItem} to="/news"><img src={externalLinkWhite} alt="external link"/>News</Link>
+          <Link className={styles.linkItem} to="/get-involved/volunteer"><img src={externalLinkWhite} alt="external link"/>Get Involved</Link>
         </ul>
       </div>
       {/* Get In Touch */}
