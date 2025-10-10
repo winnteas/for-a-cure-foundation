@@ -72,6 +72,11 @@
   width: auto;
 }
 
+.unstyledLink {
+  color: inherit;
+  text-decoration: none;
+}
+
 .infoButton {
   flex: 1;
   display: flex;

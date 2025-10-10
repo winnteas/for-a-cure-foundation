@@ -12,7 +12,7 @@ import Breadcrumb from '../../components/breadcrumb/Breadcrumb';
 const WhatWeDoSection: React.FC = () => {
   const breadcrumbItems = [
     { label: 'Home', link: '/' },
-    { label: 'About Us', link: '/about'},
+    { label: 'About Us', link: '/about/what-we-do'},
     { label: 'What We Do', link: ''},
 
   ]

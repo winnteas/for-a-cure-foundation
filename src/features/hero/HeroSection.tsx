@@ -3,6 +3,7 @@ import styles from './HeroSection.module.css';
 import heroBanner from '../../assets/hero-banner.svg';
 import Button from '../../components/Button';
 import externalLinkIcon from '../../assets/icons/external-link.svg';
+import { Link } from 'react-router-dom';
 
 const HeroSection: React.FC = () => (
   <section
@@ -16,10 +17,9 @@ const HeroSection: React.FC = () => (
         Life-Saving Research!
       </h1>
       <p className={styles.heroDescription}>Join us in supporting cutting-edge research that brings us closer to a cure.</p>
-      <Button variant="primary">
-        Explore Our Research 
-        <img src={externalLinkIcon} alt="external link" style={{width: '16px', height: '16px', marginLeft: '8px', verticalAlign: 'middle'}} />
-      </Button>
+      <Link to="/research">
+         <Button variant="primary">Explore Our Research</Button>
+      </Link>
     
     </div>
   </section>

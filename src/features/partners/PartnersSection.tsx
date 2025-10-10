@@ -15,6 +15,7 @@ import arrowLeft from '../../assets/sponsors/arrow-left.svg';
 import arrowRight from '../../assets/sponsors/arrow-right.svg';
 
 import PartnerWithUs from './PartnerWithUs';
+import { Link } from 'react-router-dom';
 
 const sponsors = [
   { src: sunbury, alt: 'Sunbury Primary School' },
@@ -57,7 +58,9 @@ const PartnersSection: React.FC = () => {
             <img src={arrowRight} alt="Right arrow"/>
             </button>
           </div>
-          <Button variant="primary">View All Partners</Button>
+          <Link to="/get-involved/our-friends">
+         <Button variant="primary">View All Partners</Button>
+      </Link>
           <div className="whiteDivider"></div>
         </div>
       </div>

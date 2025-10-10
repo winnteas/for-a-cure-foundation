@@ -19,7 +19,7 @@ const navLinks = [
   { label: 'Get Involved', hasDropdown: true, dropdownItems: [
     { label: 'Donate', path: '/get-involved/donate' },
     { label: 'Volunteer', path: '/get-involved/volunteer' },
-    { label: 'Our Friends', path: '/get-involved/our-friends' }
+    { label: 'Our People', path: '/get-involved/our-friends' }
   ]},
   { label: 'News', path: '/news' },
   { label: 'Contact', path: '/contact' },

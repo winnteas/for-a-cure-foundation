@@ -5,6 +5,7 @@ import newsThumbnail1 from '../../assets/news-thumbnails/news-thumbnail1.svg';
 import newsThumbnail2 from '../../assets/news-thumbnails/news-thumbnail2.svg';
 import newsThumbnail3 from '../../assets/news-thumbnails/news-thumbnail-3.svg';
 import NewsCard from '../../components/NewsCard';
+import { Link } from 'react-router-dom';
 
 interface NewsItem {
   title: string;
@@ -52,7 +53,9 @@ const NewsSection: React.FC = () => (
         ))}
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Button variant="primary">View All</Button>
+        <Link to="/news">
+         <Button variant="primary">View All</Button>
+      </Link>
       </div>
     </div>
   </section>

@@ -37,8 +37,12 @@ const DesktopNavbar: React.FC = () => (
           <button className={`${styles.infoButton} ${styles.searchButton}`} aria-label="Search">
             <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           </button>
+          <Link to={'/get-involved/donate'} className={styles.unstyledLink}>
           <button className={`${styles.infoButton} ${styles.donateButton}`}>Donate</button>
+          </Link>
+          <Link to={'/get-involved/volunteer'} className={styles.unstyledLink}>
           <button className={`${styles.infoButton} ${styles.memberButton}`}>Be a Volunteer</button>
+          </Link>
         </div>
       </div>
     </div>

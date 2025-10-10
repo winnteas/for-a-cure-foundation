@@ -112,14 +112,11 @@
   align-items: center;
   margin-top: auto;
 }
-.linkedinIcon {
+.frame {
   color: #0077b5;
-  cursor: pointer;
-  transition: color 0.2s;
+
 }
-.linkedinIcon:hover {
-  color: #005885;
-}
+
 .moreAboutLink {
   color: #FF8A65;
   text-decoration: none;

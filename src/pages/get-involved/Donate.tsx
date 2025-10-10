@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import DonationSection from '../../features/donation/DonationSection';
 import PageTitleSection from '../../components/PageTitleSection';
 import Breadcrumb from '../../components/breadcrumb/Breadcrumb';
+import Button from '../../components/Button';
 
 const DonatePage: React.FC = () => { 
   const breadcrumbItems = [
@@ -132,8 +133,8 @@ const DonatePage: React.FC = () => {
         <p className={styles.additionalQuestionsText}>
           We're here to help. Please get in touch if you have any other questions or feedback.
         </p>
-        <Link to="/contact" className={styles.getInTouchButton}>
-          Get In Touch
+        <Link to="/contact">
+          <Button variant="primary">Get In Touch</Button>
         </Link>
       </div>
     </div>

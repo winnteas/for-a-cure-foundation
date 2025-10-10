@@ -250,9 +250,7 @@ const VolunteerPage: React.FC = () => {
             </div>
             
             <div className={styles.formActions}>
-              <button type="submit" className={styles.sendButton}>
-                Send
-              </button>
+            <Button variant="primary">Send</Button>
             </div>
           </form>
         </div>
