@@ -6,6 +6,7 @@ import dropdownIcon from '../assets/icons/dropdown.svg';
 import facebookIcon from '../assets/icons/facebook.svg';
 import instagramIcon from '../assets/icons/instagram.svg';
 import xIcon from '../assets/icons/x.svg';
+import linkedinIcon from '../assets/icons/linkedin.svg';
 import mailIcon from '../assets/icons/mail.svg';
 import phoneIcon from '../assets/icons/phone.svg';
 
@@ -15,14 +16,17 @@ const DesktopNavbar: React.FC = () => (
     <div className={styles.topBar}>
       <div className={styles.topBarContent}>
         <div className={styles.left}>
-          <a href="#" className={styles.socialIcon} aria-label="Facebook">
+          <a href="https://www.facebook.com/stemcells.foracure/" className={styles.socialIcon} aria-label="Facebook">
             <img src={facebookIcon} alt="Facebook"/>
           </a>
-          <a href="#" className={styles.socialIcon} aria-label="Instagram">
+          <a href="https://www.instagram.com/foracurefoundation/" className={styles.socialIcon} aria-label="Instagram">
             <img src={instagramIcon} alt="Instagram"/>
           </a>
-          <a href="#" className={styles.socialIcon} aria-label="X">
+          <a href="https://x.com/foracure" className={styles.socialIcon} aria-label="X">
             <img src={xIcon} alt="X"/>
+          </a>
+          <a href="https://www.linkedin.com/company/for-a-cure-foundation/?viewAsMember=true" className={styles.socialIcon} aria-label="LinkedIn">
+            <img src={linkedinIcon} alt="LinkedIn"/>
           </a>
           <span className={styles.contactInfo}>
             <span className={styles.divider}>|</span>

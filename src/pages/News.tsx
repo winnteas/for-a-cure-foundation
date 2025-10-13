@@ -10,11 +10,11 @@ import Breadcrumb from '../components/breadcrumb/Breadcrumb';
 
 const cards = [
   { title: 'Stem cells: What they are and what they do', date: 'Jun 08,2025', desc: '', category: 'Categoria', categoryType: 'categoria' as const, image: thumb1 },
-  { title: 'Stem cells: What they are and what they do', date: 'Jun 08,2025', desc: '', category: 'Donate', categoryType: 'donate' as const, image: thumb2 },
-  { title: 'Stem cells: What they are and what they do', date: 'Jun 08,2025', desc: '', category: 'Event', categoryType: 'event' as const, image: thumb3 },
-  { title: 'Stem cells: What they are and what they do', date: 'Jun 08,2025', desc: '', category: 'Categoria', categoryType: 'categoria' as const, image: thumb1 },
-  { title: 'Stem cells: What they are and what they do', date: 'Jun 08,2025', desc: '', category: 'Donate', categoryType: 'donate' as const, image: thumb2 },
-  { title: 'Stem cells: What they are and what they do', date: 'Jun 08,2025', desc: '', category: 'Event', categoryType: 'event' as const, image: thumb3 },
+  { title: 'The Gift of Giving: Why Donating Feels So Good', date: 'Jun 08,2025', desc: '', category: 'Donate', categoryType: 'donate' as const, image: thumb2 },
+  { title: 'Recent breakthroughs in Stem Cell Research', date: 'Jun 08,2025', desc: '', category: 'Event', categoryType: 'event' as const, image: thumb3 },
+  { title: 'The Power of Volunteering: Why Giving Your Time Matters', date: 'Jun 08,2025', desc: '', category: 'Categoria', categoryType: 'categoria' as const, image: thumb1 },
+  { title: 'From Research to Reality: How Science Becomes a Cure', date: 'Jun 08,2025', desc: '', category: 'Donate', categoryType: 'donate' as const, image: thumb2 },
+  { title: 'United for a Cure: The Strength of Community Support', date: 'Jun 08,2025', desc: '', category: 'Event', categoryType: 'event' as const, image: thumb3 },
 ];
 
 const breadcrumbItems = [

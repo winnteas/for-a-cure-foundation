@@ -46,10 +46,9 @@ const OurFriendsPage: React.FC = () => {
       <div className={styles.mainContent}>
         <div className={styles.contentContainer}>
           <div className={styles.introSection}>
-            <h2 className={styles.introTitle}>Lorem Ipsum Is Simply Dummy Text Of The Printing</h2>
+            <h2 className={styles.introTitle}>Celebrating Those Who Stand With Us</h2>
             <p className={styles.introDescription}>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            We’re deeply grateful to the generous individuals, businesses, and partners whose time, donations, and expertise help us advance research, inspire hope, and create lasting change.
             </p>
           </div>
 

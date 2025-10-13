@@ -10,7 +10,7 @@ import phoneIcon from '../assets/icons/phone.svg';
 import mailIcon from '../assets/icons/mail.svg';
 import externalLinkWhite from '../assets/icons/external-link-white.svg';
 import { Link } from 'react-router-dom';
-import Button from '../components/Button';
+import linkedInIcon from '../assets/icons/linkedin.svg';
 
 // You can use react-icons or inline SVGs for icons. Here, we'll use inline SVGs for simplicity.
 
@@ -47,9 +47,10 @@ const Footer: React.FC = () => (
           <li className={styles.contactItem}><img src={mailIcon} alt="Mail" className={styles.contactIcon} /> info@foracure.org.au</li>
         </ul>
         <div className={styles.socials}>
-          <a href="#" className={styles.socialIcon} aria-label="Facebook"><img src={facebookIcon} alt="Facebook" className={styles.socialIcon} /></a>
-          <a href="#" className={styles.socialIcon} aria-label="Instagram"><img src={instagramIcon} alt="Instagram" className={styles.socialIcon} /></a>
-          <a href="#" className={styles.socialIcon} aria-label="X"><img src={xIcon} alt="X" className={styles.socialIcon} /></a>
+          <a href="https://www.facebook.com/stemcells.foracure/" className={styles.socialIcon} aria-label="Facebook"><img src={facebookIcon} alt="Facebook" className={styles.socialIcon} /></a>
+          <a href="https://www.instagram.com/foracurefoundation/" className={styles.socialIcon} aria-label="Instagram"><img src={instagramIcon} alt="Instagram" className={styles.socialIcon} /></a>
+          <a href="https://x.com/foracure" className={styles.socialIcon} aria-label="X"><img src={xIcon} alt="X" className={styles.socialIcon} /></a>
+          <a href="https://www.linkedin.com/company/for-a-cure-foundation/?viewAsMember=true" className={styles.socialIcon} aria-label="LinkedIn"><img src={linkedInIcon} alt="LinkedIn" className={styles.socialIcon} /></a>
         </div>
       </div>
     </div>

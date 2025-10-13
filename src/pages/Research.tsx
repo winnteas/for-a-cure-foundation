@@ -33,7 +33,7 @@ const ResearchPage: React.FC = () => (
       <div className={styles.contentGrid}>
         <div className={styles.textColumn}>
           <p className={styles.researchText}>
-            Stem cell research is the study of unique, unspecialized cells that can develop into different body cell types. 
+            Stem cell research is the study of unique, unspecialised cells that can develop into different body cell types. 
             These cells serve as raw materials, capable of dividing, renewing, and becoming specific cells such as muscle, 
             nerve, or blood cells.
           </p>

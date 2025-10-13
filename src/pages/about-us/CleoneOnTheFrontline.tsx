@@ -63,7 +63,7 @@ const CleoneOnTheFrontline: React.FC = () => {
         <p>
           There’s still a war to be won and Angie, with her Foundation, is standing courageously on the frontline.
         </p>
-        <div className={styles.signature}>Stephen M Thomson<br />For A Cure</div>
+        <div className={styles.signature}>Stephen M Thomson<br />For A Cure Foundation</div>
       </div>
     </div>
   </div>

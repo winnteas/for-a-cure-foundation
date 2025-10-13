@@ -5,6 +5,7 @@ import DonationSection from '../../features/donation/DonationSection';
 import PageTitleSection from '../../components/PageTitleSection';
 import Breadcrumb from '../../components/breadcrumb/Breadcrumb';
 import Button from '../../components/Button';
+import faqIcon from '../../assets/donate/faq.svg';
 
 const DonatePage: React.FC = () => { 
   const breadcrumbItems = [
@@ -31,14 +32,11 @@ const DonatePage: React.FC = () => {
         <p className={styles.faqDescription}>
           Have questions about donating? Find clear answers about how your support helps, tax benefits, secure payments, and ways to give, so you can donate with confidence and purpose.
         </p>
-        
+         {/* TODO: turn this into a component */}
         <div className={styles.faqGrid}>
           <div className={styles.faqItem}>
             <div className={styles.faqIcon}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#4CAF50" stroke="#4CAF50" strokeWidth="2"/>
-                <path d="M9 12L11 14L15 10" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <img src={faqIcon} alt="FAQ" />
             </div>
             <div className={styles.faqContent}>
               <h4 className={styles.faqQuestion}>How will my donation be used?</h4>
@@ -50,10 +48,7 @@ const DonatePage: React.FC = () => {
 
           <div className={styles.faqItem}>
             <div className={styles.faqIcon}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#4CAF50" stroke="#4CAF50" strokeWidth="2"/>
-                <path d="M9 12L11 14L15 10" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+            <img src={faqIcon} alt="FAQ" />
             </div>
             <div className={styles.faqContent}>
               <h4 className={styles.faqQuestion}>Is my donation tax-deductible?</h4>
@@ -64,11 +59,8 @@ const DonatePage: React.FC = () => {
           </div>
 
           <div className={styles.faqItem}>
-            <div className={styles.faqIcon}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#4CAF50" stroke="#4CAF50" strokeWidth="2"/>
-                <path d="M9 12L11 14L15 10" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+          <div className={styles.faqIcon}>
+              <img src={faqIcon} alt="FAQ" />
             </div>
             <div className={styles.faqContent}>
               <h4 className={styles.faqQuestion}>Can I make a recurring donation?</h4>
@@ -80,10 +72,7 @@ const DonatePage: React.FC = () => {
 
           <div className={styles.faqItem}>
             <div className={styles.faqIcon}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#4CAF50" stroke="#4CAF50" strokeWidth="2"/>
-                <path d="M9 12L11 14L15 10" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <img src={faqIcon} alt="FAQ" />
             </div>
             <div className={styles.faqContent}>
               <h4 className={styles.faqQuestion}>Will I receive a receipt for my donation?</h4>
@@ -95,10 +84,7 @@ const DonatePage: React.FC = () => {
 
           <div className={styles.faqItem}>
             <div className={styles.faqIcon}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#4CAF50" stroke="#4CAF50" strokeWidth="2"/>
-                <path d="M9 12L11 14L15 10" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <img src={faqIcon} alt="FAQ" />
             </div>
             <div className={styles.faqContent}>
               <h4 className={styles.faqQuestion}>Can I donate on behalf of someone else?</h4>
@@ -110,10 +96,7 @@ const DonatePage: React.FC = () => {
 
           <div className={styles.faqItem}>
             <div className={styles.faqIcon}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#4CAF50" stroke="#4CAF50" strokeWidth="2"/>
-                <path d="M9 12L11 14L15 10" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <img src={faqIcon} alt="FAQ" />
             </div>
             <div className={styles.faqContent}>
               <h4 className={styles.faqQuestion}>Is it safe to donate online?</h4>
