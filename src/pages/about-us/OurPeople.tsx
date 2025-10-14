@@ -1,8 +1,13 @@
 import React from 'react';
 import styles from './OurPeople.module.css';
 import { Link } from 'react-router-dom';
-import angieImg from '../../assets/angie.png'; // Angie's image
-import placeholderImg from '../../assets/partner.svg'; // Placeholder for other team members
+import angieImg from '../../assets/people/angie.svg';
+import adamImg from '../../assets/people/adam.svg';
+import charlesImg from '../../assets/people/charles.svg';
+import edgarImg from '../../assets/people/edgar.svg';
+import ivicaImg from '../../assets/people/ivica.svg';
+import damodaronImg from '../../assets/people/damodaron.svg';
+import placeholderImg from '../../assets/people/blank.svg'; // Placeholder for other team members
 import PageTitleSection from '../../components/PageTitleSection';
 import Breadcrumb from '../../components/breadcrumb/Breadcrumb';
 import linkedInIcon from '../../assets/icons/linkedin-navy.svg';
@@ -14,39 +19,44 @@ const teamMembers = [
     title: 'Founder and Chair',
     description: 'Visionary founder dedicated to advancing medical research, Angie leads the Foundation with unwavering passion, strategic insight, and a deep commitment to finding cures and supporting those im...',
     image: angieImg,
-    hasMoreInfo: true
+    hasMoreInfo: true,
+    linkedIn: 'https://www.linkedin.com/in/angie-cleone-2406516/'
   },
   {
     id: 2,
     name: 'Dr Damodaron Kumar',
     title: 'Non-Executive Director',
     description: 'With a strong background in clinical research and health innovation, Dr Kumar provides strategic oversight and scientific insight to support the Foundation\'s mission of funding life-changing medical...',
-    image: placeholderImg,
-    hasMoreInfo: false
+    image: damodaronImg,
+    hasMoreInfo: false,
+    linkedIn: 'https://www.linkedin.com/in/prem-kumar-damodaran-13b929136/?originalSubdomain=au'
   },
   {
     id: 3,
     name: 'Dr Charles Galea',
     title: 'Non-Executive Director',
     description: 'Dr Galea brings academic rigour and research experience to the board, offering valuable guidance on science-led initiatives and ensuring robust governance in support of the Foundation...',
-    image: placeholderImg,
-    hasMoreInfo: false
+    image: charlesImg,
+    hasMoreInfo: false,
+    linkedIn: 'https://www.linkedin.com/in/charles-galea-data-scientist/'
   },
   {
     id: 4,
     name: 'Adam Fenech',
     title: 'Chief Executive Officer',
     description: 'A seasoned executive and change leader, Adam brings hands-on experience across financial services, innovation, and transformation, guiding the Foundation\'s growth, partnerships, and impact with c...',
-    image: placeholderImg,
-    hasMoreInfo: false
+    image: adamImg,
+    hasMoreInfo: false,
+    linkedIn: 'https://www.linkedin.com/in/adam-fenech/'
   },
   {
     id: 5,
     name: 'Ka Hei (Edgar) Koo',
     title: 'Company Secretary',
     description: 'Edgar plays a critical role in ensuring the Foundation\'s governance, legal, and compliance obligations are upheld, supporting the board with structured advice, reporting, and operational discipl.',
-    image: placeholderImg,
-    hasMoreInfo: false
+    image: edgarImg,
+    hasMoreInfo: false,
+    linkedIn: 'https://www.linkedin.com/in/edgar-koo-04092124/'
   },
   {
     id: 6,
@@ -69,7 +79,7 @@ const teamMembers = [
     name: 'Ivica Cuncic',
     title: 'Testing',
     description: 'Ivica provides essential technical support, ensuring all digital systems and features are thoroughly tested and optimised, helping deliver a smooth and reliable online experience for all users.',
-    image: placeholderImg,
+    image: ivicaImg,
     hasMoreInfo: false
   },
   {
@@ -102,21 +112,36 @@ const OurPeople: React.FC = () => (
       <div className={styles.teamGrid}>
         {teamMembers.map((member) => (
           <div key={member.id} className={styles.teamCard}>
+          <div className={styles.imageWrapper}>
             <img src={member.image} alt={member.name} className={styles.memberImg} />
-            <h4 className={styles.memberName}>{member.name}</h4>
-            <p className={styles.memberTitle}>{member.title}</p>
-            <p className={styles.memberDescription}>{member.description}</p>
-            <div className={styles.cardFooter}>
-              <div className={styles.frame}>
-                <img src={linkedInIcon} alt="LinkedIn" />
-              </div>
-              {member.hasMoreInfo && (
-                <Link to="/about/cleone-on-the-frontline" className={styles.moreAboutLink}>
-                  More About +
-                </Link>
-              )}
-            </div>
           </div>
+          <div className={styles.textWrapper}>
+          <p className={styles.memberName}>{member.name}</p>
+          <p className={styles.memberTitle}>{member.title}</p>
+          <p className={styles.memberDescription}>{member.description}</p>
+          <div className={styles.cardFooter}>
+            {member.linkedIn && (
+              <a
+                href={member.linkedIn}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.frame}
+              >
+                <img src={linkedInIcon} alt="LinkedIn" />
+              </a>
+            )}
+            {member.hasMoreInfo && (
+              <Link
+                to="/about/cleone-on-the-frontline"
+                className={styles.moreAboutLink}
+              >
+                More About +
+              </Link>
+            )}
+          </div>
+        </div>
+        </div>
+        
         ))}
       </div>
     </div>
