@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/for-a-cure-foundation/static/css/main.4fe98793.css",
-    "main.js": "/for-a-cure-foundation/static/js/main.3f08afd8.js",
+    "main.css": "/for-a-cure-foundation/static/css/main.a8b170e8.css",
+    "main.js": "/for-a-cure-foundation/static/js/main.feb18201.js",
     "static/js/453.831e232c.chunk.js": "/for-a-cure-foundation/static/js/453.831e232c.chunk.js",
     "static/media/partner.svg": "/for-a-cure-foundation/static/media/partner.4bec2935c90eacb772f325075de63d9b.svg",
     "static/media/volunteers.svg": "/for-a-cure-foundation/static/media/volunteers.6995009bcdf30991633e1e02609c0c1a.svg",
@@ -10,6 +10,7 @@
     "static/media/transforms-lives.svg": "/for-a-cure-foundation/static/media/transforms-lives.deca67919725b51b29000cd0ed0f8766.svg",
     "static/media/hands.svg": "/for-a-cure-foundation/static/media/hands.ec8c1a73f04dbd1738dc1e4cf5744512.svg",
     "static/media/funds-photo.svg": "/for-a-cure-foundation/static/media/funds-photo.0273290fe01472640324984e444c1ce4.svg",
+    "static/media/adam.svg": "/for-a-cure-foundation/static/media/adam.de2d99dc793ca377e029bdd8553127ab.svg",
     "static/media/news-thumbnail2.svg": "/for-a-cure-foundation/static/media/news-thumbnail2.4f45a6790f05d74ee30b6deee4ea2081.svg",
     "static/media/news-thumbnail-3.svg": "/for-a-cure-foundation/static/media/news-thumbnail-3.0adbbd6c080943a9c68c96c06c0c8982.svg",
     "static/media/hero-banner.svg": "/for-a-cure-foundation/static/media/hero-banner.44734f74b51ba7bf0eb656a884b520fe.svg",
@@ -17,6 +18,12 @@
     "static/media/news-thumbnail1.svg": "/for-a-cure-foundation/static/media/news-thumbnail1.bcbf0aca190439f3c78cbb679766435b.svg",
     "static/media/angie.png": "/for-a-cure-foundation/static/media/angie.45b246511bd416345c44.png",
     "static/media/mccables.svg": "/for-a-cure-foundation/static/media/mccables.927e80f125986b7475072319c8607a1b.svg",
+    "static/media/angie.svg": "/for-a-cure-foundation/static/media/angie.78d8e89408fef8ac45769b152f9a6ea1.svg",
+    "static/media/blank.svg": "/for-a-cure-foundation/static/media/blank.2ab0e0b2993953621293de0e44798d3b.svg",
+    "static/media/damodaron.svg": "/for-a-cure-foundation/static/media/damodaron.f531ca337ad5dcc69012c14b5f9a7000.svg",
+    "static/media/ivica.svg": "/for-a-cure-foundation/static/media/ivica.e3549efe07655551504fa76dd704e2be.svg",
+    "static/media/charles.svg": "/for-a-cure-foundation/static/media/charles.eabe35e4fdf289a2c335462a8b58ce65.svg",
+    "static/media/edgar.svg": "/for-a-cure-foundation/static/media/edgar.97dacbfda110f6513d7f3c1a09b1fabd.svg",
     "static/media/lions-den-academy.svg": "/for-a-cure-foundation/static/media/lions-den-academy.76b0b98a5e9963c784d77279da1c3633.svg",
     "static/media/alchemy-partners.svg": "/for-a-cure-foundation/static/media/alchemy-partners.c5ca9a5c7820b75493b8491149687cc8.svg",
     "static/media/morgan.svg": "/for-a-cure-foundation/static/media/morgan.70d388e491a5b4fc21c949b711e09fad.svg",
@@ -63,12 +70,12 @@
     "static/media/arrow-right.svg": "/for-a-cure-foundation/static/media/arrow-right.2398cc586fa27ae15903daefc5844ed8.svg",
     "static/media/arrow-left.svg": "/for-a-cure-foundation/static/media/arrow-left.eb98317093d1b884cabac4e2475df58e.svg",
     "static/media/dropdown.svg": "/for-a-cure-foundation/static/media/dropdown.b38def64e4b7ec8e112d6a6d9f139deb.svg",
-    "main.4fe98793.css.map": "/for-a-cure-foundation/static/css/main.4fe98793.css.map",
-    "main.3f08afd8.js.map": "/for-a-cure-foundation/static/js/main.3f08afd8.js.map",
+    "main.a8b170e8.css.map": "/for-a-cure-foundation/static/css/main.a8b170e8.css.map",
+    "main.feb18201.js.map": "/for-a-cure-foundation/static/js/main.feb18201.js.map",
     "453.831e232c.chunk.js.map": "/for-a-cure-foundation/static/js/453.831e232c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4fe98793.css",
-    "static/js/main.3f08afd8.js"
+    "static/css/main.a8b170e8.css",
+    "static/js/main.feb18201.js"
   ]
 }
