@@ -52,9 +52,15 @@
   font-weight: 600;
 }
 
+/* .breadcrumbWrapper {
+  position: absolute;
+  top: 0.5;
+  left: 0.5;
+} */
+
 /* Hero Section */
 .heroSection {
-  background: #205B77;
+  background: var(--primary-blue);;
   padding: 4rem 0;
   color: #fff;
 }
@@ -158,14 +164,15 @@
 .sectionTitle {
   font-size: 2.5rem;
   font-weight: 900;
-  color: #205B77;
+  color: var(--primary-blue);
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
 
 .sectionDescription {
   font-size: 1.2rem;
-  color: #666;
+  color: var(--primary-blue);
+
   margin-bottom: 3rem;
   line-height: 1.6;
   max-width: 600px;
@@ -181,7 +188,7 @@
 }
 
 .benefitCard {
-  background: #205B77;
+  background: var(--primary-blue);
   color: #fff;
   padding: 2rem;
   border-radius: 16px;
@@ -224,7 +231,7 @@
 /* FAQ Section */
 .faqSection {
   padding: 4rem 0;
-  background: #f8f9fa;
+  background: #E0F2FE;
 }
 
 .faqContainer {
@@ -327,14 +334,14 @@
 }
 
 .formField {
-  margin-bottom: 2rem;
+  margin: 0 2rem 2rem 0rem;
 }
 
 .formLabel {
   display: block;
   font-size: 1rem;
   font-weight: 600;
-  color: #205B77;
+  color: var(--primary-blue);
   margin-bottom: 0.5rem;
 }
 
@@ -387,7 +394,7 @@
 
 /* Newsletter Section */
 .newsletterSection {
-  background: #205B77;
+  background: var(--primary-blue);
   padding: 4rem 0;
   margin-top: 3rem;
 }
@@ -490,6 +497,7 @@
   .faqContent {
     max-width: 100%;
     text-align: center;
+    
   }
   
   .formRow {

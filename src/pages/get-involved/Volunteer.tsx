@@ -5,7 +5,9 @@ import volunteerImage from '../../assets/volunteer/volunteers.svg';
 import PageTitleSection from '../../components/PageTitleSection';
 import Button from '../../components/Button';
 import Breadcrumb from '../../components/breadcrumb/Breadcrumb';
-
+import arrowDown from "../../assets/volunteer/circle-arrow-down.svg"
+import arrowUp from "../../assets/volunteer/circle-arrow-up.svg"
+import FaqSection from './FaqSection';
 const VolunteerPage: React.FC = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -48,6 +50,8 @@ const VolunteerPage: React.FC = () => {
     { label: 'Volunteer', link: '/volunteer'}
   ]
 
+
+
   return (
     <div className={styles.root}>
       {/* Page Title Section */}
@@ -63,18 +67,17 @@ const VolunteerPage: React.FC = () => {
               Join our passionate community of volunteers and help us make a real difference in the fight against disease. 
               Your time, skills, and dedication are invaluable to our mission of finding cures and supporting those affected.
             </p>
-     <Button
-  variant="primary"
-  onClick={() => {
-    const el = document.querySelector('#contact-form');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  }}
->
-  Get Started
-</Button>
-
+            <Button
+            variant="primary"
+            onClick={() => {
+              const el = document.querySelector('#contact-form');
+              if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
+            Get Started
+          </Button>
           </div>
           <div className={styles.heroImage}>
            <img src={volunteerImage} alt="Volunteer" />
@@ -119,56 +122,19 @@ const VolunteerPage: React.FC = () => {
       </div>
 
       {/* FAQ Section */}
-      <div className={styles.faqSection}>
+       <div className={styles.faqSection}>
         <div className={styles.faqContainer}>
           <div className={styles.faqContent}>
             <h2 className={styles.sectionTitle}>Frequently Asked Questions</h2>
             <p className={styles.sectionDescription}>
-              Get answers to common questions about volunteering with our foundation.
+            Find quick answers to common questions about volunteering, including how to get involved, what’s required, and how it all works.
             </p>
           </div>
           
-          <div className={styles.faqList}>
-            <div className={styles.faqItem}>
-              <div className={styles.faqQuestion}>
-                <span>What kind of volunteer roles are available?</span>
-                <div className={styles.faqIcon}>+</div>
-              </div>
-            </div>
-            
-            <div className={styles.faqItem}>
-              <div className={styles.faqQuestion}>
-                <span>Do I need any special skills to volunteer?</span>
-                <div className={styles.faqIcon}>+</div>
-              </div>
-            </div>
-            
-            <div className={styles.faqItem}>
-              <div className={styles.faqQuestion}>
-                <span>How much time do I need to commit?</span>
-                <div className={styles.faqIcon}>+</div>
-              </div>
-            </div>
-            
-            <div className={styles.faqItem}>
-              <div className={styles.faqQuestion}>
-                <span>Can I volunteer remotely?</span>
-                <div className={styles.faqIcon}>+</div>
-              </div>
-            </div>
-            
-            <div className={styles.faqItem}>
-              <div className={styles.faqQuestion}>
-                <span>Will I receive training or support?</span>
-                <div className={styles.faqIcon}>+</div>
-              </div>
-              <div className={styles.faqAnswer}>
-                Yes, all volunteers receive guidance and support to ensure you feel confident and valued.
-              </div>
-            </div>
-          </div>
+          <FaqSection/>
         </div>
-      </div>
+      </div> 
+
 
       {/* Contact Form Section */}
       <div className={styles.contactSection} id="contact-form">
