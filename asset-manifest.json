@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/for-a-cure-foundation/static/css/main.a8b170e8.css",
-    "main.js": "/for-a-cure-foundation/static/js/main.feb18201.js",
+    "main.css": "/for-a-cure-foundation/static/css/main.45eb7a1b.css",
+    "main.js": "/for-a-cure-foundation/static/js/main.935de675.js",
     "static/js/453.831e232c.chunk.js": "/for-a-cure-foundation/static/js/453.831e232c.chunk.js",
     "static/media/partner.svg": "/for-a-cure-foundation/static/media/partner.4bec2935c90eacb772f325075de63d9b.svg",
     "static/media/volunteers.svg": "/for-a-cure-foundation/static/media/volunteers.6995009bcdf30991633e1e02609c0c1a.svg",
@@ -65,17 +65,19 @@
     "static/media/hamburger-menu.svg": "/for-a-cure-foundation/static/media/hamburger-menu.b5be01894ef0edb368ce6120a955b598.svg",
     "static/media/external-link.svg": "/for-a-cure-foundation/static/media/external-link.cbf0e0c11a3417650029c2aeb5df5bc3.svg",
     "static/media/external-link-white.svg": "/for-a-cure-foundation/static/media/external-link-white.71ea7d34e029ae4c8a690e5589aacf1d.svg",
+    "static/media/circle-arrow-down.svg": "/for-a-cure-foundation/static/media/circle-arrow-down.7c05420ed066492de22630fe5e02eb8b.svg",
+    "static/media/circle-arrow-up.svg": "/for-a-cure-foundation/static/media/circle-arrow-up.9e4158d0ba1ae7498fc255f9bf450de1.svg",
     "static/media/close-button.svg": "/for-a-cure-foundation/static/media/close-button.aa34803b79ccbb380f985f8702ac9ffe.svg",
     "static/media/breadcrumb-arrow.svg": "/for-a-cure-foundation/static/media/breadcrumb-arrow.fe16f16626fa84ee387d7d35d7c08da3.svg",
     "static/media/arrow-right.svg": "/for-a-cure-foundation/static/media/arrow-right.2398cc586fa27ae15903daefc5844ed8.svg",
     "static/media/arrow-left.svg": "/for-a-cure-foundation/static/media/arrow-left.eb98317093d1b884cabac4e2475df58e.svg",
     "static/media/dropdown.svg": "/for-a-cure-foundation/static/media/dropdown.b38def64e4b7ec8e112d6a6d9f139deb.svg",
-    "main.a8b170e8.css.map": "/for-a-cure-foundation/static/css/main.a8b170e8.css.map",
-    "main.feb18201.js.map": "/for-a-cure-foundation/static/js/main.feb18201.js.map",
+    "main.45eb7a1b.css.map": "/for-a-cure-foundation/static/css/main.45eb7a1b.css.map",
+    "main.935de675.js.map": "/for-a-cure-foundation/static/js/main.935de675.js.map",
     "453.831e232c.chunk.js.map": "/for-a-cure-foundation/static/js/453.831e232c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8b170e8.css",
-    "static/js/main.feb18201.js"
+    "static/css/main.45eb7a1b.css",
+    "static/js/main.935de675.js"
   ]
 }
