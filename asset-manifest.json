@@ -1,14 +1,13 @@
 {
   "files": {
-    "main.css": "/for-a-cure-foundation/static/css/main.ecc1c668.css",
-    "main.js": "/for-a-cure-foundation/static/js/main.935de675.js",
+    "main.css": "/for-a-cure-foundation/static/css/main.2986952e.css",
+    "main.js": "/for-a-cure-foundation/static/js/main.830c4dce.js",
     "static/js/453.831e232c.chunk.js": "/for-a-cure-foundation/static/js/453.831e232c.chunk.js",
     "static/media/partner.svg": "/for-a-cure-foundation/static/media/partner.4bec2935c90eacb772f325075de63d9b.svg",
     "static/media/volunteers.svg": "/for-a-cure-foundation/static/media/volunteers.6995009bcdf30991633e1e02609c0c1a.svg",
     "static/media/generate-discoveries.svg": "/for-a-cure-foundation/static/media/generate-discoveries.eb6e0a69a8468a40d7c6c6aacdaa4993.svg",
     "static/media/research.svg": "/for-a-cure-foundation/static/media/research.3a411ff4a96924c2d7044bc6a4ad5d41.svg",
     "static/media/transforms-lives.svg": "/for-a-cure-foundation/static/media/transforms-lives.deca67919725b51b29000cd0ed0f8766.svg",
-    "static/media/hands.svg": "/for-a-cure-foundation/static/media/hands.ec8c1a73f04dbd1738dc1e4cf5744512.svg",
     "static/media/funds-photo.svg": "/for-a-cure-foundation/static/media/funds-photo.0273290fe01472640324984e444c1ce4.svg",
     "static/media/adam.svg": "/for-a-cure-foundation/static/media/adam.de2d99dc793ca377e029bdd8553127ab.svg",
     "static/media/news-thumbnail2.svg": "/for-a-cure-foundation/static/media/news-thumbnail2.4f45a6790f05d74ee30b6deee4ea2081.svg",
@@ -72,12 +71,12 @@
     "static/media/arrow-right.svg": "/for-a-cure-foundation/static/media/arrow-right.2398cc586fa27ae15903daefc5844ed8.svg",
     "static/media/arrow-left.svg": "/for-a-cure-foundation/static/media/arrow-left.eb98317093d1b884cabac4e2475df58e.svg",
     "static/media/dropdown.svg": "/for-a-cure-foundation/static/media/dropdown.b38def64e4b7ec8e112d6a6d9f139deb.svg",
-    "main.ecc1c668.css.map": "/for-a-cure-foundation/static/css/main.ecc1c668.css.map",
-    "main.935de675.js.map": "/for-a-cure-foundation/static/js/main.935de675.js.map",
+    "main.2986952e.css.map": "/for-a-cure-foundation/static/css/main.2986952e.css.map",
+    "main.830c4dce.js.map": "/for-a-cure-foundation/static/js/main.830c4dce.js.map",
     "453.831e232c.chunk.js.map": "/for-a-cure-foundation/static/js/453.831e232c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ecc1c668.css",
-    "static/js/main.935de675.js"
+    "static/css/main.2986952e.css",
+    "static/js/main.830c4dce.js"
   ]
 }
