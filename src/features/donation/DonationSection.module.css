@@ -1,24 +1,19 @@
 .section {
-  background: #fff;
-  border-radius: 0;
-  padding: 3.5rem 2.5rem;
-  display: flex;
-  justify-content: center;
+  background: var(--primary-blue);
   align-items: center;
-  margin: 2rem auto;
-  max-width: 1100px;
+  padding: 5rem 2rem;
+  background-size: cover;
+  background-position: center;
 }
 
 .donationContainer {
   display: flex;
-  width: 100%;
-  gap: 2.5rem;
-  align-items: stretch;
-  background: #F1F5F9;
+  background: #fff;
   border-radius: 2rem;
+  flex-direction: column;
   padding: 2.5rem;
-  box-shadow: 0 8px 24px rgba(12, 74, 110, 0.08);
-  color: inherit;
+  align-items: center;
+  justify-content: center
 }
 .leftCol {
   flex: 1.2;

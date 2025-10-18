@@ -20,6 +20,8 @@ const DonationSection: React.FC = () => {
     setAmount('');
   };
 
+
+
   return (
     <section className={styles.section}>
       <div className={styles.donationContainer}>
@@ -74,6 +76,7 @@ const DonationSection: React.FC = () => {
         <div className={styles.rightCol}>
           <img src={petriDishImg} alt="unitedHands" className={styles.unitedHands} />
         </div>
+        
       </div>
       
     </section>

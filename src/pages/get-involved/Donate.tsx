@@ -6,6 +6,7 @@ import PageTitleSection from '../../components/PageTitleSection';
 import Breadcrumb from '../../components/breadcrumb/Breadcrumb';
 import Button from '../../components/Button';
 import faqIcon from '../../assets/donate/faq.svg';
+import StripeDonationSection from '../../features/donation/StripeDonationSection';
 
 const DonatePage: React.FC = () => { 
   const breadcrumbItems = [
@@ -22,7 +23,7 @@ const DonatePage: React.FC = () => {
 
     {/* Main Content - Reusing DonationSection Component */}
     <div className={styles.mainContent}>
-      <DonationSection />
+      <StripeDonationSection />
     </div>
 
     {/* FAQ Section */}

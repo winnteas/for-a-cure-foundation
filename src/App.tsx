@@ -19,6 +19,7 @@ import VolunteerPage from './pages/get-involved/Volunteer';
 import OurFriendsPage from './pages/get-involved/OurFriends';
 import './App.css';
 import ScrollToTop from './components/ScrollToTop';
+import StripeDonationSection from './features/donation/StripeDonationSection';
 
 const App: React.FC = () => {
   const HomePageContent = (
@@ -28,7 +29,7 @@ const App: React.FC = () => {
       <ImpactStats />
       <NewsSection />
       <PartnersSection />
-      <DonationSection />
+      <StripeDonationSection />
       <div className="whiteDivider"></div>
     </>
   );
