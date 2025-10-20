@@ -26,7 +26,7 @@ const news: NewsItem[] = [
     image: newsThumbnail1
   },
   {
-    title: 'Stem cells: What they are and what they do',
+    title: 'The Gift of Giving: Why Donating Feels So Good',
     date: 'Jun 08,2025',
     desc: 'Learn about the basics of stem cells and their potential in medical research.',
     category: 'Donate',
@@ -34,7 +34,7 @@ const news: NewsItem[] = [
     image: newsThumbnail2
   },
   {
-    title: 'Stem cells: What they are and what they do',
+    title: 'Recent breakthroughs in Stem Cell Research',
     date: 'Jun 08,2025',
     desc: 'Learn about the basics of stem cells and their potential in medical research.',
     category: 'Event',

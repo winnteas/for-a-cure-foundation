@@ -11,6 +11,7 @@ import mailIcon from '../assets/icons/mail.svg';
 import externalLinkWhite from '../assets/icons/external-link-white.svg';
 import { Link } from 'react-router-dom';
 import linkedInIcon from '../assets/icons/linkedin.svg';
+import certificate from '../assets/certificate.jpg';
 
 // You can use react-icons or inline SVGs for icons. Here, we'll use inline SVGs for simplicity.
 
@@ -51,6 +52,9 @@ const Footer: React.FC = () => (
           <a href="https://www.instagram.com/foracurefoundation/" className={styles.socialIcon} aria-label="Instagram"><img src={instagramIcon} alt="Instagram" className={styles.socialIcon} /></a>
           <a href="https://x.com/foracure" className={styles.socialIcon} aria-label="X"><img src={xIcon} alt="X" className={styles.socialIcon} /></a>
           <a href="https://www.linkedin.com/company/for-a-cure-foundation/?viewAsMember=true" className={styles.socialIcon} aria-label="LinkedIn"><img src={linkedInIcon} alt="LinkedIn" className={styles.socialIcon} /></a>
+        </div>
+        <div className={styles.contactList + ' smallText'}>
+        <a className={styles.contactItem} href={certificate} target="_blank">Certificate of Registration</a>
         </div>
       </div>
     </div>
