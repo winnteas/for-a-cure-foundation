@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/for-a-cure-foundation/static/css/main.2986952e.css",
-    "main.js": "/for-a-cure-foundation/static/js/main.830c4dce.js",
+    "main.css": "/for-a-cure-foundation/static/css/main.43cb698c.css",
+    "main.js": "/for-a-cure-foundation/static/js/main.a66b248c.js",
     "static/js/453.831e232c.chunk.js": "/for-a-cure-foundation/static/js/453.831e232c.chunk.js",
     "static/media/partner.svg": "/for-a-cure-foundation/static/media/partner.4bec2935c90eacb772f325075de63d9b.svg",
     "static/media/volunteers.svg": "/for-a-cure-foundation/static/media/volunteers.6995009bcdf30991633e1e02609c0c1a.svg",
@@ -18,9 +18,8 @@
     "static/media/angie.png": "/for-a-cure-foundation/static/media/angie.45b246511bd416345c44.png",
     "static/media/mccables.svg": "/for-a-cure-foundation/static/media/mccables.927e80f125986b7475072319c8607a1b.svg",
     "static/media/angie.svg": "/for-a-cure-foundation/static/media/angie.78d8e89408fef8ac45769b152f9a6ea1.svg",
-    "static/media/blank.svg": "/for-a-cure-foundation/static/media/blank.2ab0e0b2993953621293de0e44798d3b.svg",
+    "static/media/certificate.pdf": "/for-a-cure-foundation/static/media/certificate.b36f9ef2773ad805a597.pdf",
     "static/media/damodaron.svg": "/for-a-cure-foundation/static/media/damodaron.f531ca337ad5dcc69012c14b5f9a7000.svg",
-    "static/media/ivica.svg": "/for-a-cure-foundation/static/media/ivica.e3549efe07655551504fa76dd704e2be.svg",
     "static/media/charles.svg": "/for-a-cure-foundation/static/media/charles.eabe35e4fdf289a2c335462a8b58ce65.svg",
     "static/media/edgar.svg": "/for-a-cure-foundation/static/media/edgar.97dacbfda110f6513d7f3c1a09b1fabd.svg",
     "static/media/lions-den-academy.svg": "/for-a-cure-foundation/static/media/lions-den-academy.76b0b98a5e9963c784d77279da1c3633.svg",
@@ -71,12 +70,12 @@
     "static/media/arrow-right.svg": "/for-a-cure-foundation/static/media/arrow-right.2398cc586fa27ae15903daefc5844ed8.svg",
     "static/media/arrow-left.svg": "/for-a-cure-foundation/static/media/arrow-left.eb98317093d1b884cabac4e2475df58e.svg",
     "static/media/dropdown.svg": "/for-a-cure-foundation/static/media/dropdown.b38def64e4b7ec8e112d6a6d9f139deb.svg",
-    "main.2986952e.css.map": "/for-a-cure-foundation/static/css/main.2986952e.css.map",
-    "main.830c4dce.js.map": "/for-a-cure-foundation/static/js/main.830c4dce.js.map",
+    "main.43cb698c.css.map": "/for-a-cure-foundation/static/css/main.43cb698c.css.map",
+    "main.a66b248c.js.map": "/for-a-cure-foundation/static/js/main.a66b248c.js.map",
     "453.831e232c.chunk.js.map": "/for-a-cure-foundation/static/js/453.831e232c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2986952e.css",
-    "static/js/main.830c4dce.js"
+    "static/css/main.43cb698c.css",
+    "static/js/main.a66b248c.js"
   ]
 }
