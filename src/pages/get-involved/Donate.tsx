@@ -7,6 +7,7 @@ import Breadcrumb from '../../components/breadcrumb/Breadcrumb';
 import Button from '../../components/Button';
 import faqIcon from '../../assets/donate/faq.svg';
 import StripeDonationSection from '../../features/donation/StripeDonationSection';
+import certificate from '../../assets/certificate.pdf';
 
 const DonatePage: React.FC = () => { 
   const breadcrumbItems = [
@@ -54,7 +55,7 @@ const DonatePage: React.FC = () => {
             <div className={styles.faqContent}>
               <h4 className={styles.faqQuestion}>Is my donation tax-deductible?</h4>
               <p className={styles.faqAnswer}>
-                Yes, Aussies 4 Cures Foundation (trading as For A Cure Foundation) is a registered charity, and all donations over $2 are tax-deductible in Australia.
+                Yes, Aussies 4 Cures Foundation (trading as For A Cure Foundation) is a <a href={certificate} target="_blank">registered charity</a>, and all donations over $2 are tax-deductible in Australia.
               </p>
             </div>
           </div>
@@ -112,6 +113,7 @@ const DonatePage: React.FC = () => {
 
     {/* Additional Questions Section */}
     <div className={styles.additionalQuestionsSection}>
+      <div className={styles.blueBox}></div>
       <div className={styles.additionalQuestionsContainer}>
         <h3 className={styles.additionalQuestionsTitle}>Have Any Additional Questions?</h3>
         <p className={styles.additionalQuestionsText}>
@@ -121,6 +123,7 @@ const DonatePage: React.FC = () => {
           <Button variant="primary">Get In Touch</Button>
         </Link>
       </div>
+  
     </div>
   </div>
 );

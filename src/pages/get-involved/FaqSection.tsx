@@ -6,19 +6,19 @@ import arrowUp from "../../assets/volunteer/circle-arrow-up.svg";
 const faqs = [
     {
       question: "What kind of volunteer roles are available?",
-      answer: "...",
+      answer: "Fundraising, marketing & social media, partnerships & sponsorships, admin & operations, research support, community ambassadors, and technical help.",
     },
     {
       question: "Do I need any special skills to volunteer?",
-      answer: "...",
+      answer: "No special skills are required; enthusiasm is enough. We’ll provide guidance and any training and support needed.",
     },
     {
       question: "How much time do I need to commit?",
-      answer: "...",
+      answer: "Flexible. Many volunteers give 2-4 hours per week or help at one-off activities or events.",
     },
     {
       question: "Can I volunteer remotely?",
-      answer: "...",
+      answer: "Yes, all roles can be done from home.",
     },
     {
       question: "Will I receive training or support?",

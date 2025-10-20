@@ -373,7 +373,7 @@
 .mobileMenuActions .infoButton {
   flex: 1;
   min-width: 0;
-  padding: 1.2rem 0.5rem;
+  padding: 1rem 0.5rem;
   font-size: 1.2rem;
   border-radius: 0.5rem;
 }
@@ -653,36 +653,42 @@
 
 .mobileDropdownItem .mobileMenuItemContent {
   padding: 1rem 1.5rem 1rem 3rem;
-  color: #205B77;
+  color: var(--primary-blue);
+}
+
+.mobileBottom {
+  background: var(--primary-blue);
+  width: 100%;
+  min-height: 400px;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5rem;
 }
 
 /* Call to Action Buttons Section */
 .mobileMenuActions {
-  background: #205B77;
-  padding: 2rem 1.5rem;
-  display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
+  padding: 4rem;
   align-items: center;
+  justify-content: center;
 }
 
 .mobileMenuActions .infoButton {
-  width: 100%;
   max-width: 200px;
-  padding: 1rem 2rem;
+  padding: 1rem 5rem;
   border: none;
   border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 .mobileMenuActions .donateButton {
-  background: #81C784;
-  color: #205B77;
+  background: #A7F3D0;
+  color: var(--primary-blue);
 }
 
 .mobileMenuActions .donateButton:hover {
@@ -692,8 +698,8 @@
 }
 
 .mobileMenuActions .memberButton {
-  background: #E1BEE7;
-  color: #205B77;
+  background: #E0E7FF;
+  color: var(--primary-blue);
 }
 
 .mobileMenuActions .memberButton:hover {
@@ -704,11 +710,10 @@
 
 /* Social Media Icons Section */
 .mobileMenuSocials {
-  background: #205B77;
   padding: 1.5rem;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: center;
 }
 

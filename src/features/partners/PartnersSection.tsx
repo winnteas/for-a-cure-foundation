@@ -60,7 +60,7 @@ const PartnersSection: React.FC = () => {
           </div>
           <Link to="/get-involved/our-friends">
          <Button variant="primary">View All Friends</Button>
-      </Link>
+        </Link>
           <div className="whiteDivider"></div>
         </div>
       </div>

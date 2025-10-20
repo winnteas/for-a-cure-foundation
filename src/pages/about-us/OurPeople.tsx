@@ -11,22 +11,23 @@ import placeholderImg from '../../assets/people/blank.svg'; // Placeholder for o
 import PageTitleSection from '../../components/PageTitleSection';
 import Breadcrumb from '../../components/breadcrumb/Breadcrumb';
 import linkedInIcon from '../../assets/icons/linkedin-navy.svg';
+import volunteerImg from '../../assets/volunteer/volunteers.svg'
 
 const teamMembers = [
   {
     id: 1,
     name: 'Angie Cleone',
     title: 'Founder and Chair',
-    description: 'Visionary founder dedicated to advancing medical research, Angie leads the Foundation with unwavering passion, strategic insight, and a deep commitment to finding cures and supporting those im...',
+    description: 'Visionary founder dedicated to advancing medical research, Angie leads the Foundation with unwavering passion, strategic insight, and a deep commitment to finding cures.',
     image: angieImg,
     hasMoreInfo: true,
     linkedIn: 'https://www.linkedin.com/in/angie-cleone-2406516/'
   },
   {
     id: 2,
-    name: 'Dr Damodaron Kumar',
+    name: 'Dr Prem Kumar',
     title: 'Non-Executive Director',
-    description: 'With a strong background in clinical research and health innovation, Dr Kumar provides strategic oversight and scientific insight to support the Foundation\'s mission of funding life-changing medical...',
+    description: 'With a strong background in clinical research and health innovation, Dr Kumar provides strategic oversight and scientific insight to support our mission of funding life-changing medical breakthroughs.',
     image: damodaronImg,
     hasMoreInfo: false,
     linkedIn: 'https://www.linkedin.com/in/prem-kumar-damodaran-13b929136/?originalSubdomain=au'
@@ -35,7 +36,7 @@ const teamMembers = [
     id: 3,
     name: 'Dr Charles Galea',
     title: 'Non-Executive Director',
-    description: 'Dr Galea brings academic rigour and research experience to the board, offering valuable guidance on science-led initiatives and ensuring robust governance in support of the Foundation...',
+    description: 'Dr Galea brings academic rigour and research experience, offering valuable guidance on science-led initiatives and ensuring robust governance in support of the Foundation’s purpose.',
     image: charlesImg,
     hasMoreInfo: false,
     linkedIn: 'https://www.linkedin.com/in/charles-galea-data-scientist/'
@@ -43,8 +44,8 @@ const teamMembers = [
   {
     id: 4,
     name: 'Adam Fenech',
-    title: 'Chief Executive Officer',
-    description: 'A seasoned executive and change leader, Adam brings hands-on experience across financial services, innovation, and transformation, guiding the Foundation\'s growth, partnerships, and impact with c...',
+    title: 'Managing Director & CEO',
+    description: 'Adam is a seasoned executive with experience in financial services, innovation, and transformation, driving the Foundation’s growth, partnerships, and impact, with care and compassion.',
     image: adamImg,
     hasMoreInfo: false,
     linkedIn: 'https://www.linkedin.com/in/adam-fenech/'
@@ -53,43 +54,51 @@ const teamMembers = [
     id: 5,
     name: 'Ka Hei (Edgar) Koo',
     title: 'Company Secretary',
-    description: 'Edgar plays a critical role in ensuring the Foundation\'s governance, legal, and compliance obligations are upheld, supporting the board with structured advice, reporting, and operational discipl.',
+    description: 'Edgar ensures the Foundation’s compliance, governance, and reporting obligations are met with professionalism and precision, supporting transparent operations and board effectiveness.',
     image: edgarImg,
     hasMoreInfo: false,
     linkedIn: 'https://www.linkedin.com/in/edgar-koo-04092124/'
   },
   {
     id: 6,
-    name: 'Silvana Martins',
-    title: 'Graphic Designer',
-    description: 'Silvana brings creativity and compassion to the Foundation\'s visual identity, designing impactful graphics and campaign materials that communicate our purpose and inspire supporters to engag...',
-    image: placeholderImg,
-    hasMoreInfo: false
+    name: 'Our Amazing Team of Volunteers',
+    title: '',
+    description: '',
+    image: volunteerImg,
+    hasMoreInfo: false,
   },
-  {
-    id: 7,
-    name: 'Winnie Tan',
-    title: 'Website Developer',
-    description: 'Winnie develops and maintains our digital platform, ensuring the website remains accessible, secure, and user-friendly-supporting our fundraising, research updates, and public engagement efforts....',
-    image: placeholderImg,
-    hasMoreInfo: false
-  },
-  {
-    id: 8,
-    name: 'Ivica Cuncic',
-    title: 'Testing',
-    description: 'Ivica provides essential technical support, ensuring all digital systems and features are thoroughly tested and optimised, helping deliver a smooth and reliable online experience for all users.',
-    image: ivicaImg,
-    hasMoreInfo: false
-  },
-  {
-    id: 9,
-    name: 'Jov Moratalla',
-    title: 'Marketing',
-    description: 'Jov shapes and executes marketing strategies that build awareness, drive campaigns, and connect supporters to our mission-bringing energy and creativity to everything from social medi.',
-    image: placeholderImg,
-    hasMoreInfo: false
-  }
+  // {
+  //   id: 6,
+  //   name: 'Silvana Martins',
+  //   title: 'Graphic Designer',
+  //   description: 'Silvana brings creativity and compassion to the Foundation\'s visual identity, designing impactful graphics and campaign materials that communicate our purpose and inspire supporters to engag...',
+  //   image: placeholderImg,
+  //   hasMoreInfo: false
+  // },
+  // {
+  //   id: 7,
+  //   name: 'Winnie Tan',
+  //   title: 'Website Developer',
+  //   description: 'Winnie develops and maintains our digital platform, ensuring the website remains accessible, secure, and user-friendly-supporting our fundraising, research updates, and public engagement efforts....',
+  //   image: placeholderImg,
+  //   hasMoreInfo: false
+  // },
+  // {
+  //   id: 8,
+  //   name: 'Ivica Cuncic',
+  //   title: 'Testing',
+  //   description: 'Ivica provides essential technical support, ensuring all digital systems and features are thoroughly tested and optimised, helping deliver a smooth and reliable online experience for all users.',
+  //   image: ivicaImg,
+  //   hasMoreInfo: false
+  // },
+  // {
+  //   id: 9,
+  //   name: 'Jov Moratalla',
+  //   title: 'Marketing',
+  //   description: 'Jov shapes and executes marketing strategies that build awareness, drive campaigns, and connect supporters to our mission-bringing energy and creativity to everything from social medi.',
+  //   image: placeholderImg,
+  //   hasMoreInfo: false
+  // }
 ];
 
 const breadcrumbItems = [

@@ -6,6 +6,7 @@ import hamburgerMenu from '../assets/icons/hamburger-menu.svg';
 import closeButton from '../assets/icons/close-button.svg';
 import facebookIcon from '../assets/icons/facebook.svg';
 import instagramIcon from '../assets/icons/instagram.svg';
+import linkedInIcon from '../assets/icons/linkedin.svg';
 import xIcon from '../assets/icons/x.svg';
 
 const navLinks = [
@@ -19,7 +20,7 @@ const navLinks = [
   { label: 'Get Involved', hasDropdown: true, dropdownItems: [
     { label: 'Donate', path: '/get-involved/donate' },
     { label: 'Volunteer', path: '/get-involved/volunteer' },
-    { label: 'Our People', path: '/get-involved/our-friends' }
+    { label: 'Our Friends', path: '/get-involved/our-friends' }
   ]},
   { label: 'News', path: '/news' },
   { label: 'Contact', path: '/contact' },
@@ -131,23 +132,41 @@ const MobileNavbar: React.FC = () => {
                 {navLinks.map(renderNavItem)}
               </div>
               
-              {/* Call to Action Buttons Section */}
-              <div className={styles.mobileMenuActions}>
-                <button className={`${styles.infoButton} ${styles.donateButton}`}>Donate</button>
-                <button className={`${styles.infoButton} ${styles.memberButton}`}>Be a Member</button>
-              </div>
-              
-              {/* Social Media Icons Section */}
-              <div className={styles.mobileMenuSocials}>
-                <a href="#" className={styles.socialIcon} aria-label="Facebook">
-                  <img src={facebookIcon} alt="Facebook" />
-                </a>
-                <a href="#" className={styles.socialIcon} aria-label="Instagram">
-                  <img src={instagramIcon} alt="Instagram" />
-                </a>
-                <a href="#" className={styles.socialIcon} aria-label="X">
-                  <img src={xIcon} alt="X" />
-                </a>
+              <div className={styles.mobileBottom}>
+                {/* Call to Action Buttons Section */}
+                <div className={styles.mobileMenuActions}>
+                  <Link to="/get-involved/donate"  style={{
+    textDecoration: "none",
+    color: "inherit",
+  }}
+  onClick={closeMenu}>
+                    <button className={`${styles.infoButton} ${styles.donateButton}`}>Donate</button>
+                  </Link>
+                  <Link to="/get-involved/volunteer"
+                   style={{
+                    textDecoration: "none",
+                    color: "inherit",
+                  }}
+                  onClick={closeMenu}>
+                  <button className={`${styles.infoButton} ${styles.memberButton}`}>Be a Member</button>
+                  </Link>
+                </div>
+                
+                {/* Social Media Icons Section */}
+                <div className={styles.mobileMenuSocials}>
+                  <a href="https://www.facebook.com/stemcells.foracure/" className={styles.socialIcon} aria-label="Facebook">
+                    <img src={facebookIcon} alt="Facebook" />
+                  </a>
+                  <a href="https://www.instagram.com/foracurefoundation" className={styles.socialIcon} aria-label="Instagram">
+                    <img src={instagramIcon} alt="Instagram" />
+                  </a>
+                  <a href="https://x.com/foracure" className={styles.socialIcon} aria-label="X">
+                    <img src={xIcon} alt="X" />
+                  </a>
+                  <a href="https://www.linkedin.com/company/for-a-cure-foundation/?viewAsMember=true" className={styles.socialIcon} aria-label="X">
+                    <img src={linkedInIcon} alt="linkedIn" />
+                  </a>
+                </div>
               </div>
             </div>
         </div>
