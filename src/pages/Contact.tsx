@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Contact.module.css';
 import { Link } from 'react-router-dom';
 import emailIcon from '../assets/contact/email.svg';
@@ -8,18 +8,40 @@ import socialsIcon from '../assets/contact/socials.svg';
 import PageTitleSection from '../components/PageTitleSection';
 import Button from '../components/Button';
 import Breadcrumb from '../components/breadcrumb/Breadcrumb';
+import { sendContactEmail } from "../api/contact";
+import facebookIcon from '../assets/icons/facebook.svg';
+import instagramIcon from '../assets/icons/instagram.svg';
+import xIcon from '../assets/icons/x.svg';
+import linkedInIcon from '../assets/icons/linkedin.svg';
 
 const ContactPage: React.FC = () => {
   const breadcrumbItems = [
     { label: 'Home', link: '/' },
     { label: 'Contact', link: ''}
   ]
+
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("Sending... Please wait...");
+
+    try {
+      const response = await sendContactEmail(email, message);
+      setStatus("Email sent successfully!");
+    } catch (err: any) {
+      setStatus(`Error: ${err.message}`);
+    }
+  };
+  
   return (
   
   <div className={styles.root}>
     {/* Hero/Banner Section */}
     <PageTitleSection title="Contact" />
-
+    <div className={styles.bg}>
     <Breadcrumb items={breadcrumbItems}></Breadcrumb>
 
     {/* Main Content Area */}
@@ -31,6 +53,8 @@ const ContactPage: React.FC = () => {
           <p className={styles.sectionDescription}>
             Whether it's a question, idea, or message of support, we'd love to hear from you.
           </p>
+
+          <div className={styles.contactBottom} >
           
           <div className={styles.contactGrid}>
             <div className={styles.contactBox}>
@@ -65,30 +89,19 @@ const ContactPage: React.FC = () => {
               <div className={styles.contactDetails}>
                 <h4 className={styles.contactLabel}>Socials</h4>
                 <div className={styles.socialIcons}>
-                  <a href="www.facebook.com" className={styles.socialIcon} aria-label="Facebook">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                    </svg>
-                  </a>
-                  <a href="www.instagram.com" className={styles.socialIcon} aria-label="Instagram">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.895 3.708 13.744 3.708 12.447s.49-2.448 1.418-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.928.875 1.418 2.026 1.418 3.323s-.49 2.448-1.418 3.323c-.875.807-2.026 1.297-3.323 1.297zm7.718-1.297c-.875.807-2.026 1.297-3.323 1.297s-2.448-.49-3.323-1.297c-.928-.875-1.418-2.026-1.418-3.323s.49-2.448 1.418-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.928.875 1.418 2.026 1.418 3.323s-.49 2.448-1.418 3.323z"/>
-                    </svg>
-                  </a>
-                  <a href="www.linkedin.com" className={styles.socialIcon} aria-label="LinkedIn">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                  </a>
+                           <a href="https://www.facebook.com/stemcells.foracure/" className={styles.socialIcon} aria-label="Facebook"><img src={facebookIcon} alt="Facebook" className={styles.socialIcon} /></a>
+          <a href="https://www.instagram.com/foracurefoundation/" className={styles.socialIcon} aria-label="Instagram"><img src={instagramIcon} alt="Instagram" className={styles.socialIcon} /></a>
+          <a href="https://x.com/foracure" className={styles.socialIcon} aria-label="X"><img src={xIcon} alt="X" className={styles.socialIcon} /></a>
+          <a href="https://www.linkedin.com/company/for-a-cure-foundation/?viewAsMember=true" className={styles.socialIcon} aria-label="LinkedIn"><img src={linkedInIcon} alt="LinkedIn" className={styles.socialIcon} /></a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+
 
         {/* Right Side - Contact Form */}
         <div className={styles.contactForm}>
-          <form className={styles.form}>
+          <form  onSubmit={handleSubmit} className={styles.form}>
             <div className={styles.formGroup}>
               <label htmlFor="email" className={styles.formLabel}>Email</label>
               <input
@@ -96,6 +109,8 @@ const ContactPage: React.FC = () => {
                 id="email"
                 name="email"
                 defaultValue="example@gmail.com"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
                 className={styles.formInput}
                 required
               />
@@ -108,6 +123,8 @@ const ContactPage: React.FC = () => {
                 name="message"
                 placeholder="Your message..."
                 className={styles.formTextarea}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 rows={6}
                 required
               ></textarea>
@@ -117,13 +134,18 @@ const ContactPage: React.FC = () => {
             <button type="submit" className={styles.submitButton}>
               Send
             </button>
+
+            {status && <p className={styles.formLabel}>{status}</p>}
           </form>
         </div>
+        </div>
       </div>
+    </div>
+    </div>
     </div>
   </div>
 
 );
 };
 
-export default ContactPage; 
+export default ContactPage;

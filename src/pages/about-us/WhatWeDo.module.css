@@ -24,38 +24,6 @@
   line-height: 1.2;
 }
 
-
-
-.breadcrumbs {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 2rem;
-}
-
-.breadcrumbLink {
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.breadcrumbLink:hover {
-  color: #FF8A65;
-}
-
-.breadcrumbSeparator {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.breadcrumbCurrent {
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 600;
-}
-
-
-
 .discoverButton {
   background: #FF8A65;
   color: #fff;
@@ -82,10 +50,12 @@
 /* Science That Transforms Lives Section */
 .scienceSection {
   background: var(--primary-blue);
+   position: relative;
   /* padding: 4rem 0; */
 }
 
 .scienceContainer {
+   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;

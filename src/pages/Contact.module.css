@@ -49,16 +49,27 @@
 
 /* Main Content Area */
 .mainContent {
-  max-width: 1200px;
-  margin: 0 auto 4rem auto;
-  padding: 0 2rem;
+  /* max-width: 1200px; */
+  padding: 2rem 6rem 6rem 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  width: auto;
+}
+
+.bg {
+  background-color: #F1F5F9;
+  height: 100%;
+  width: 100%;
+  padding-top: 1.5rem;
+
 }
 
 .contentContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: start;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* width: 100%; */
 }
 
 /* Contact Information Section */
@@ -78,8 +89,16 @@
 .sectionDescription {
   font-size: 1.2rem;
   color: #666;
-  margin-bottom: 3rem;
+  margin-bottom: 8rem;
   line-height: 1.6;
+}
+
+.contactBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20rem;
+  flex-direction: row;
 }
 
 .contactBox {
@@ -91,6 +110,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  justify-content: center;
 }
 
 .contactItem {
@@ -138,12 +158,13 @@
   display: flex;
   gap: 1rem;
   align-items: center;
+  padding-top: 1rem;
 }
 
 .socialIcon {
-  width: 24px;
-  height: 24px;
-  color: #666;
+  width: 20px;
+  height: 20px;
+  color: var(--primary-blue);
   transition: color 0.3s ease;
   display: flex;
   align-items: center;
@@ -161,6 +182,7 @@
   padding: 2.5rem;
   box-shadow: 0 4px 20px rgba(32, 91, 119, 0.1);
   border: 1px solid #e0e0e0;
+  width: 30rem;
 }
 
 .form {
@@ -317,6 +339,7 @@
   
   .contactForm {
     padding: 2rem;
+    width: 20rem;
   }
   
   .newsletterContent {
@@ -331,6 +354,11 @@
   
   .newsletterForm {
     max-width: 100%;
+  }
+
+  .contactBottom {
+    flex-direction: column;
+    gap: 10rem;
   }
 }
 
