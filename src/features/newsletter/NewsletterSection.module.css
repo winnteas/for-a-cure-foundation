@@ -23,6 +23,10 @@
   justify-content: flex-start;
 }
 
+.formLabel {
+  color: #fff;
+}
+
 .emailInput {
   border: 1px solid var(--primary-green);
   padding: 0.5rem 1rem;

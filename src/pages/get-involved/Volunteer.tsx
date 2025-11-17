@@ -8,6 +8,10 @@ import Breadcrumb from '../../components/breadcrumb/Breadcrumb';
 import arrowDown from "../../assets/volunteer/circle-arrow-down.svg"
 import arrowUp from "../../assets/volunteer/circle-arrow-up.svg"
 import FaqSection from './FaqSection';
+
+import { sendTeamUpEmail } from '../../api/team-up';
+
+
 const VolunteerPage: React.FC = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -17,6 +21,21 @@ const VolunteerPage: React.FC = () => {
     message: ''
   });
 
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("Sending... Please wait...");
+
+    try {
+       const { firstName, lastName, email, phone, message } = formData;
+      const response = await sendTeamUpEmail(firstName, lastName, email, phone, message );
+      setStatus("Email sent successfully!");
+    } catch (err: any) {
+      setStatus(`Error: ${err.message}`);
+    }
+  };
+  
   const location = useLocation();
 
   useEffect(() => {
@@ -36,12 +55,6 @@ const VolunteerPage: React.FC = () => {
       ...prev,
       [name]: value
     }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
   };
 
   const breadcrumbItems = [
@@ -218,6 +231,7 @@ const VolunteerPage: React.FC = () => {
             <div className={styles.formActions}>
             <Button variant="primary">Send</Button>
             </div>
+            {status && <p className={styles.formLabel}>{status}</p>}
           </form>
         </div>
       </div>

@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import styles from './NewsletterSection.module.css';
 import Button from '../../components/Button';
-import { sendContactEmail } from '../../api/contact';
-[]
+import { subscribe } from '../../api/subscribe'
+
 const NewsletterSection: React.FC = () => {
 
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const message = "{email} would like "
   const [status, setStatus] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus("Sending... Please wait...");
+    setStatus("Subscribing... Please wait...");
 
     try {
-      const response = await sendContactEmail(email, message);
-      setStatus("Email sent successfully!");
+      const response = await subscribe(email);
+      setStatus("You are now subscribed!");
     } catch (err: any) {
       setStatus(`Error: ${err.message}`);
     }
@@ -24,8 +24,13 @@ const NewsletterSection: React.FC = () => {
   <section className={styles.section}>
     <h2 className={styles.sectionTitle}>Subscribe To Our Newsletter!</h2>
     <form className={styles.form}>
-      <input type="email" placeholder="example@gmail.com" className={styles.emailInput} />
+      <input 
+      type="email" 
+      placeholder="example@gmail.com" 
+      className={styles.emailInput}
+      value={email} />
       <Button type="submit" variant="primary">Subscribe</Button>
+      {status && <p className={styles.formLabel}>{status}</p>}
     </form>
   </section>
 
