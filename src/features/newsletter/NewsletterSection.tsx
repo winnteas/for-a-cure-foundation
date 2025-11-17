@@ -6,7 +6,6 @@ import { subscribe } from '../../api/subscribe'
 const NewsletterSection: React.FC = () => {
 
   const [email, setEmail] = useState("");
-  const message = "{email} would like "
   const [status, setStatus] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -23,15 +22,18 @@ const NewsletterSection: React.FC = () => {
  return (
   <section className={styles.section}>
     <h2 className={styles.sectionTitle}>Subscribe To Our Newsletter!</h2>
-    <form className={styles.form}>
+    <form  onSubmit={handleSubmit} className={styles.form}>
       <input 
       type="email" 
       placeholder="example@gmail.com" 
       className={styles.emailInput}
-      value={email} />
+       onChange={(e) => setEmail(e.target.value)}
+      value={email} 
+       required/>
       <Button type="submit" variant="primary">Subscribe</Button>
-      {status && <p className={styles.formLabel}>{status}</p>}
+      
     </form>
+    {status && <p className={styles.formLabel}>{status}</p>}
   </section>
 
 )}
