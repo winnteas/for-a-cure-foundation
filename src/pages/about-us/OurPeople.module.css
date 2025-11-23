@@ -73,11 +73,12 @@
   transition: transform 0.2s, box-shadow 0.2s;
   overflow: hidden;
   border: 1px solid #CBD5E1;
-}
 
 .imageWrapper {
   width: 100%;
   overflow: hidden;
+  max-height: 230px;
+}
 }
 
 .textWrapper {
