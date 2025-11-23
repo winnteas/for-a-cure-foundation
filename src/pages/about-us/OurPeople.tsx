@@ -158,7 +158,9 @@ const OurPeople: React.FC = () => (
     <div className={styles.volunteerSection}>
       <h3 className={styles.volunteerTitle}>Volunteer For A Cure</h3>
       <p className={styles.volunteerDescription}>
-        Are you passionate about making a difference? For A Cure Foundation is seeking dedicated volunteers to support our mission in advancing stem cell research to find cures Join us and help drive hope, healing, and health breakthroughs.
+        Are you passionate about making a difference? For A Cure Foundation is seeking dedicated
+volunteers to support our mission in advancing scientific research to find cures Join us and
+help drive hope, healing, and health breakthroughs.
       </p>
       <button className={styles.joinUsButton}>Join Us</button>
     </div>

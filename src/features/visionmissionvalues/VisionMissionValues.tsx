@@ -13,17 +13,17 @@ interface Card {
 const cards: Card[] = [
   {
     title: 'Our Vision',
-    text: 'To advance stem cell breakthroughs by funding vital research, building global partnerships, securing long-term investment, supporting innovation, and engaging diverse communities in advancing regenerative medicine.',
+    text: 'To advance scientific breakthroughs by funding vital research, building global partnerships, securing long term investment, supporting innovation, and engaging diverse communities in advancing regenerative medicine.',
     icon: visionIcon
   },
   {
     title: 'Our Mission',
-    text: 'To fund and foster stem cell research and deliver promising treatments and cures, using scientific teams, community, and donors, accelerating health outcomes and hope for generations to come.',
+    text: 'A world where research delivers transformative treatments and cures, uniting scientists, communities, and funders to create lasting health outcomes and hope for generations to come.',
     icon: missionIcon
   },
   {
     title: 'Our Values',
-    text: 'We value innovation, collaboration, and inclusivity in our mission to save lives. Guided by science, integrity, and care, we strive to make a difference responsibly and effectively.',
+    text: 'We value innovation, collaboration, and transformational impact, turning science into cures. Guided by integrity, inclusivity, and agility, we advance scientific breakthroughs responsibly and effectively.',
     icon: valuesIcon
   }
 ];

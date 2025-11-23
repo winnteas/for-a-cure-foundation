@@ -29,9 +29,9 @@ const WhatWeDoSection: React.FC = () => {
     <Breadcrumb items={breadcrumbItems} whiteLinks={true}></Breadcrumb>
           <h2 className={styles.scienceTitle}>Science That Transforms Lives</h2>
           <p className={styles.scienceDescription}>
-            We focus on stem cell research and regenerative medicine to find cures for life-threatening diseases. 
-            Our foundation is dedicated to advancing scientific breakthroughs that can transform the lives of patients 
-            and their families through innovative medical solutions.
+            We focus on scientific research and regenerative medicine to find cures for life-threatening
+diseases. Our foundation is dedicated to advancing scientific breakthroughs that can
+transform the lives of patients and their families through innovative medical solutions.
           </p>
           <Link to="/research">
             <Button variant="primary">Discover Our Research</Button>
@@ -55,9 +55,9 @@ const WhatWeDoSection: React.FC = () => {
         <div className={styles.donationsRight}>
           <h2 className={styles.donationsTitle}>Donations That Generate Discoveries</h2>
           <p className={styles.donationsDescription}>
-            Your donations fund cutting-edge stem cell research and are directed to laboratories where they drive 
-            significant advances. Every contribution helps accelerate the development of life-saving treatments and 
-            brings us closer to finding cures for devastating diseases.
+Your donations fund cutting-edge scientific research and are directed to laboratories where
+they drive significant advances. Every contribution helps accelerate the development of life-
+saving treatments and brings us closer to finding cures for devastating diseases.
           </p>
           <Link to="/get-involved/donate">
             <Button variant="primary">Donate Now</Button>
