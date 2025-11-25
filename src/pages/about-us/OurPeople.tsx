@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './OurPeople.module.css';
 import { Link } from 'react-router-dom';
-import angieImg from '../../assets/people/angie.png';
+import angieImg from '../../assets/people/angie.svg';
 import adamImg from '../../assets/people/adam.svg';
 import charlesImg from '../../assets/people/charles.svg';
 import edgarImg from '../../assets/people/edgar.svg';
