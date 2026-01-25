@@ -22,5 +22,5 @@ A React TypeScript application for the For A Cure Foundation website.
    npm run build
    ```
 
-2. Select 'Update from Remote' and 'Deploy Head Commit' on cPanel under Git Version Control
+2. Select 'Update from Remote' and 'Deploy Head Commit' on cPanel under the Git Version Control application
 
