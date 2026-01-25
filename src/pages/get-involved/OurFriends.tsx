@@ -13,6 +13,9 @@ import morgan from '../../assets/sponsors/morgan.svg';
 import alchemy from '../../assets/sponsors/alchemy-partners.svg';
 import fellia from '../../assets/sponsors/fellia-melas-gallery.svg';
 import lionsden from '../../assets/sponsors/lions-den-academy.svg';
+import distinctly from '../../assets/sponsors/distinctly.png';
+import avantevo from '../../assets/sponsors/avantevo.jpg'
+
 import Breadcrumb from '../../components/breadcrumb/Breadcrumb';
 
 const OurFriendsPage: React.FC = () => {
@@ -25,9 +28,12 @@ const OurFriendsPage: React.FC = () => {
     { src: jfk, alt: 'JFK Automation' },
     { src: tafe, alt: 'TAFE' },
     { src: morgan, alt: 'Morgan Boxing' },
-    { src: alchemy, alt: 'Alchemy Partners' },
+    // { src: alchemy, alt: 'Alchemy Partners' },
     { src: fellia, alt: 'Fellia Melas Gallery' },
     { src: lionsden, alt: "Lion's Den Academy" },
+      { src: avantevo, alt: "Avantevo" },
+  { src: distinctly, alt: "Distinctly" },
+    
   ];
 
   const breadcrumbItems = [

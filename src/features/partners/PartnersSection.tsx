@@ -13,30 +13,41 @@ import fellia from '../../assets/sponsors/fellia-melas-gallery.svg';
 import lionsden from '../../assets/sponsors/lions-den-academy.svg';
 import arrowLeft from '../../assets/sponsors/arrow-left.svg';
 import arrowRight from '../../assets/sponsors/arrow-right.svg';
+import distinctly from '../../assets/sponsors/distinctly.png';
+import avantevo from '../../assets/sponsors/avantevo.jpg'
 
 import PartnerWithUs from './PartnerWithUs';
 import { Link } from 'react-router-dom';
 
 const sponsors = [
-  { src: sunbury, alt: 'Sunbury Primary School' },
+  // { src: sunbury, alt: 'Sunbury Primary School' },
   { src: twogb, alt: '2GB Sydney' },
   { src: doyles, alt: 'Doyles' },
   { src: mccables, alt: 'MC Cables' },
   { src: jfk, alt: 'JFK Automation' },
   { src: tafe, alt: 'TAFE' },
   { src: morgan, alt: 'Morgan Boxing' },
-  { src: alchemy, alt: 'Alchemy Partners' },
+  // { src: alchemy, alt: 'Alchemy Partners' },
   { src: fellia, alt: 'Fellia Melas Gallery' },
   { src: lionsden, alt: "Lion's Den Academy" },
+  { src: avantevo, alt: "Avantevo" },
+  { src: distinctly, alt: "Distinctly" },
+
 ];
 
 const PartnersSection: React.FC = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
 
-  const scrollByAmount = (amount: number) => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: amount, behavior: 'smooth' });
-    }
+  const scrollByItems = (count: number) => {
+    const container = carouselRef.current;
+    if (!container) return;
+    const children = Array.from(container.children) as HTMLElement[];
+    if (children.length === 0) return;
+    const firstRect = children[0].getBoundingClientRect();
+    const computed = window.getComputedStyle(container);
+    const gap = parseFloat((computed.gap as string) || '0') || 0;
+    const itemWidth = firstRect.width + gap;
+    container.scrollBy({ left: itemWidth * count, behavior: 'smooth' });
   };
 
   return (
@@ -46,7 +57,7 @@ const PartnersSection: React.FC = () => {
         <div className="whiteDivider"></div>
         <div className={styles.bottomContainer}>
           <div className={styles.partnersCarouselWrapper}>
-            <button aria-label="Scroll sponsors left" className={styles.arrow + ' ' + styles.carouselArrowLeft} onClick={() => scrollByAmount(-300)}>
+            <button aria-label="Scroll sponsors left" className={styles.arrow + ' ' + styles.carouselArrowLeft} onClick={() => scrollByItems(-1)}>
             <img src={arrowLeft} alt="Left arrow"/>
             </button>
             <div className={styles.partnersCarousel} ref={carouselRef} style={{ overflowX: 'auto', scrollBehavior: 'smooth', scrollbarWidth: 'none' }}>
@@ -54,7 +65,7 @@ const PartnersSection: React.FC = () => {
                 <img key={i} src={s.src} alt={s.alt} className={styles.partnerLogoImg} />
               ))}
             </div>
-            <button aria-label="Scroll sponsors right" className={styles.arrow + ' ' + styles.carouselArrowRight} onClick={() => scrollByAmount(-300)}>
+            <button aria-label="Scroll sponsors right" className={styles.arrow + ' ' + styles.carouselArrowRight} onClick={() => scrollByItems(1)}>
             <img src={arrowRight} alt="Right arrow"/>
             </button>
           </div>

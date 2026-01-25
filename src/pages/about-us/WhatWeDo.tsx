@@ -56,8 +56,7 @@ transform the lives of patients and their families through innovative medical so
           <h2 className={styles.donationsTitle}>Donations That Generate Discoveries</h2>
           <p className={styles.donationsDescription}>
 Your donations fund cutting-edge scientific research and are directed to laboratories where
-they drive significant advances. Every contribution helps accelerate the development of life-
-saving treatments and brings us closer to finding cures for devastating diseases.
+they drive significant advances. Every contribution helps accelerate the development of life-saving treatments and brings us closer to finding cures for devastating diseases.
           </p>
           <Link to="/get-involved/donate">
             <Button variant="primary">Donate Now</Button>

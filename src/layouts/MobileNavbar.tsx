@@ -154,16 +154,16 @@ const MobileNavbar: React.FC = () => {
                 
                 {/* Social Media Icons Section */}
                 <div className={styles.mobileMenuSocials}>
-                  <a href="https://www.facebook.com/stemcells.foracure/" className={styles.socialIcon} aria-label="Facebook">
+                  <a href="https://www.facebook.com/stemcells.foracure/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Facebook">
                     <img src={facebookIcon} alt="Facebook" />
                   </a>
-                  <a href="https://www.instagram.com/foracurefoundation" className={styles.socialIcon} aria-label="Instagram">
+                  <a href="https://www.instagram.com/foracurefoundation" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Instagram">
                     <img src={instagramIcon} alt="Instagram" />
                   </a>
-                  <a href="https://x.com/foracure" className={styles.socialIcon} aria-label="X">
+                  <a href="https://x.com/foracure" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="X">
                     <img src={xIcon} alt="X" />
                   </a>
-                  <a href="https://www.linkedin.com/company/for-a-cure-foundation/?viewAsMember=true" className={styles.socialIcon} aria-label="X">
+                  <a href="https://www.linkedin.com/company/for-a-cure-foundation/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="X">
                     <img src={linkedInIcon} alt="linkedIn" />
                   </a>
                 </div>

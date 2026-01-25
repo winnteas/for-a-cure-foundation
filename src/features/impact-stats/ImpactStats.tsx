@@ -12,7 +12,7 @@ const stats = [
   {
     label: 'Raising',
     value: '$15M+',
-    desc: 'To directly fund live-saving research.',
+    desc: 'To directly fund life-saving research.',
     icon: moneyIcon,
     alt: 'Money',
     image: fundsPhoto,
