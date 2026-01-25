@@ -14,12 +14,13 @@ A React TypeScript application for the For A Cure Foundation website.
    npm start
    ```
 
-3. **Build for production:**
+
+## Deploy
+
+1. Build for production and then push all changes
    ```bash
    npm run build
    ```
 
-4. **Run tests:**
-   ```bash
-   npm test
-   ```
+2. Select 'Update from Remote' and 'Deploy Head Commit' on cPanel under Git Version Control
+
