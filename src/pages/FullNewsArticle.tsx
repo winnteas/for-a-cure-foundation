@@ -135,7 +135,7 @@ const NewsPage: React.FC = () => (
               <div className={styles.cellsVisualization}></div>
             </div>
             <div className={styles.cardContent}>
-              <div className={styles.cardCategory} style={{backgroundColor: '#4CAF50'}}>Categoria</div>
+              <div className={styles.cardCategory} style={{backgroundColor: '#4CAF50'}}>Categories</div>
               <h3 className={styles.cardTitle}>Stem cells: What they are and what they do</h3>
               <div className={styles.cardDate}>Jun 08, 2025</div>
               <Link to="#" className={styles.readMoreLink}>

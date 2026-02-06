@@ -7,7 +7,7 @@ interface NewsCardProps {
   date: string;
   desc: string;
   category: string;
-  categoryType: 'categoria' | 'donate' | 'event';
+  categoryType: 'categories' | 'donate' | 'events';
   image: string;
 }
 

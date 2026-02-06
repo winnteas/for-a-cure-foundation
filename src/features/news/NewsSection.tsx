@@ -12,7 +12,7 @@ interface NewsItem {
   date: string;
   desc: string;
   category: string;
-  categoryType: 'categoria' | 'donate' | 'event';
+  categoryType: 'categories' | 'donate' | 'events';
   image: string;
 }
 
@@ -21,8 +21,8 @@ const news: NewsItem[] = [
     title: 'Stem cells: What they are and what they do',
     date: 'Jun 08,2025',
     desc: 'Learn about the basics of stem cells and their potential in medical research.',
-    category: 'Categoria',
-    categoryType: 'categoria',
+    category: 'Categories',
+    categoryType: 'categories',
     image: newsThumbnail1
   },
   {
@@ -37,8 +37,8 @@ const news: NewsItem[] = [
     title: 'Recent breakthroughs in Stem Cell Research',
     date: 'Jun 08,2025',
     desc: 'Learn about the basics of stem cells and their potential in medical research.',
-    category: 'Event',
-    categoryType: 'event',
+    category: 'Events',
+    categoryType: 'events',
     image: newsThumbnail3
   }
 ];
