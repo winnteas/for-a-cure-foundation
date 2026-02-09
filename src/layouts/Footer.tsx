@@ -26,7 +26,7 @@ const Footer: React.FC = () => (
         <div className={styles.orgInfo}>
           Aussies 4 Cures, trading as For A Cure Foundation, is an ATO-registered charity, dedicated to advancing the prevention or control of diseases in humans, and promoting meaningful health outcomes.
          <br/><br/> All donations over $2 are tax-deductible.
-         <br/><br/> Charitable Fundraising Authority No. CFN/27883.
+         <br/> Charitable Fundraising Authority No. CFN/27883.
         
         </div>
       </div>
