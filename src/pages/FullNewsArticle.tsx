@@ -136,7 +136,7 @@ const NewsPage: React.FC = () => (
             </div>
             <div className={styles.cardContent}>
               <div className={styles.cardCategory} style={{backgroundColor: '#4CAF50'}}>Categories</div>
-              <h3 className={styles.cardTitle}>Stem cells: What they are and what they do</h3>
+              <h3 className={styles.cardTitle}>Stem cells: What They are and What They do</h3>
               <div className={styles.cardDate}>Jun 08, 2025</div>
               <Link to="#" className={styles.readMoreLink}>
                 Read More
@@ -153,7 +153,7 @@ const NewsPage: React.FC = () => (
             </div>
             <div className={styles.cardContent}>
               <div className={styles.cardCategory} style={{backgroundColor: '#FF8A65'}}>Donate</div>
-              <h3 className={styles.cardTitle}>Stem cells: What they are and what they do</h3>
+              <h3 className={styles.cardTitle}>The Gift of Giving: Why Donating Feels so Good</h3>
               <div className={styles.cardDate}>Jun 08, 2025</div>
               <Link to="#" className={styles.readMoreLink}>
                 Read More
@@ -170,7 +170,7 @@ const NewsPage: React.FC = () => (
             </div>
             <div className={styles.cardContent}>
               <div className={styles.cardCategory} style={{backgroundColor: '#E91E63'}}>Event</div>
-              <h3 className={styles.cardTitle}>Stem cells: What they are and what they do</h3>
+              <h3 className={styles.cardTitle}>Get Involved: Make an Impact</h3>
               <div className={styles.cardDate}>Jun 08, 2025</div>
               <Link to="#" className={styles.readMoreLink}>
                 Read More
