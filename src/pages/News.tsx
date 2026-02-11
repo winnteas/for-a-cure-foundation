@@ -9,7 +9,7 @@ import thumb3 from '../assets/news-thumbnails/news-thumbnail-3.svg';
 import Breadcrumb from '../components/breadcrumb/Breadcrumb';
 
 const cards = [
-  { title: 'Stem cells: What They Are and What They Do', date: 'Jun 08,2025', desc: '', category: 'Categories', categoryType: 'categories' as const, image: thumb1 },
+  { title: 'Stem Cells: What They Are and What They Do', date: 'Jun 08,2025', desc: '', category: 'Categories', categoryType: 'categories' as const, image: thumb1 },
   { title: 'The Gift of Giving: Why Donating Feels so Good', date: 'Jun 08,2025', desc: '', category: 'Donate', categoryType: 'donate' as const, image: thumb2 },
   { title: 'Get involved: Make an Impact', date: 'Jun 08,2025', desc: '', category: 'Events', categoryType: 'events' as const, image: thumb3 },
   { title: 'The Power of Volunteering: Why Giving Your Time Matters', date: 'Jun 08,2025', desc: '', category: 'Categories', categoryType: 'categories' as const, image: thumb1 },

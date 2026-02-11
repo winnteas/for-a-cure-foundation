@@ -18,7 +18,7 @@ interface NewsItem {
 
 const news: NewsItem[] = [
   {
-    title: 'Stem cells: What They Are and What They Do',
+    title: 'Stem Cells: What They Are and What They Do',
     date: 'Jun 08,2025',
     desc: 'Learn about the basics of stem cells and their potential in medical research.',
     category: 'Categories',
