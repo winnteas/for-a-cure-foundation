@@ -1,0 +1,23 @@
+.loadingMessage,
+.errorMessage,
+.emptyMessage {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
+
+.loadingMessage {
+  color: var(--primary-blue);
+}
+
+.errorMessage {
+  color: #dc2626;
+  background-color: #fee2e2;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.emptyMessage {
+  color: #6b7280;
+}

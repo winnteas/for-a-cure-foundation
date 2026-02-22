@@ -17,6 +17,8 @@ import DonatePage from './pages/get-involved/Donate';
 import NewsPage from './pages/News';
 import VolunteerPage from './pages/get-involved/Volunteer';
 import OurFriendsPage from './pages/get-involved/OurFriends';
+import LoginPage from './pages/admin/login/Login';
+import AdminNewsPage from './pages/admin/news/News';
 import './App.css';
 import ScrollToTop from './components/ScrollToTop';
 import StripeDonationSection from './features/donation/StripeDonationSection';
@@ -53,6 +55,8 @@ const App: React.FC = () => {
           <Route path="volunteer" element={<VolunteerPage />} />
           <Route path="our-friends" element={<OurFriendsPage />} />
         </Route>
+        <Route path="/admin/login" element={<LoginPage />} />
+        <Route path="/admin/news" element={<AdminNewsPage />} />
         <Route path="/news" element={<NewsPage />} />
       </Routes>
       <Footer />

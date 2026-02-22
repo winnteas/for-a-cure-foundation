@@ -1,0 +1,105 @@
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import styles from '../../../features/news/NewsSection.module.css';
+import adminStyles from './News.module.css';
+import EditableNewsCard from '../../../components/EditableNewsCard';
+
+interface NewsItem {
+  id?: string;
+  title: string;
+  date: string;
+  desc: string;
+  category: string;
+  categoryType: 'categories' | 'donate' | 'events';
+  image: string;
+}
+
+const News: React.FC = () => {
+  const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        setLoading(true);
+        // TODO: Replace with actual backend API endpoint
+        const response = await fetch('/api/news');
+        if (!response.ok) {
+          throw new Error('Failed to fetch news');
+        }
+        const data = await response.json();
+        setNewsItems(data);
+      } catch (err) {
+        let errorMessage = err instanceof Error ? err.message : 'An error occurred';
+        // Check if it's a JSON parsing error (usually means unauthorized/HTML response)
+        if (errorMessage.includes('Unexpected token')) {
+          errorMessage = 'User not authenticated, please <link>login here</link>';
+        }
+        setError(errorMessage);
+        console.error('Error fetching news:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchNews();
+  }, []);
+
+  const handleEdit = (id?: string) => {
+    console.log('Edit news item:', id);
+    // TODO: Implement edit functionality
+  };
+
+  const handleDelete = (id?: string) => {
+    console.log('Delete news item:', id);
+    // TODO: Implement delete functionality
+    setNewsItems(newsItems.filter((item) => item.id !== id));
+  };
+
+  return (
+    <div className={styles.section}>
+      <div className={styles.container}>
+        <h2 className="sectionTitle largeText">Admin News Management</h2>
+
+        {loading && <div className={adminStyles.loadingMessage}>Loading news...</div>}
+        {error && (
+          <div className={adminStyles.errorMessage}>
+            {error.includes('login here') ? (
+              <>
+                User not authenticated, please <Link to="/admin/login">login here</Link>
+              </>
+            ) : (
+              <>Error: {error}</>
+            )}
+          </div>
+        )}
+
+        {!loading && !error && (
+          <div className={styles.newsContainer}>
+            {newsItems.map((item, index) => (
+              <EditableNewsCard
+                key={item.id || index}
+                id={item.id}
+                title={item.title}
+                date={item.date}
+                desc={item.desc}
+                category={item.category}
+                categoryType={item.categoryType}
+                image={item.image}
+                onEdit={handleEdit}
+                onDelete={handleDelete}
+              />
+            ))}
+          </div>
+        )}
+
+        {!loading && !error && newsItems.length === 0 && (
+          <div className={adminStyles.emptyMessage}>No news items found.</div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default News;
