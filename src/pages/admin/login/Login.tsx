@@ -6,22 +6,40 @@ const Login: React.FC = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
 
-    // Basic validation
     if (!username || !password) {
       setError('Please enter both username and password');
       return;
     }
 
-    // TODO: Add authentication logic here
-    console.log('Login attempt:', { username, password });
-    // Stub: Navigate to admin news page
-    navigate('/admin/news');
+    setLoading(true);
+    try {
+      const response = await fetch("https://for-a-cure-foundation-backend.onrender.com/login", {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setError(data.error || 'Login failed');
+        return;
+      }
+
+      localStorage.setItem('token', data.token);
+      navigate('/admin/news');
+    } catch (err) {
+      setError('Unable to connect to server. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -59,8 +77,8 @@ const Login: React.FC = () => {
 
           {error && <div className={styles.errorMessage}>{error}</div>}
 
-          <button type="submit" className={styles.continueButton}>
-            Continue
+          <button type="submit" className={styles.continueButton} disabled={loading}>
+            {loading ? 'Logging in...' : 'Continue'}
           </button>
         </form>
       </div>

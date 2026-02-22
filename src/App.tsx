@@ -22,6 +22,8 @@ import AdminNewsPage from './pages/admin/news/News';
 import './App.css';
 import ScrollToTop from './components/ScrollToTop';
 import StripeDonationSection from './features/donation/StripeDonationSection';
+import ProtectedRoute from './ProtectedRoute';
+import NotAuthorised from './pages/admin/NotAuthorised';
 
 const App: React.FC = () => {
   const HomePageContent = (
@@ -55,9 +57,12 @@ const App: React.FC = () => {
           <Route path="volunteer" element={<VolunteerPage />} />
           <Route path="our-friends" element={<OurFriendsPage />} />
         </Route>
-        <Route path="/admin/login" element={<LoginPage />} />
+        <Route path="/not-authorised" element={<NotAuthorised />} />
+        <Route path="/admin/login" element={
+          <LoginPage />} />
         <Route path="/admin/news" element={<AdminNewsPage />} />
-        <Route path="/news" element={<NewsPage />} />
+        <Route path="/news" element={
+          <ProtectedRoute><NewsPage /></ProtectedRoute>} />
       </Routes>
       <Footer />
     </BrowserRouter>

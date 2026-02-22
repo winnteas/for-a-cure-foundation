@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import styles from '../../../features/news/NewsSection.module.css';
 import adminStyles from './News.module.css';
 import EditableNewsCard from '../../../components/EditableNewsCard';
@@ -23,20 +22,16 @@ const News: React.FC = () => {
     const fetchNews = async () => {
       try {
         setLoading(true);
-        // TODO: Replace with actual backend API endpoint
-        const response = await fetch('/api/news');
+        const response = await fetch("https://for-a-cure-foundation-backend.onrender.com/news", {
+          credentials: 'include', // sends the httpOnly cookie
+        });
         if (!response.ok) {
           throw new Error('Failed to fetch news');
         }
         const data = await response.json();
         setNewsItems(data);
       } catch (err) {
-        let errorMessage = err instanceof Error ? err.message : 'An error occurred';
-        // Check if it's a JSON parsing error (usually means unauthorized/HTML response)
-        if (errorMessage.includes('Unexpected token')) {
-          errorMessage = 'User not authenticated, please <link>login here</link>';
-        }
-        setError(errorMessage);
+        setError(err instanceof Error ? err.message : 'An error occurred');
         console.error('Error fetching news:', err);
       } finally {
         setLoading(false);
@@ -53,7 +48,6 @@ const News: React.FC = () => {
 
   const handleDelete = (id?: string) => {
     console.log('Delete news item:', id);
-    // TODO: Implement delete functionality
     setNewsItems(newsItems.filter((item) => item.id !== id));
   };
 
@@ -63,17 +57,7 @@ const News: React.FC = () => {
         <h2 className="sectionTitle largeText">Admin News Management</h2>
 
         {loading && <div className={adminStyles.loadingMessage}>Loading news...</div>}
-        {error && (
-          <div className={adminStyles.errorMessage}>
-            {error.includes('login here') ? (
-              <>
-                User not authenticated, please <Link to="/admin/login">login here</Link>
-              </>
-            ) : (
-              <>Error: {error}</>
-            )}
-          </div>
-        )}
+        {error && <div className={adminStyles.errorMessage}>Error: {error}</div>}
 
         {!loading && !error && (
           <div className={styles.newsContainer}>
