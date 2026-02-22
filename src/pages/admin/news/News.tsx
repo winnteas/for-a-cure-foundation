@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import styles from '../../../features/news/NewsSection.module.css';
 import adminStyles from './News.module.css';
 import EditableNewsCard from '../../../components/EditableNewsCard';
@@ -79,7 +80,12 @@ const News: React.FC = () => {
         )}
 
         {!loading && !error && newsItems.length === 0 && (
-          <div className={adminStyles.emptyMessage}>No news items found.</div>
+          <div className={adminStyles.emptyContainer}>
+            <div className={adminStyles.emptyMessage}>No news items found.</div>
+            <Link to="/admin/news/add-news" className={adminStyles.addButton}>
+              Add Article
+            </Link>
+          </div>
         )}
       </div>
     </div>

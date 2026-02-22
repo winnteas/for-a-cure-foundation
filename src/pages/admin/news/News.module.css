@@ -18,6 +18,32 @@
   margin-bottom: 1rem;
 }
 
+.emptyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  gap: 1.5rem;
+}
+
 .emptyMessage {
   color: #6b7280;
+  margin: 0;
 }
+
+.addButton {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-orange);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  display: inline-block;
+}
+
+.addButton:hover {
+  background-color: #E67A5A;
+}
+
