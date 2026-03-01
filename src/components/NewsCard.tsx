@@ -7,16 +7,15 @@ interface NewsCardProps {
   date: string;
   desc: string;
   category: string;
-  categoryType: 'categories' | 'donate' | 'events';
   image: string;
 }
 
-const NewsCard: React.FC<NewsCardProps> = ({ title, date, desc, category, categoryType, image }) => (
+const NewsCard: React.FC<NewsCardProps> = ({ title, date, desc, category, image }) => (
   <div className={styles.newsCard}>
     <div className={styles.newsImageWrapper}>
       <img src={image} className={styles.newsImage} alt={title} />
     </div>
-    <span className={styles['categoryLabel'] + ' ' + styles[categoryType]}>{category}</span>
+    <span className={styles['categoryLabel']}>{category}</span>
     <div className={styles.newsContent}>
       <h3 className={styles.newsTitle}>{title}</h3>
       <div className={styles.line}></div>

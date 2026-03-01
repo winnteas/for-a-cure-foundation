@@ -20,6 +20,7 @@ import OurFriendsPage from './pages/get-involved/OurFriends';
 import LoginPage from './pages/admin/login/Login';
 import AdminNewsPage from './pages/admin/news/News';
 import AddNewsPage from './pages/admin/news/AddNews';
+import EditNewsPage from './pages/admin/news/EditNews';
 import './App.css';
 import ScrollToTop from './components/ScrollToTop';
 import StripeDonationSection from './features/donation/StripeDonationSection';
@@ -63,6 +64,7 @@ const App: React.FC = () => {
           <LoginPage />} />
         <Route path="/admin/news" element={<AdminNewsPage />} />
         <Route path="/admin/news/add-news" element={<AddNewsPage />} />
+        <Route path="/admin/news/edit/:id" element={<EditNewsPage />} />
         <Route path="/news" element={
           <ProtectedRoute><NewsPage /></ProtectedRoute>} />
       </Routes>

@@ -9,12 +9,12 @@ import thumb3 from '../assets/news-thumbnails/news-thumbnail-3.svg';
 import Breadcrumb from '../components/breadcrumb/Breadcrumb';
 
 const cards = [
-  { title: 'Stem Cells: What They Are and What They Do', date: 'Jun 08,2025', desc: '', category: 'Categories', categoryType: 'categories' as const, image: thumb1 },
-  { title: 'The Gift of Giving: Why Donating Feels so Good', date: 'Jun 08,2025', desc: '', category: 'Donate', categoryType: 'donate' as const, image: thumb2 },
-  { title: 'Get involved: Make an Impact', date: 'Jun 08,2025', desc: '', category: 'Events', categoryType: 'events' as const, image: thumb3 },
-  { title: 'The Power of Volunteering: Why Giving Your Time Matters', date: 'Jun 08,2025', desc: '', category: 'Categories', categoryType: 'categories' as const, image: thumb1 },
-  { title: 'From Research to Reality: How Science Becomes a Cure', date: 'Jun 08,2025', desc: '', category: 'Donate', categoryType: 'donate' as const, image: thumb2 },
-  { title: 'Get involved: Make an Impact', date: 'Jun 08,2025', desc: '', category: 'Events', categoryType: 'events' as const, image: thumb3 },
+  { title: 'Stem Cells: What They Are and What They Do', date: 'Jun 08,2025', desc: '', category: 'Categories', image: thumb1 },
+  { title: 'The Gift of Giving: Why Donating Feels so Good', date: 'Jun 08,2025', desc: '', category: 'Donate', image: thumb2 },
+  { title: 'Get involved: Make an Impact', date: 'Jun 08,2025', desc: '', category: 'Events', image: thumb3 },
+  { title: 'The Power of Volunteering: Why Giving Your Time Matters', date: 'Jun 08,2025', desc: '', category: 'Categories', image: thumb1 },
+  { title: 'From Research to Reality: How Science Becomes a Cure', date: 'Jun 08,2025', desc: '', category: 'Donate', image: thumb2 },
+  { title: 'Get involved: Make an Impact', date: 'Jun 08,2025', desc: '', category: 'Events', image: thumb3 },
 ];
 
 const breadcrumbItems = [
@@ -42,7 +42,7 @@ const NewsListPage: React.FC = () => (
 
       <div className={styles.grid}>
         {cards.map((c, i) => (
-          <NewsCard key={i} title={c.title} date={c.date} desc={c.desc} category={c.category} categoryType={c.categoryType} image={c.image} />
+          <NewsCard key={i} title={c.title} date={c.date} desc={c.desc} category={c.category} image={c.image} />
         ))}
       </div>
 

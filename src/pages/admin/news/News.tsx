@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from '../../../features/news/NewsSection.module.css';
 import adminStyles from './News.module.css';
 import EditableNewsCard from '../../../components/EditableNewsCard';
+import { useNavigate } from 'react-router-dom';
 
 interface NewsItem {
   id?: string;
@@ -10,7 +11,6 @@ interface NewsItem {
   date: string;
   desc: string;
   category: string;
-  categoryType: 'categories' | 'donate' | 'events';
   image: string;
 }
 
@@ -44,9 +44,11 @@ const News: React.FC = () => {
     fetchNews();
   }, []);
 
+  const navigate = useNavigate();
+
   const handleEdit = (id?: string) => {
-    console.log('Edit news item:', id);
-    // TODO: Implement edit functionality
+    if (!id) return;
+    navigate(`/admin/news/edit/${id}`);
   };
 
   const handleDelete = async (id?: string) => {
@@ -83,7 +85,6 @@ const News: React.FC = () => {
                 date={item.date}
                 desc={item.desc}
                 category={item.category}
-                categoryType={item.categoryType}
                 image={item.image}
                 onEdit={handleEdit}
                 onDelete={handleDelete}

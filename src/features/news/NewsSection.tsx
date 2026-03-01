@@ -12,7 +12,6 @@ interface NewsItem {
   date: string;
   desc: string;
   category: string;
-  categoryType: 'categories' | 'donate' | 'events';
   image: string;
 }
 
@@ -22,7 +21,6 @@ const news: NewsItem[] = [
     date: 'Jun 08,2025',
     desc: 'Learn about the basics of stem cells and their potential in medical research.',
     category: 'Categories',
-    categoryType: 'categories',
     image: newsThumbnail1
   },
   {
@@ -30,7 +28,6 @@ const news: NewsItem[] = [
     date: 'Jun 08,2025',
     desc: 'Learn about the basics of stem cells and their potential in medical research.',
     category: 'Donate',
-    categoryType: 'donate',
     image: newsThumbnail2
   },
   {
@@ -38,7 +35,6 @@ const news: NewsItem[] = [
     date: 'Jun 08,2025',
     desc: 'Learn about the basics of stem cells and their potential in medical research.',
     category: 'Events',
-    categoryType: 'events',
     image: newsThumbnail3
   }
 ];

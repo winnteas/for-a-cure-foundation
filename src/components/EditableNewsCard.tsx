@@ -1,5 +1,4 @@
 import React from 'react';
-import externalLinkIcon from '../assets/icons/external-link.svg';
 import styles from '../features/news/NewsSection.module.css';
 import editableStyles from './EditableNewsCard.module.css';
 
@@ -9,10 +8,9 @@ interface EditableNewsCardProps {
   date: string;
   desc: string;
   category: string;
-  categoryType: 'categories' | 'donate' | 'events';
   image: string;
-  onEdit: (id?: string) => void;
-  onDelete: (id?: string) => void;
+  onEdit?: (id?: string) => void;
+  onDelete?: (id?: string) => void;
 }
 
 const EditableNewsCard: React.FC<EditableNewsCardProps> = ({
@@ -21,16 +19,15 @@ const EditableNewsCard: React.FC<EditableNewsCardProps> = ({
   date,
   desc,
   category,
-  categoryType,
   image,
   onEdit,
-  onDelete
+  onDelete,
 }) => (
   <div className={styles.newsCard}>
     <div className={styles.newsImageWrapper}>
       <img src={image} className={styles.newsImage} alt={title} />
     </div>
-    <span className={styles['categoryLabel'] + ' ' + styles[categoryType]}>{category}</span>
+    <span className={styles['categoryLabel']}>{category}</span>
     <div className={styles.newsContent}>
       <h3 className={styles.newsTitle}>{title}</h3>
       <div className={styles.line}></div>
@@ -46,14 +43,14 @@ const EditableNewsCard: React.FC<EditableNewsCardProps> = ({
     <div className={editableStyles.actionButtons}>
       <button
         className={editableStyles.editButton}
-        onClick={() => onEdit(id)}
+        onClick={() => onEdit && onEdit(id)}
         title="Edit news"
       >
         Edit
       </button>
       <button
         className={editableStyles.deleteButton}
-        onClick={() => onDelete(id)}
+        onClick={() => onDelete && onDelete(id)}
         title="Delete news"
       >
         Delete
