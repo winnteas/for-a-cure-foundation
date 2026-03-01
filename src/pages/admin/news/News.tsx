@@ -14,6 +14,8 @@ interface NewsItem {
   image: string;
 }
 
+const API_URL = 'https://for-a-cure-foundation-backend.onrender.com';
+
 const News: React.FC = () => {
   const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState(true);
@@ -23,7 +25,7 @@ const News: React.FC = () => {
     const fetchNews = async () => {
       try {
         setLoading(true);
-        const response = await fetch("https://for-a-cure-foundation-backend.onrender.com/news", {
+        const response = await fetch(`${API_URL}/news`, {
           credentials: 'include', // sends the httpOnly cookie
         });
         if (!response.ok) {
@@ -47,11 +49,22 @@ const News: React.FC = () => {
     // TODO: Implement edit functionality
   };
 
-  const handleDelete = (id?: string) => {
-    console.log('Delete news item:', id);
-    setNewsItems(newsItems.filter((item) => item.id !== id));
-  };
+  const handleDelete = async (id?: string) => {
+    if (!id) return;
 
+    try {
+        const response = await fetch(`${API_URL}/news/${id}`, {
+        method: 'DELETE',
+        credentials: 'include',
+        });
+
+        if (!response.ok) throw new Error('Failed to delete article');
+
+        setNewsItems(newsItems.filter((item) => item.id !== id));
+    } catch (err) {
+        console.error('Error deleting news item:', err);
+    }
+    };
   return (
     <div className={styles.section}>
       <div className={styles.container}>

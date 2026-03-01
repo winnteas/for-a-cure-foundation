@@ -1,25 +1,30 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import pako from 'pako';
 import styles from './AddNews.module.css';
 
 interface FormData {
   title: string;
   date: string;
-  description: string;
+  content: string;
   category: string;
   slug: string;
   image: string;
+  author: string;
 }
+
+const API_URL = 'https://for-a-cure-foundation-backend.onrender.com';
 
 const AddNews: React.FC = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState<FormData>({
     title: '',
     date: '',
-    description: '',
+    content: '',
     category: '',
     slug: '',
-    image: ''
+    image: '',
+    author: ''
   });
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string>('');
@@ -53,52 +58,45 @@ const AddNews: React.FC = () => {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError(null);
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setError(null);
 
-    // Validation
-    if (!formData.title || !formData.date || !formData.description || 
-        !formData.category || !formData.slug || !formData.image) {
-      setError('Please fill in all fields');
-      return;
-    }
+  if (!formData.title || !formData.author || !formData.date || !formData.content ||
+      !formData.category || !formData.slug || !formData.image) {
+    setError('Please fill in all fields');
+    return;
+  }
 
-    setLoading(true);
+  setLoading(true);
 
-    try {
-      const response = await fetch(
-        'https://for-a-cure-foundation-backend.onrender.com/news',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          credentials: 'include',
-          body: JSON.stringify({
-            title: formData.title,
-            date: formData.date,
-            desc: formData.description,
-            category: formData.category,
-            slug: formData.slug,
-            image: formData.image
-          })
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error('Failed to create article');
+  try {
+    const response = await fetch(
+      `${API_URL}/news`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({
+          title: formData.title,
+          author: formData.author,
+          date: formData.date,
+          description: formData.content,
+          category: formData.category,
+          slug: formData.slug,
+          image: formData.image, // this should be a URL, not base64
+        }),
       }
+    );
 
-      // Navigate back to news page
-      navigate('/admin/news');
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
-      console.error('Error creating article:', err);
-    } finally {
-      setLoading(false);
-    }
-  };
+    if (!response.ok) throw new Error('Failed to create article');
+    navigate('/admin/news');
+  } catch (err) {
+    setError(err instanceof Error ? err.message : 'An error occurred');
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div className={styles.addNewsContainer}>
@@ -125,6 +123,22 @@ const AddNews: React.FC = () => {
           </div>
 
           <div className={styles.formGroup}>
+            <label htmlFor="author" className={styles.label}>
+              Author *
+            </label>
+            <input
+              type="text"
+              id="author"
+              name="author"
+              className={styles.input}
+              value={formData.author}
+              onChange={handleInputChange}
+              placeholder="Enter author name"
+              required
+            />
+          </div>
+
+          <div className={styles.formGroup}>
             <label htmlFor="date" className={styles.label}>
               Date *
             </label>
@@ -141,17 +155,17 @@ const AddNews: React.FC = () => {
           </div>
 
           <div className={styles.formGroup}>
-            <label htmlFor="description" className={styles.label}>
-              Description *
+            <label htmlFor="content" className={styles.label}>
+              Content *
             </label>
             <textarea
-              id="description"
-              name="description"
+              id="content"
+              name="content"
               className={styles.textarea}
-              value={formData.description}
+              value={formData.content}
               onChange={handleInputChange}
-              placeholder="Enter article description"
-              rows={5}
+              placeholder="Enter article content"
+              rows={12}
               required
             />
           </div>
