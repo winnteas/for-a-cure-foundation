@@ -14,6 +14,7 @@ interface NewsItem {
   desc: string;
   category: string;
   image: string;
+  slug: string;
 }
 
 const breadcrumbItems = [
@@ -94,7 +95,7 @@ const NewsListPage: React.FC = () => {
         <div className={styles.searchRow}>
           <input
             className={styles.searchInput}
-            placeholder="Search by title or category"
+            placeholder="Search"
             value={searchQuery}
             onChange={(e) => {
               setSearchQuery(e.target.value);
@@ -111,7 +112,15 @@ const NewsListPage: React.FC = () => {
             {paginatedCards.length > 0 ? (
               <div className={styles.grid}>
                 {paginatedCards.map((c, i) => (
-                  <NewsCard key={c.id || i} title={c.title} date={c.date} desc={c.desc} category={c.category} image={c.image} />
+                  <NewsCard
+                    key={c.id || i}
+                    title={c.title}
+                    date={c.date}
+                    desc={c.desc}
+                    category={c.category}
+                    image={c.image}
+                    slug={c.slug}
+                  />
                 ))}
               </div>
             ) : (

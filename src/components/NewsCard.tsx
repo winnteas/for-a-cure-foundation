@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import externalLinkIcon from '../assets/icons/external-link.svg';
 import styles from '../features/news/NewsSection.module.css';
 
@@ -8,9 +9,10 @@ interface NewsCardProps {
   desc: string;
   category: string;
   image: string;
+  slug: string;
 }
 
-const NewsCard: React.FC<NewsCardProps> = ({ title, date, desc, category, image }) => {
+const NewsCard: React.FC<NewsCardProps> = ({ title, date, desc, category, image, slug }) => {
   const capitalizedCategory = category.charAt(0).toUpperCase() + category.slice(1).toLowerCase();
   
   return (
@@ -29,9 +31,9 @@ const NewsCard: React.FC<NewsCardProps> = ({ title, date, desc, category, image 
             </span>
             <span className={styles.newsDate}>{date}</span>
           </span>
-          <a href="#" className={styles.readMore}>
+          <Link to={`/news/${slug}`} className={styles.readMore}>
             Read More <img src={externalLinkIcon} alt="external link" className={styles.externalLinkIcon} />
-          </a>
+          </Link>
         </div>
       </div>
     </div>

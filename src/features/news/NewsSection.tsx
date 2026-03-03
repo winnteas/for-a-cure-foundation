@@ -13,6 +13,7 @@ interface NewsItem {
   desc: string;
   category: string;
   image: string;
+  slug: string;
 }
 
 const NewsSection: React.FC = () => {
@@ -64,6 +65,7 @@ const NewsSection: React.FC = () => {
                 desc={item.desc}
                 category={item.category}
                 image={item.image}
+                slug={item.slug}
               />
             ))}
           </div>
