@@ -25,6 +25,9 @@ const NewsListPage: React.FC = () => {
   const [cards, setCards] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
 
   useEffect(() => {
     let mounted = true;
@@ -47,6 +50,36 @@ const NewsListPage: React.FC = () => {
     return () => { mounted = false; };
   }, []);
 
+  const filteredCards = cards.filter(card =>
+    card.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    card.category.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  const totalPages = Math.ceil(filteredCards.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const paginatedCards = filteredCards.slice(startIndex, startIndex + itemsPerPage);
+
+  const handlePrevPage = () => {
+    setCurrentPage(prev => Math.max(prev - 1, 1));
+  };
+
+  const handleNextPage = () => {
+    setCurrentPage(prev => Math.min(prev + 1, totalPages));
+  };
+
+  const handlePageClick = (page: number) => {
+    setCurrentPage(page);
+  };
+
+  // Generate page numbers to display
+  const getPageNumbers = () => {
+    const pages = [];
+    for (let i = 1; i <= totalPages; i++) {
+      pages.push(i);
+    }
+    return pages;
+  };
+
   return (
     <div className={styles.root}>
       <PageTitleSection title="News" />
@@ -61,27 +94,63 @@ const NewsListPage: React.FC = () => {
         </div>
 
         <div className={styles.searchRow}>
-          <input className={styles.searchInput} placeholder="Search" />
+          <input
+            className={styles.searchInput}
+            placeholder="Search by title or category"
+            value={searchQuery}
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+              setCurrentPage(1);
+            }}
+          />
         </div>
 
         {loading && <div className={styles.loading}>Loading news...</div>}
         {error && <div className={styles.error}>Error: {error}</div>}
 
         {!loading && !error && (
-          <div className={styles.grid}>
-            {cards.map((c, i) => (
-              <NewsCard key={c.id || i} title={c.title} date={c.date} desc={c.desc} category={c.category} image={c.image} />
-            ))}
-          </div>
+          <>
+            {paginatedCards.length > 0 ? (
+              <div className={styles.grid}>
+                {paginatedCards.map((c, i) => (
+                  <NewsCard key={c.id || i} title={c.title} date={c.date} desc={c.desc} category={c.category} image={c.image} />
+                ))}
+              </div>
+            ) : (
+              <div className={styles.noResults}>No articles found matching your search.</div>
+            )}
+          </>
         )}
 
-        <div className={styles.pagination}>
-          <button className={styles.pageBtn}>{'<'}</button>
-          <button className={styles.pageBtn + ' ' + styles.active}>1</button>
-          <button className={styles.pageBtn}>2</button>
-          <button className={styles.pageBtn}>3</button>
-          <button className={styles.pageBtn}>{'>'}</button>
-        </div>
+        {!loading && !error && filteredCards.length > 0 && (
+          <div className={styles.pagination}>
+            {currentPage > 1 && (
+              <button
+                className={styles.pageBtn}
+                onClick={handlePrevPage}
+              >
+                {'<'}
+              </button>
+            )}
+            {getPageNumbers().map(page => (
+              <button
+                key={page}
+                className={styles.pageBtn + (currentPage === page ? ' ' + styles.active : '')}
+                onClick={() => handlePageClick(page)}
+              >
+                {page}
+              </button>
+            ))}
+            {currentPage < totalPages && (
+              <button
+                className={styles.pageBtn}
+                onClick={handleNextPage}
+              >
+                {'>'}
+              </button>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
