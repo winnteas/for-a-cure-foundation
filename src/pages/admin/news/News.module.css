@@ -47,3 +47,9 @@
   background-color: #E67A5A;
 }
 
+.actionsRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+

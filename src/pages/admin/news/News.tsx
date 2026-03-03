@@ -72,6 +72,12 @@ const News: React.FC = () => {
       <div className={styles.container}>
         <h2 className="sectionTitle largeText">Admin News Management</h2>
 
+        <div className={adminStyles.actionsRow}>
+          <Link to="/admin/news/add-news" className={adminStyles.addButton}>
+            Add Article
+          </Link>
+        </div>
+
         {loading && <div className={adminStyles.loadingMessage}>Loading news...</div>}
         {error && <div className={adminStyles.errorMessage}>Error: {error}</div>}
 
@@ -96,9 +102,6 @@ const News: React.FC = () => {
         {!loading && !error && newsItems.length === 0 && (
           <div className={adminStyles.emptyContainer}>
             <div className={adminStyles.emptyMessage}>No news items found.</div>
-            <Link to="/admin/news/add-news" className={adminStyles.addButton}>
-              Add Article
-            </Link>
           </div>
         )}
       </div>
