@@ -36,7 +36,7 @@
 }
 
 .title {
-  color: #0C4A6E;
+  color: #205B77;
   font-size: 2rem;
   font-weight: 900;
   margin: 0 0 0.75rem 0;
@@ -52,7 +52,7 @@
 .searchRow {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin: 3rem 0 6rem 0;
 }
 
 .searchInput {
@@ -76,7 +76,7 @@
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  margin: 1.5rem 0 4rem 0;
+  padding: 1.5rem 0 4rem 0;
 }
 
 .pageBtn {
@@ -86,10 +86,64 @@
   border-radius: 8px;
   background: #fff;
   color: #334155;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pageBtn:hover:not(:disabled) {
+  background-color: #E2E8F0;
+}
+
+.pageBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .active { background: #F1F5F9; }
 
-@media (max-width: 600px) {
-  .container { padding: 0 1rem; }
+.noResults {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  font-size: 1.1rem;
+  color: #64748B;
+  text-align: center;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  font-size: 1.1rem;
+  color: #64748B;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  font-size: 1.1rem;
+  color: #991b1b;
+  text-align: center;
 } 
+
+.heroPhoto {
+  display: block;
+  max-width: 75%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.relatedLoading {
+  text-align: center;
+  margin: 1.5rem 0 2rem;
+  color: #64748B;
+  font-size: 0.95rem;
+}

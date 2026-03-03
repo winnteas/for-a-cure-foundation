@@ -1,64 +1,85 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './NewsSection.module.css';
 import Button from '../../components/Button';
-import newsThumbnail1 from '../../assets/news-thumbnails/news-thumbnail1.svg';
-import newsThumbnail2 from '../../assets/news-thumbnails/news-thumbnail2.svg';
-import newsThumbnail3 from '../../assets/news-thumbnails/news-thumbnail-3.svg';
 import NewsCard from '../../components/NewsCard';
 import { Link } from 'react-router-dom';
 
+const API_URL = 'https://for-a-cure-foundation-backend.onrender.com';
+
 interface NewsItem {
+  id: string;
   title: string;
   date: string;
   desc: string;
   category: string;
-  categoryType: 'categories' | 'donate' | 'events';
   image: string;
+  slug: string;
 }
 
-const news: NewsItem[] = [
-  {
-    title: 'Stem Cells: What They Are and What They Do',
-    date: 'Jun 08,2025',
-    desc: 'Learn about the basics of stem cells and their potential in medical research.',
-    category: 'Categories',
-    categoryType: 'categories',
-    image: newsThumbnail1
-  },
-  {
-    title: 'The Gift of Giving: Why Donating Feels so Good',
-    date: 'Jun 08,2025',
-    desc: 'Learn about the basics of stem cells and their potential in medical research.',
-    category: 'Donate',
-    categoryType: 'donate',
-    image: newsThumbnail2
-  },
-  {
-    title: 'Get Involved: Make an Impact',
-    date: 'Jun 08,2025',
-    desc: 'Learn about the basics of stem cells and their potential in medical research.',
-    category: 'Events',
-    categoryType: 'events',
-    image: newsThumbnail3
-  }
-];
+const NewsSection: React.FC = () => {
+  const [items, setItems] = useState<NewsItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-const NewsSection: React.FC = () => (
-  <section className={styles.section}>
-    <div className={styles.container}>
-      <h2 className="sectionTitle largeText">Our Latest News</h2>
-      <div className={styles.newsContainer}>
-        {news.map((item, idx) => (
-          <NewsCard key={idx} {...item} />
-        ))}
-      </div>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Link to="/news">
-         <Button variant="primary">View All</Button>
-      </Link>
-      </div>
-    </div>
-  </section>
-);
+  useEffect(() => {
+    let mounted = true;
+    const fetchNews = async () => {
+      try {
+        setLoading(true);
+        const res = await fetch(`${API_URL}/news`);
+        if (!res.ok) throw new Error('Failed to load news');
+        const data = await res.json();
+        if (mounted) setItems(data || []);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'An error occurred');
+        console.error('Error fetching news:', err);
+      } finally {
+        if (mounted) setLoading(false);
+      }
+    };
 
-export default NewsSection; 
+    fetchNews();
+    return () => { mounted = false; };
+  }, []);
+
+  return (
+    <section className={styles.section}>
+      <div className={styles.container}>
+        <h2 className="sectionTitle largeText">Our Latest News</h2>
+
+        {loading && (
+          <div className={styles.loadingMessage}>
+            <div className={styles.spinner}></div>
+            <span>Loading news...</span>
+          </div>
+        )}
+        {error && <div className={styles.errorMessage}>Error: {error}</div>}
+
+        {!loading && !error && (
+          <div className={styles.newsContainer}>
+            {items.slice(0, 3).map((item, idx) => (
+              <NewsCard
+                key={item.id || idx}
+                id={item.id}
+                title={item.title}
+                date={item.date}
+                desc={item.desc}
+                category={item.category}
+                image={item.image}
+                slug={item.slug}
+              />
+            ))}
+          </div>
+        )}
+
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <Link to="/news">
+            <Button variant="primary">View All</Button>
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default NewsSection;

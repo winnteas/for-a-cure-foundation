@@ -15,11 +15,18 @@ import ResearchPage from './pages/Research';
 import ContactPage from './pages/Contact';
 import DonatePage from './pages/get-involved/Donate';
 import NewsPage from './pages/News';
+import FullNewsArticle from './pages/FullNewsArticle';
 import VolunteerPage from './pages/get-involved/Volunteer';
 import OurFriendsPage from './pages/get-involved/OurFriends';
+import LoginPage from './pages/admin/login/Login';
+import AdminNewsPage from './pages/admin/news/News';
+import AddNewsPage from './pages/admin/news/AddNews';
+import EditNewsPage from './pages/admin/news/EditNews';
 import './App.css';
 import ScrollToTop from './components/ScrollToTop';
 import StripeDonationSection from './features/donation/StripeDonationSection';
+import ProtectedRoute from './ProtectedRoute';
+import NotAuthorised from './pages/admin/NotAuthorised';
 
 const App: React.FC = () => {
   const HomePageContent = (
@@ -54,6 +61,15 @@ const App: React.FC = () => {
           <Route path="our-friends" element={<OurFriendsPage />} />
         </Route>
         <Route path="/news" element={<NewsPage />} />
+        <Route path="/news/:slug" element={<FullNewsArticle />} />
+        <Route path="/not-authorised" element={<NotAuthorised />} />
+
+        <Route path="/admin/login" element={<LoginPage />} />
+      
+        <Route path="/admin/news" element={<ProtectedRoute><AdminNewsPage /></ProtectedRoute>} />
+        <Route path="/admin/news/add-news" element={<ProtectedRoute><AddNewsPage /></ProtectedRoute>} />
+        <Route path="/admin/news/edit/:id" element={<ProtectedRoute><EditNewsPage /></ProtectedRoute      >} />
+      
       </Routes>
       <Footer />
     </BrowserRouter>
