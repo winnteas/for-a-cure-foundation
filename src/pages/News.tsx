@@ -86,12 +86,12 @@ const NewsListPage: React.FC = () => {
       <Breadcrumb items={breadcrumbItems}></Breadcrumb>
 
       <div className={styles.container}>
-        <h1 className={styles.construction}>Under Construction  - Stay informed with updates, milestones, and moments of impact from our research and community work.</h1>
+        {/* <h1 className={styles.construction}>Under Construction  - Stay informed with updates, milestones, and moments of impact from our research and community work.</h1>
 
         <div className={styles.header}>
           <h2 className={styles.title}>Stories Of Impact</h2>
           <p className={styles.subtitle}>Stay informed with updates, milestones, and moments of impact from our research and community work.</p>
-        </div>
+        </div> */}
 
         <div className={styles.searchRow}>
           <input
