@@ -141,3 +141,43 @@
   background-color: #CBD5E1;
   width: 100%;
 }
+
+.loadingMessage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 3rem 2rem;
+  font-size: 1.1rem;
+  color: #205B77;
+  min-height: 200px;
+}
+
+.spinner {
+  border: 3px solid #e0e7ff;
+  border-top: 3px solid #205B77;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.errorMessage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: #991b1b;
+  background-color: #fee2e2;
+  border-radius: 8px;
+  margin: 2rem 0;
+}

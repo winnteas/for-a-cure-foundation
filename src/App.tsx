@@ -59,14 +59,15 @@ const App: React.FC = () => {
           <Route path="volunteer" element={<VolunteerPage />} />
           <Route path="our-friends" element={<OurFriendsPage />} />
         </Route>
+        <Route path="/news" element={<NewsPage />} />
         <Route path="/not-authorised" element={<NotAuthorised />} />
-        <Route path="/admin/login" element={
-          <LoginPage />} />
-        <Route path="/admin/news" element={<AdminNewsPage />} />
-        <Route path="/admin/news/add-news" element={<AddNewsPage />} />
-        <Route path="/admin/news/edit/:id" element={<EditNewsPage />} />
-        <Route path="/news" element={
-          <ProtectedRoute><NewsPage /></ProtectedRoute>} />
+
+        <Route path="/admin/login" element={<LoginPage />} />
+      
+        <Route path="/admin/news" element={<ProtectedRoute><AdminNewsPage /></ProtectedRoute>} />
+        <Route path="/admin/news/add-news" element={<ProtectedRoute><AddNewsPage /></ProtectedRoute>} />
+        <Route path="/admin/news/edit/:id" element={<ProtectedRoute><EditNewsPage /></ProtectedRoute      >} />
+      
       </Routes>
       <Footer />
     </BrowserRouter>
