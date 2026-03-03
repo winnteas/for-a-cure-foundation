@@ -119,7 +119,7 @@
   font-size: 1.1rem;
   color: #64748B;
   text-align: center;
-  padding-bottom: 9rem;
+  padding-bottom: 2rem;
 }
 
 .error {
@@ -131,3 +131,19 @@
   color: #991b1b;
   text-align: center;
 } 
+
+.heroPhoto {
+  display: block;
+  max-width: 75%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.relatedLoading {
+  text-align: center;
+  margin: 1.5rem 0 2rem;
+  color: #64748B;
+  font-size: 0.95rem;
+}

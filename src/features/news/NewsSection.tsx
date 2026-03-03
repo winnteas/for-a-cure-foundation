@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const API_URL = 'https://for-a-cure-foundation-backend.onrender.com';
 
 interface NewsItem {
-  id?: string;
+  id: string;
   title: string;
   date: string;
   desc: string;
@@ -60,6 +60,7 @@ const NewsSection: React.FC = () => {
             {items.slice(0, 3).map((item, idx) => (
               <NewsCard
                 key={item.id || idx}
+                id={item.id}
                 title={item.title}
                 date={item.date}
                 desc={item.desc}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import pako from 'pako';
 import styles from './AddNews.module.css';
@@ -30,6 +30,26 @@ const AddNews: React.FC = () => {
   const [imagePreview, setImagePreview] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [categories, setCategories] = useState<string[]>([]);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const res = await fetch(`${API_URL}/news/categories`, {
+          credentials: 'include',
+        });
+        if (!res.ok) return;
+        const data = await res.json();
+        if (Array.isArray(data)) {
+          setCategories(data);
+        }
+      } catch {
+        // silently ignore category load failures
+      }
+    };
+
+    fetchCategories();
+  }, []);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -174,19 +194,23 @@ const handleSubmit = async (e: React.FormEvent) => {
             <label htmlFor="category" className={styles.label}>
               Category *
             </label>
-            <select
+            <input
+              list="categoryOptions"
               id="category"
               name="category"
               className={styles.input}
               value={formData.category}
               onChange={handleInputChange}
               required
-            >
-              <option value="">Select category</option>
-              <option value="categories">Categories</option>
-              <option value="donate">Donate</option>
-              <option value="events">Events</option>
-            </select>
+              placeholder="Type or select a category"
+            />
+            {categories.length > 0 && (
+              <datalist id="categoryOptions">
+                {categories.map((cat) => (
+                  <option key={cat} value={cat} />
+                ))}
+              </datalist>
+            )}
           </div>
 
           <div className={styles.formGroup}>

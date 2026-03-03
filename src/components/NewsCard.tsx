@@ -4,6 +4,7 @@ import externalLinkIcon from '../assets/icons/external-link.svg';
 import styles from '../features/news/NewsSection.module.css';
 
 interface NewsCardProps {
+  id: string;
   title: string;
   date: string;
   desc: string;
@@ -12,7 +13,7 @@ interface NewsCardProps {
   slug: string;
 }
 
-const NewsCard: React.FC<NewsCardProps> = ({ title, date, desc, category, image, slug }) => {
+const NewsCard: React.FC<NewsCardProps> = ({ id, title, date, desc, category, image, slug }) => {
   const capitalizedCategory = category.charAt(0).toUpperCase() + category.slice(1).toLowerCase();
   
   return (

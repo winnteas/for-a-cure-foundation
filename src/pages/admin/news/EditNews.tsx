@@ -31,15 +31,20 @@ const EditNews: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [saving, setSaving] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
+  const [categories, setCategories] = useState<string[]>([]);
 
   useEffect(() => {
     if (!id) return;
-    const fetchItem = async () => {
+    const fetchItemAndCategories = async () => {
       setLoading(true);
       try {
-        const res = await fetch(`${API_URL}/news/${id}`, { credentials: 'include' });
-        if (!res.ok) throw new Error('Failed to fetch article');
-        const data = await res.json();
+        const [itemRes, categoriesRes] = await Promise.all([
+          fetch(`${API_URL}/news/${id}`, { credentials: 'include' }),
+          fetch(`${API_URL}/news/categories`, { credentials: 'include' }),
+        ]);
+
+        if (!itemRes.ok) throw new Error('Failed to fetch article');
+        const data = await itemRes.json();
         setFormData({
           title: data.title || '',
           date: data.date || '',
@@ -50,6 +55,13 @@ const EditNews: React.FC = () => {
           author: data.author || ''
         });
         setImagePreview(data.image || '');
+
+        if (categoriesRes.ok) {
+          const categoriesData = await categoriesRes.json();
+          if (Array.isArray(categoriesData)) {
+            setCategories(categoriesData);
+          }
+        }
       } catch (err) {
         setError(err instanceof Error ? err.message : 'An error occurred');
       } finally {
@@ -57,7 +69,7 @@ const EditNews: React.FC = () => {
       }
     };
 
-    fetchItem();
+    fetchItemAndCategories();
   }, [id]);
 
   const handleInputChange = (
@@ -151,12 +163,23 @@ const EditNews: React.FC = () => {
 
           <div className={styles.formGroup}>
             <label htmlFor="category" className={styles.label}>Category *</label>
-            <select id="category" name="category" className={styles.input} value={formData.category} onChange={handleInputChange} required>
-              <option value="">Select category</option>
-              <option value="categories">Categories</option>
-              <option value="donate">Donate</option>
-              <option value="events">Events</option>
-            </select>
+            <input
+              list="categoryOptions"
+              id="category"
+              name="category"
+              className={styles.input}
+              value={formData.category}
+              onChange={handleInputChange}
+              placeholder="Type or select a category"
+              required
+            />
+            {categories.length > 0 && (
+              <datalist id="categoryOptions">
+                {categories.map((cat) => (
+                  <option key={cat} value={cat} />
+                ))}
+              </datalist>
+            )}
           </div>
 
           <div className={styles.formGroup}>

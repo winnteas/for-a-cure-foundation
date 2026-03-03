@@ -8,7 +8,7 @@ import Breadcrumb from '../components/breadcrumb/Breadcrumb';
 const API_URL = 'https://for-a-cure-foundation-backend.onrender.com';
 
 interface NewsItem {
-  id?: string;
+  id: string;
   title: string;
   date: string;
   desc: string;
@@ -114,6 +114,7 @@ const NewsListPage: React.FC = () => {
                 {paginatedCards.map((c, i) => (
                   <NewsCard
                     key={c.id || i}
+                    id={c.id}
                     title={c.title}
                     date={c.date}
                     desc={c.desc}
