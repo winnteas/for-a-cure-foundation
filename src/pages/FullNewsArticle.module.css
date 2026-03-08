@@ -18,14 +18,12 @@
 
 .categoryTag {
   display: inline-block;
-  background: #4CAF50;
-  color: #fff;
+  color: #4CAF50;
   padding: 0.5rem 1rem;
   border-radius: 20px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
@@ -49,7 +47,7 @@
 
 .date {
   font-size: 1rem;
-  color: #205B77;
+  color: var(--accent-orange);
   font-weight: 600;
   margin-bottom: 3rem;
 }

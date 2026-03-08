@@ -15,6 +15,7 @@
   text-align: center;
   margin-bottom: 3rem;
 }
+
 .impactSubtitle {
   display: block;
   font-size: 1.25rem;
@@ -22,11 +23,12 @@
   color: var(--primary-blue);
   margin-bottom: 0.2rem;
 }
+
 .impactMainTitle {
   display: block;
   font-size: 2.5rem;
   font-weight: 900;
-  color: #205B77;
+  color: #205b77;
 }
 
 .impactBlueBox {
@@ -46,7 +48,9 @@
   justify-content: center;
   margin-bottom: 3.5rem;
 }
-.iconCard, .iconCardActive {
+
+.iconCard,
+.iconCardActive {
   width: 140px;
   height: 140px;
   background: #fff;
@@ -54,23 +58,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(32,91,119,0.08);
+  box-shadow: 0 2px 8px rgba(32, 91, 119, 0.08);
   position: relative;
   transition: box-shadow 0.2s, background 0.2s;
   border: none;
   padding: 0;
 }
-.iconCard img, .iconCardActive img {
+
+.iconCard img,
+.iconCardActive img {
   width: 64px;
   height: 64px;
 }
+
 .iconCardActive {
-  background: #205B77;
-  box-shadow: 0 4px 16px rgba(32,91,119,0.18);
+  background: #205b77;
+  box-shadow: 0 4px 16px rgba(32, 91, 119, 0.18);
 }
+
 .iconCardActive img {
   filter: brightness(0) invert(1);
 }
+
 .iconPointer {
   position: absolute;
   left: 50%;
@@ -80,12 +89,13 @@
   height: 20px;
   background: none;
 }
+
 .iconPointer::after {
   content: '';
   display: block;
   width: 36px;
   height: 20px;
-  background: #205B77;
+  background: #205b77;
   clip-path: polygon(50% 100%, 0 0, 100% 0);
 }
 
@@ -102,6 +112,7 @@
   padding: 0;
   box-shadow: none;
 }
+
 .impactStatBox {
   flex: 1;
   display: flex;
@@ -110,25 +121,29 @@
   justify-content: center;
   padding-left: 1.5rem;
 }
+
 .impactStatLabel {
   font-size: 4rem;
   font-weight: 700;
-  color: #205B77;
+  color: #205b77;
   margin-bottom: 0.5rem;
 }
+
 .impactStatValue {
   font-size: 6rem;
   font-weight: 900;
-  color: #205B77;
+  color: #205b77;
   margin-bottom: 0.5rem;
   line-height: 1.1;
 }
+
 .impactStatDesc {
   font-size: 1.25rem;
-  color: #205B77;
+  color: #205b77;
   opacity: 0.9;
   margin-top: 0.5rem;
 }
+
 .impactImageBox {
   flex: 1;
   display: flex;
@@ -136,6 +151,7 @@
   justify-content: flex-end;
   position: relative;
 }
+
 .impactImage {
   width: 100%;
   height: auto;
@@ -144,12 +160,10 @@
   background: #fff;
   border-radius: 14px;
   border: 5px solid #fff;
-  box-shadow: 0 2px 12px rgba(32,91,119,0.10);
+  box-shadow: 0 2px 12px rgba(32, 91, 119, 0.1);
 }
 
 .dotsImage {
-  /* width: 370px;
-  height: 250px; */
   position: absolute;
   bottom: -20px;
   right: -20px;
@@ -157,20 +171,159 @@
   height: auto;
 }
 
+.desktopLayout {
+  width: 100%;
+}
+
+.mobileLayout {
+  display: none;
+  width: 100%;
+}
+
+/* Mobile flip-card layout */
+.mobileIconCard {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 0;
+  height: 180px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+}
+
+.cardInnerFlipped {
+  transform: rotateY(180deg);
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardFront {
+  background: #fff;
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+  background: #205b77;
+  color: #fff;
+  padding: 0.75rem;
+}
+
+.mobileScrollable {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mobileLabel {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.mobileValue {
+  font-size: 3rem;
+  margin-bottom: 0.25rem;
+}
+
+.mobileDesc {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .desktopLayout {
+    display: none;
+  }
+
+  .mobileLayout {
+    display: block;
+    margin-top: 2rem;
+  }
+
+  .mobileList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobileLabel {
+    font-size: 1.6rem;
+  }
+
+  .mobileValue {
+    font-size: 2.3rem;
+  }
+
+  .mobileDesc {
+    font-size: 0.95rem;
+  }
+
+  .iconCard img,
+  .iconCardActive img {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 360px) {
+  .mobileLabel {
+    font-size: 1.4rem;
+  }
+
+  .mobileValue {
+    font-size: 2rem;
+  }
+
+  .mobileDesc {
+    font-size: 0.9rem;
+  }
+
+  .iconCard img,
+  .iconCardActive img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
 @media (max-width: 1100px) {
   .impactBlueBox {
     padding: 3rem 2rem;
   }
+
   .impactGrid {
     flex-direction: column;
     gap: 2rem;
     align-items: stretch;
     padding: 0;
   }
+
   .impactImage {
     width: 100%;
     max-width: 370px;
-    /* margin: 0 auto; */
   }
 
   .impactImageBox {
@@ -186,10 +339,11 @@
     left: 65%;
     max-width: 120px;
   }
-   
+
   .impactStatBox {
     align-items: center;
     padding-left: 0;
     text-align: center;
   }
-  } 
+}
+

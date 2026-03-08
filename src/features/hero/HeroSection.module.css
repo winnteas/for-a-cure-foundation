@@ -64,3 +64,9 @@
 .heroButtonOrange:hover {
   background-color: #E67A5A;
 } 
+
+@media (max-width: 768px) {
+  .heroContent {
+    padding-left: 0;
+  }
+}

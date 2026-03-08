@@ -53,7 +53,13 @@ const stats = [
 
 const ImpactStats: React.FC = () => {
   const [activeIdx, setActiveIdx] = useState(0);
+  const [mobileActiveIdx, setMobileActiveIdx] = useState<number | null>(null);
+
   const activeStat = stats[activeIdx];
+
+  const handleMobileClick = (idx: number) => {
+    setMobileActiveIdx((prev) => (prev === idx ? null : idx));
+  };
 
   return (
     <section className={styles.section}>
@@ -62,30 +68,65 @@ const ImpactStats: React.FC = () => {
           <span className={styles.impactMainTitle}>Your Contribution</span>
           <span className={styles.impactMainTitle}>Makes All The Difference</span>
         </div>
-        <div className={styles.impactBlueBox}>
-          <div className={styles.iconRow}>
+
+        {/* Desktop / tablet layout */}
+        <div className={styles.desktopLayout}>
+          <div className={styles.impactBlueBox}>
+            <div className={styles.iconRow}>
+              {stats.map((stat, idx) => (
+                <div
+                  key={idx}
+                  className={idx === activeIdx ? styles.iconCardActive : styles.iconCard}
+                  onClick={() => setActiveIdx(idx)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <img src={stat.icon} alt={stat.alt} />
+                  {idx === activeIdx && <div className={styles.iconPointer} />}
+                </div>
+              ))}
+            </div>
+            <div className={styles.impactGrid}>
+              <div className={styles.impactStatBox}>
+                <div className={styles.impactStatLabel}>{activeStat.label}</div>
+                <div className={styles.impactStatValue}>{activeStat.value}</div>
+                <div className={styles.impactStatDesc}>{activeStat.desc}</div>
+              </div>
+              <div className={styles.impactImageBox}>
+                <img src={fundsPhoto} alt={activeStat.alt} className={styles.impactImage} />
+                <img src={dots} alt={activeStat.alt} className={styles.dotsImage} />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile layout: cards flip to reveal text inside */}
+        <div className={styles.mobileLayout}>
+          <div className={styles.mobileList}>
             {stats.map((stat, idx) => (
               <div
                 key={idx}
-                className={idx === activeIdx ? styles.iconCardActive : styles.iconCard}
-                onClick={() => setActiveIdx(idx)}
+                className={`${styles.iconCard} ${styles.mobileIconCard}`}
+                onClick={() => handleMobileClick(idx)}
                 style={{ cursor: 'pointer' }}
               >
-                <img src={stat.icon} alt={stat.alt} />
-                {idx === activeIdx && <div className={styles.iconPointer} />}
+                <div
+                  className={`${styles.cardInner} ${
+                    mobileActiveIdx === idx ? styles.cardInnerFlipped : ''
+                  }`}
+                >
+                  <div className={styles.cardFront}>
+                    <img src={stat.icon} alt={stat.alt} />
+                  </div>
+                  <div className={styles.cardBack}>
+                    <div className={styles.mobileScrollable}>
+                      <div className={styles.mobileLabel}>{stat.label}</div>
+                      <div className={styles.mobileValue}>{stat.value}</div>
+                      <div className={styles.mobileDesc}>{stat.desc}</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
-          </div>
-          <div className={styles.impactGrid}>
-            <div className={styles.impactStatBox}>
-              <div className={styles.impactStatLabel}>{activeStat.label}</div>
-              <div className={styles.impactStatValue}>{activeStat.value}</div>
-              <div className={styles.impactStatDesc}>{activeStat.desc}</div>
-            </div>
-            <div className={styles.impactImageBox}>
-              <img src={fundsPhoto} alt={activeStat.alt} className={styles.impactImage} />
-              <img src={dots} alt={activeStat.alt} className={styles.dotsImage} />
-            </div>
           </div>
         </div>
       </div>
@@ -93,4 +134,5 @@ const ImpactStats: React.FC = () => {
   );
 };
 
-export default ImpactStats; 
+export default ImpactStats;
+

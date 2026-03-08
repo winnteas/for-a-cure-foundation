@@ -68,10 +68,12 @@ const FullNewsArticle: React.FC = () => {
         const params = new URLSearchParams();
         if (category) params.append('category', category);
         if (excludeId) params.append('excludeId', excludeId);
+        console.log("params", params.toString());
 
         const res = await fetch(`${API_URL}/news/related?${params.toString()}`);
         if (!res.ok) throw new Error('Failed to load related articles');
         const data: NewsItem[] = await res.json();
+        console.log(data);
         setRelated(data || []);
       } catch (err) {
         console.error('Error fetching related articles:', err);
