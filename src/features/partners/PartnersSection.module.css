@@ -191,3 +191,47 @@
 
 .carouselArrowLeft { left: 2rem; }
 .carouselArrowRight { right: 2rem; } 
+
+@media (max-width: 900px) {
+  .partnerWithUsSection {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 3rem 1.5rem;
+  }
+
+  .contentContainer {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .content {
+    align-items: center;
+    margin-right: 0;
+    padding: 1.5rem 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .sectionDescription {
+    max-width: 100%;
+  }
+
+  .contentContainer img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .contentContainer > div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

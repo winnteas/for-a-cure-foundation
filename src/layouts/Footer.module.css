@@ -207,3 +207,9 @@
     word-break: break-word;
   }
 }
+
+/* @media (max-width: 1200px) and (min-width: 750px) {
+  .footerContent .logoSection .footerBottom {
+    margin: 0rem 3rem;
+  }
+} */

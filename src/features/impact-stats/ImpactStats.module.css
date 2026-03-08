@@ -1,6 +1,8 @@
 .section {
   padding: 4rem 2rem;
   background: #fff;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .impactContainer {
@@ -9,6 +11,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .impactTitle {
@@ -40,6 +44,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .iconRow {
@@ -251,7 +256,31 @@
   font-size: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .impactBlueBox {
+    padding: 3rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .iconRow {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .iconCard,
+  .iconCardActive {
+    width: 80px;
+    height: 80px;
+  }
+
+  .iconCard img,
+  .iconCardActive img {
+    width: 40px;
+    height: 40px;
+  }
+
   .desktopLayout {
     display: none;
   }
@@ -266,6 +295,18 @@
     flex-direction: column;
     gap: 1.5rem;
     width: 100%;
+  }
+
+  .mobileIconCard {
+    height: 220px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .mobileList {
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
   }
 }
 

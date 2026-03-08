@@ -183,3 +183,34 @@
   border-radius: 8px;
   margin: 2rem 0;
 }
+
+@media (max-width: 480px) {
+  .newsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .newsCard {
+    width: 100%;
+    min-height: unset;
+  }
+
+  .newsImage,
+  .newsImageWrapper {
+    height: 200px;
+  }
+
+  .newsTitle {
+    height: auto;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 750px) {
+  .newsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .newsCard {
+    width: 100%;
+  }
+}
