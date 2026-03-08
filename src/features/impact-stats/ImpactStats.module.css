@@ -271,15 +271,15 @@
 
 @media (max-width: 480px) {
   .mobileLabel {
-    font-size: 1.6rem;
+    font-size: 1rem;
   }
 
   .mobileValue {
-    font-size: 2.3rem;
+    font-size: 1.4rem;
   }
 
   .mobileDesc {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .iconCard img,
@@ -291,11 +291,11 @@
 
 @media (max-width: 360px) {
   .mobileLabel {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .mobileValue {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 
   .mobileDesc {
