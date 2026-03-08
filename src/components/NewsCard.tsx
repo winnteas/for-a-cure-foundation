@@ -14,14 +14,14 @@ interface NewsCardProps {
 }
 
 const NewsCard: React.FC<NewsCardProps> = ({ id, title, date, desc, category, image, slug }) => {
-  const capitalizedCategory = category.charAt(0).toUpperCase() + category.slice(1).toLowerCase();
+  // const capitalizedCategory = category.charAt(0).toUpperCase() + category.slice(1).toLowerCase();
   
   return (
     <div className={styles.newsCard}>
       <div className={styles.newsImageWrapper}>
         <img src={image} className={styles.newsImage} alt={title} />
       </div>
-      <span className={styles['categoryLabel']}>{capitalizedCategory}</span>
+      <span className={styles['categoryLabel']}>{category}</span>
       <div className={styles.newsContent}>
         <h3 className={styles.newsTitle}>{title}</h3>
         <div className={styles.line}></div>
