@@ -40,9 +40,20 @@
   border-color: var(--primary-blue);
 }
 
-.subscribeButton {
+/* .subscribeButton {
   background-color: var(--accent-orange);
-  color: var(--white);
+  color: var(--primary-blue);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  border: none;
+  cursor: pointer;
+} */
+
+.buttonWrapper button {
+  background-color: var(--accent-orange);
+  color: var(--primary-blue);
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   font-weight: 500;
@@ -54,3 +65,58 @@
 .subscribeButton:hover {
   background-color: #E67A5A;
 } 
+
+.subscribeIcon {
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  margin-bottom: 2px;
+  width: 16px;
+  height: 16px;
+}
+
+.subscribeIcon {
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  margin-bottom: 2px;
+}
+
+@media (max-width: 900px) {
+  .section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .sectionTitle {
+    text-align: center;
+  }
+
+  .form {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .emailInput {
+    width: 50%;
+  }
+
+  .subscribeText {
+    display: none;
+  }
+
+  .subscribeIcon {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .buttonWrapper button {
+    padding: 0.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

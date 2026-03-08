@@ -30,6 +30,7 @@ const Footer: React.FC = () => (
         
         </div>
       </div>
+      <div className={styles.bottomSections}>
       {/* Quick Links */}
       <div className={styles.linksSection}>
         <div className={styles.sectionTitle}>Quick Links</div>
@@ -57,6 +58,7 @@ const Footer: React.FC = () => (
         <div className={styles.contactList + ' smallText'}>
         <a className={styles.contactItem} href={certificate} target="_blank">Certificate of Registration</a>
         </div>
+      </div>
       </div>
     </div>
     <hr className={styles.divider} />
