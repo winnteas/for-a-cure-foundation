@@ -323,7 +323,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .title {
     font-size: 2.5rem;
   }
@@ -331,15 +331,34 @@
   .sectionTitle {
     font-size: 2rem;
   }
-  
+
+  .mainContent {
+    padding: 2rem;
+  }
+
   .contentContainer {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contactInfo {
+    width: 100%;
+  }
+
+  .sectionDescription {
+    margin-bottom: 2rem;
+  }
+
+  .contactBottom {
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
   }
   
   .contactForm {
     padding: 2rem;
-    width: 20rem;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .newsletterContent {
@@ -354,11 +373,6 @@
   
   .newsletterForm {
     max-width: 100%;
-  }
-
-  .contactBottom {
-    flex-direction: column;
-    gap: 10rem;
   }
 }
 
@@ -376,11 +390,13 @@
   }
   
   .mainContent {
-    padding: 0 1rem;
+    padding: 1rem;
   }
   
   .contactForm {
     padding: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .newsletterTitle {
@@ -401,4 +417,4 @@
     width: 18px;
     height: 18px;
   }
-} 
+}
