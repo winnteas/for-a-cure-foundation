@@ -88,7 +88,7 @@ const NewsListPage: React.FC = () => {
 
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>Stories of Impact</h2>
+          <h2 className={styles.title}>Stories Of Impact</h2>
           <p className={styles.subtitle}>Stay informed with updates, milestones, and moments of impact from our research and community work.</p>
         </div>
 

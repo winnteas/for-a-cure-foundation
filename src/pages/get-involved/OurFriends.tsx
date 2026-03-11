@@ -14,7 +14,8 @@ import alchemy from '../../assets/sponsors/alchemy-partners.svg';
 import fellia from '../../assets/sponsors/fellia-melas-gallery.svg';
 import lionsden from '../../assets/sponsors/lions-den-academy.svg';
 import distinctly from '../../assets/sponsors/distinctly.png';
-import avantevo from '../../assets/sponsors/avantevo.jpg'
+import avantevo from '../../assets/sponsors/avantevo.jpg';
+import webby from '../../assets/sponsors/webby.svg';
 
 import Breadcrumb from '../../components/breadcrumb/Breadcrumb';
 
@@ -33,6 +34,7 @@ const OurFriendsPage: React.FC = () => {
     { src: lionsden, alt: "Lion's Den Academy" },
       { src: avantevo, alt: "Avantevo" },
   { src: distinctly, alt: "Distinctly" },
+  { src: webby, alt: "Webby" },
     
   ];
 

@@ -7,6 +7,8 @@ import dnaIcon from '../../assets/icons/impact-stats/dna.svg';
 import briefcaseIcon from '../../assets/icons/impact-stats/briefcase.svg';
 import fundsPhoto from '../../assets/icons/funds-photo.svg';
 import dots from '../../assets/icons/impact-stats/dot-grid.svg';
+import Button from '../../components/Button';
+import externalLink from '../../assets/icons/external-link-black.svg';
 
 const stats = [
   {
@@ -67,6 +69,10 @@ const ImpactStats: React.FC = () => {
         <div className={styles.impactTitle}>
           <span className={styles.impactMainTitle}>Your Contribution</span>
           <span className={styles.impactMainTitle}>Makes All The Difference</span>
+          <span className={styles.impactSubTitle}>Join the movement to support Aussie scientists for a cure! </span>
+          <Button variant="primary">Donate On GoFundMe
+          <img className={styles.buttonIcon} src={externalLink} alt="GoFundMe" />
+          </Button>
         </div>
 
         {/* Desktop / tablet layout */}

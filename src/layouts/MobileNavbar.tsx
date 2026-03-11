@@ -13,7 +13,7 @@ const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'About Us', hasDropdown: true, dropdownItems: [
     { label: 'What We Do', path: '/about/what-we-do' },
-    { label: 'Cleone on the frontline', path: '/about/cleone-on-the-frontline' },
+    { label: 'Cleone On The Frontline', path: '/about/cleone-on-the-frontline' },
     { label: 'Our People', path: '/about/our-people' }
   ]},
   { label: 'Research', path: '/research' },

@@ -8,6 +8,7 @@ import PartnerWithUs from '../../features/partners/PartnerWithUs';
 import PageTitleSection from '../../components/PageTitleSection';
 import Button from '../../components/Button';
 import Breadcrumb from '../../components/breadcrumb/Breadcrumb';
+import PartnerBanner from '../../features/partners/PartnerBanner';
 
 const WhatWeDoSection: React.FC = () => {
   const breadcrumbItems = [
@@ -72,7 +73,7 @@ they drive significant advances. Every contribution helps accelerate the develop
     <div className="whiteDivider"></div>
 
     {/* Partner With Us Section */}
-   <PartnerWithUs/>
+   <PartnerBanner variant='light'/>
 
 
   </div>

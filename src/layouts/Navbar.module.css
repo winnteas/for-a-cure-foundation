@@ -418,6 +418,7 @@
   border-radius: 0 0 12px 12px;
   z-index: 100;
   padding: 0.5rem 0;
+  margin-top: 0.5rem;
 }
 .navDropdown:focus .dropdownMenu,
 .navDropdown:hover .dropdownMenu {

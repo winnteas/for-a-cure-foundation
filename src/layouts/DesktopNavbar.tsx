@@ -65,7 +65,7 @@ const DesktopNavbar: React.FC = () => (
           </span>
           <div className={styles.dropdownMenu}>
             <Link to="/about/what-we-do" className={styles.dropdownItem}>What We Do</Link>
-            <Link to="/about/cleone-on-the-frontline" className={styles.dropdownItem}>Cleone on the frontline</Link>
+            <Link to="/about/cleone-on-the-frontline" className={styles.dropdownItem}>Cleone On The Frontline</Link>
             <Link to="/about/our-people" className={styles.dropdownItem}>Our People</Link>
           </div>
         </div>
