@@ -71,7 +71,7 @@ const ImpactStats: React.FC = () => {
           <span className={styles.impactMainTitle}>Makes All The Difference</span>
           <span className={styles.impactSubTitle}>Join the movement to support Aussie scientists for a cure! </span>
           <Button variant="primary">Donate On GoFundMe
-          <img className={styles.buttonIcon} src={externalLink} alt="GoFundMe" />
+          <img className={styles.buttonIcon} src={externalLink} />
           </Button>
         </div>
 

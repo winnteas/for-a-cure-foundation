@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1a1f8a9b.css",
-    "main.js": "/static/js/main.065cd2f8.js",
+    "main.css": "/static/css/main.f94286d4.css",
+    "main.js": "/static/js/main.316eb18f.js",
     "static/js/453.831e232c.chunk.js": "/static/js/453.831e232c.chunk.js",
     "static/media/partner.svg": "/static/media/partner.4bec2935c90eacb772f325075de63d9b.svg",
     "static/media/volunteers.svg": "/static/media/volunteers.6995009bcdf30991633e1e02609c0c1a.svg",
@@ -34,6 +34,7 @@
     "static/media/dot-grid.svg": "/static/media/dot-grid.06de27ca78bbe3ff2d2a339741c4217a.svg",
     "static/media/fellia-melas-gallery.svg": "/static/media/fellia-melas-gallery.9b34baaee97fc534e2001cf614ff1d78.svg",
     "static/media/cancer.svg": "/static/media/cancer.e0e4858f0c39b28d8d929df72c777a52.svg",
+    "static/media/webby.svg": "/static/media/webby.80516bff59f8cab70bdbd786217e1aa5.svg",
     "static/media/heart.svg": "/static/media/heart.81df0d173169056e641433b109086692.svg",
     "static/media/spinal-cord.svg": "/static/media/spinal-cord.93777fa2dbdb6caa40b33a9b6deb2d88.svg",
     "static/media/money.svg": "/static/media/money.94d3c8dfeec1015fc4046c4bafe9cd8e.svg",
@@ -61,6 +62,7 @@
     "static/media/linkedin-navy.svg": "/static/media/linkedin-navy.1fe8add0abf6029e07a6236788e92ba8.svg",
     "static/media/x.svg": "/static/media/x.104bcc6e6f0f9d34b43d9cae8080ee6f.svg",
     "static/media/hamburger-menu.svg": "/static/media/hamburger-menu.b5be01894ef0edb368ce6120a955b598.svg",
+    "static/media/external-link-black.svg": "/static/media/external-link-black.cbf0e0c11a3417650029c2aeb5df5bc3.svg",
     "static/media/external-link.svg": "/static/media/external-link.cbf0e0c11a3417650029c2aeb5df5bc3.svg",
     "static/media/external-link-white.svg": "/static/media/external-link-white.71ea7d34e029ae4c8a690e5589aacf1d.svg",
     "static/media/circle-arrow-down.svg": "/static/media/circle-arrow-down.7c05420ed066492de22630fe5e02eb8b.svg",
@@ -70,12 +72,12 @@
     "static/media/arrow-right.svg": "/static/media/arrow-right.ff2b2b9264003df4397b8e46a2670430.svg",
     "static/media/arrow-left.svg": "/static/media/arrow-left.97d883d8d29540c3590fd934f13ea1fb.svg",
     "static/media/dropdown.svg": "/static/media/dropdown.b38def64e4b7ec8e112d6a6d9f139deb.svg",
-    "main.1a1f8a9b.css.map": "/static/css/main.1a1f8a9b.css.map",
-    "main.065cd2f8.js.map": "/static/js/main.065cd2f8.js.map",
+    "main.f94286d4.css.map": "/static/css/main.f94286d4.css.map",
+    "main.316eb18f.js.map": "/static/js/main.316eb18f.js.map",
     "453.831e232c.chunk.js.map": "/static/js/453.831e232c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a1f8a9b.css",
-    "static/js/main.065cd2f8.js"
+    "static/css/main.f94286d4.css",
+    "static/js/main.316eb18f.js"
   ]
 }

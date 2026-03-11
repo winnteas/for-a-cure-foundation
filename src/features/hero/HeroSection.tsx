@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => (
       <p className={styles.heroDescription}>Join us in supporting cutting-edge research that brings us closer to a cure.</p>
       <Link to="/research">
          <Button variant="primary">Explore Our Research
-         <img className={styles.buttonIcon} src={externalLinkIcon} alt="GoFundMe" />
+         <img className={styles.buttonIcon} src={externalLinkIcon}/>
 
          </Button>
       </Link>

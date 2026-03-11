@@ -14,7 +14,8 @@ import lionsden from '../../assets/sponsors/lions-den-academy.svg';
 import arrowLeft from '../../assets/sponsors/arrow-left.svg';
 import arrowRight from '../../assets/sponsors/arrow-right.svg';
 import distinctly from '../../assets/sponsors/distinctly.png';
-import avantevo from '../../assets/sponsors/avantevo.jpg'
+import avantevo from '../../assets/sponsors/avantevo.jpg';
+import webby from '../../assets/sponsors/webby.svg'
 
 import PartnerWithUs from './PartnerWithUs';
 import { Link } from 'react-router-dom';
@@ -32,6 +33,7 @@ const sponsors = [
   { src: lionsden, alt: "Lion's Den Academy" },
   { src: avantevo, alt: "Avantevo" },
   { src: distinctly, alt: "Distinctly" },
+  { src: webby, alt: "Webby"}
 
 ];
 
