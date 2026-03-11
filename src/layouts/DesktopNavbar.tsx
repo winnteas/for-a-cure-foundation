@@ -45,7 +45,7 @@ const DesktopNavbar: React.FC = () => (
           <button className={`${styles.infoButton} ${styles.donateButton}`}>Donate</button>
           </Link>
           <Link to={'/get-involved/volunteer'} className={styles.unstyledLink}>
-          <button className={`${styles.infoButton} ${styles.memberButton}`}>Be a Volunteer</button>
+          <button className={`${styles.infoButton} ${styles.memberButton}`}>Be A Volunteer</button>
           </Link>
         </div>
       </div>

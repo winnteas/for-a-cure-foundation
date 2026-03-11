@@ -70,9 +70,16 @@ const ImpactStats: React.FC = () => {
           <span className={styles.impactMainTitle}>Your Contribution</span>
           <span className={styles.impactMainTitle}>Makes All The Difference</span>
           <span className={styles.impactSubTitle}>Join the movement to support Aussie scientists for a cure! </span>
+          <a 
+  href="https://www.gofundme.com/f/cleone-on-the-frontline?attribution_id=sl:9de968e0-8ede-4ef8-a4f3-aee15eb9550a&lang=en_GB&ts=1773126284&utm_campaign=fp_sharesheet&utm_content=amp20_t2&utm_medium=customer&utm_source=twitter" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className={styles.donateButton}
+>
           <Button variant="primary">Donate On GoFundMe
           <img className={styles.buttonIcon} src={externalLink} />
           </Button>
+          </a>
         </div>
 
         {/* Desktop / tablet layout */}
