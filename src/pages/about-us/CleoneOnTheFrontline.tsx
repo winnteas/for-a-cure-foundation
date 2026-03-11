@@ -21,6 +21,12 @@ const CleoneOnTheFrontline: React.FC = () => {
       <div className={styles.imageCol}>
         <img src={cleoneImg} alt="Angie Cleone" className={styles.cleoneImg} />
         <span className={styles.imgCaption}>Angie Cleone</span>
+        <blockquote className={styles.quote}>
+  <div className={styles.quoteBorder}>
+    <p>"I want to give people hope. There is life after cancer. I believe we are not far from finding a cure and putting an end to such harsh treatments."</p>
+  </div>
+  <footer>– Angie Cleone</footer>
+</blockquote>
       </div>
       <div className={styles.textCol}>
         <p className={styles.italic}>
@@ -47,10 +53,6 @@ const CleoneOnTheFrontline: React.FC = () => {
         <p>
           Throughout her treatment Angie continued working and exercising, living life on her terms. Her courage, strength and imperturbable determination were, and continue to be, an inspiration to all who know her. But it’s other cancer sufferers, and all those who’ve been touched by cancer, that Angie wants to help and inspire.
         </p>
-        <blockquote className={styles.quote}>
-          <p>“I want to give people hope. There is life after cancer. I believe we are not far from finding a cure and putting an end to such harsh treatments.”</p>
-          <footer>– Angie Cleone</footer>
-        </blockquote>
         <p>
           Angie founded the For A Cure Foundation to raise funds for scientists researching the role of stem cells. The Foundation strongly supports research into this field and is geared towards helping find cures and therapies for many diseases.
         </p>
