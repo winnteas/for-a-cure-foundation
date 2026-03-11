@@ -40,7 +40,7 @@ const OurFriendsPage: React.FC = () => {
 
   const breadcrumbItems = [
     { label: 'Home', link: '/' },
-    { label: 'Get Involved', link: "/get-involved" },
+    { label: 'Get Involved', link: "/get-involved/donate" },
     { label: 'Our Friends', link: ""}
 
   ]

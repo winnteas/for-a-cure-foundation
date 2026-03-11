@@ -101,7 +101,7 @@
 }
 
 .iconCardActive {
-  background: #205b77;
+  background: var(--primary-blue);
   box-shadow: 0 4px 16px rgba(32, 91, 119, 0.18);
 }
 
@@ -124,7 +124,7 @@
   display: block;
   width: 36px;
   height: 20px;
-  background: #205b77;
+  background: var(--primary-blue);
   clip-path: polygon(50% 100%, 0 0, 100% 0);
 }
 
@@ -154,21 +154,21 @@
 .impactStatLabel {
   font-size: 4rem;
   font-weight: 700;
-  color: #205b77;
+  color: var(--primary-blue);
   margin-bottom: 0.5rem;
 }
 
 .impactStatValue {
   font-size: 6rem;
   font-weight: 900;
-  color: #205b77;
+  color: var(--primary-blue);
   margin-bottom: 0.5rem;
   line-height: 1.1;
 }
 
 .impactStatDesc {
   font-size: 1.25rem;
-  color: #205b77;
+  color: var(--primary-blue);
   opacity: 0.9;
   margin-top: 0.5rem;
 }
@@ -251,7 +251,7 @@
 
 .cardBack {
   transform: rotateY(180deg);
-  background: #205b77;
+  background: var(--primary-blue);
   color: #fff;
   padding: 0.75rem;
 }

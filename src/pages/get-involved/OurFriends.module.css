@@ -27,7 +27,7 @@
 }
 
 .breadcrumbLink {
-  color: #205B77;
+  color: var(--primary-blue);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -48,7 +48,7 @@
 .pageTitle {
   font-size: 3rem;
   font-weight: 900;
-  color: #205B77;
+  color: var(--primary-blue);
   margin: 0;
   line-height: 1.2;
 }
@@ -73,7 +73,7 @@
 .introTitle {
   font-size: 2.5rem;
   font-weight: 900;
-  color: #205B77;
+  color: var(--primary-blue);
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
@@ -314,7 +314,7 @@
 
 /* Newsletter Section */
 .newsletterSection {
-  background: #205B77;
+  background: var(--primary-blue);
   padding: 4rem 0;
   margin-top: 3rem;
 }

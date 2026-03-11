@@ -170,7 +170,7 @@
   cursor: pointer;
   font-weight: 500;
   font-size: 1.15rem;
-  color: #205B77;
+  color: var(--primary-blue);
   background: none;
   border: none;
   outline: none;
@@ -284,7 +284,7 @@
   padding: 1.2rem 1.5rem;
   display: flex;
   align-items: center;
-  color: #205B77;
+  color: var(--primary-blue);
   font-weight: 500;
 }
 
@@ -377,7 +377,7 @@
 .dropdownItem {
   display: block;
   padding: 0.75rem 1.5rem;
-  color: #205B77;
+  color: var(--primary-blue);
   text-decoration: none;
   font-size: 1.05rem;
   font-weight: 500;
@@ -418,7 +418,7 @@
   border-bottom: 1px solid #CBD5E1;
   font-size: 1.1rem;
   font-weight: 500;
-  color: #205B77;
+  color: var(--primary-blue);
   text-align: left;
   padding: 0;
   display: flex;
@@ -511,7 +511,7 @@
 .closeIcon {
   width: 20px;
   height: 20px;
-  color: #205B77;
+  color: var(--primary-blue);
 }
 
 /* Navigation Links Section */
@@ -527,7 +527,7 @@
   border: none;
   font-size: 1.1rem;
   font-weight: 500;
-  color: #205B77;
+  color: var(--primary-blue);
   text-align: left;
   padding: 1rem 1.5rem;
   display: flex;

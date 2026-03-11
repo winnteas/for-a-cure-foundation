@@ -73,7 +73,7 @@
 .newsTitle {
   font-size: 1.1rem;
   /* font-weight: 700; */
-  color: #205B77;
+  color: var(--primary-blue);
   padding-bottom: 1rem;
   /* margin-bottom: 0.7rem; */
   /* margin-top: 0.2rem; */
@@ -101,7 +101,7 @@
   color: #7a8fa6;
 }
 .readMore {
-  color: #205B77;
+  color: var(--primary-blue);
   /* font-weight: 600; */
   font-size: 1.05rem;
   text-decoration: none;
@@ -118,7 +118,7 @@
   height: 1em;
   margin-left: 0.2em;
   vertical-align: middle;
-  color: #205B77;
+  color: var(--primary-blue);
 }
 
 .viewAllButton {
@@ -151,13 +151,13 @@
   gap: 1rem;
   padding: 3rem 2rem;
   font-size: 1.1rem;
-  color: #205B77;
+  color: var(--primary-blue);
   min-height: 200px;
 }
 
 .spinner {
   border: 3px solid #e0e7ff;
-  border-top: 3px solid #205B77;
+  border-top: 3px solid var(--primary-blue);
   border-radius: 50%;
   width: 1.5rem;
   height: 1.5rem;

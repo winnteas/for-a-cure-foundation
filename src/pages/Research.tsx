@@ -54,8 +54,10 @@ const ResearchPage: React.FC = () => (
         </div>
       </div>
       <div className={styles.researchImageContainer}>
-        <img src={scientistImage} alt="Scientist working in laboratory" />
+      <div className={styles.researchImageSquare}>
+        <img src={scientistImage} alt="Stem cells" />
       </div>
+    </div>
     </div>
 
     {/* Scientific Activity Areas Section */}

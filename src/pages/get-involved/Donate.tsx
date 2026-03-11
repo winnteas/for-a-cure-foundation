@@ -12,7 +12,7 @@ import certificate from '../../assets/certificate.pdf';
 const DonatePage: React.FC = () => { 
   const breadcrumbItems = [
     { label: 'Home', link: '/' },
-    { label: 'Get Involved', link: '/get-involved'},
+    { label: 'Get Involved', link: '/get-involved/donate'},
     { label: 'Donate', link: ''}
   ]
   return (

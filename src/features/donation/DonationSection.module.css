@@ -45,7 +45,7 @@
 .heading {
   font-size: 2.5rem;
   font-weight: 900;
-  color: #205B77;
+  color: var(--primary-blue);
   margin-bottom: 1.2rem;
   text-align: center;
 }
@@ -87,7 +87,7 @@
 }
 .amountBtn, .amountActive {
   background: #e3f3fd;
-  color: #205B77;
+  color: var(--primary-blue);
   font-size: 1.15rem;
   font-weight: 700;
   border: none;
@@ -97,11 +97,11 @@
   transition: background 0.2s, color 0.2s;
 }
 .amountActive {
-  background: #205B77;
+  background: var(--primary-blue);
   color: #fff;
 }
 .amountCustom {
-  border: 2px solid #205B77;
+  border: 2px solid var(--primary-blue);
   border-radius: 0.5rem;
   padding: 0.7rem 1.2rem;
   font-size: 1.1rem;
@@ -116,18 +116,18 @@
   border: 1.5px solid #e3f3fd;
   font-size: 1.1rem;
   background: #fff;
-  color: #205B77;
+  color: var(--primary-blue);
 }
 .paymentLabel {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #205B77;
+  color: var(--primary-blue);
   margin: 1.2rem 0 0.5rem 0;
 }
 .paymentBox {
   display: flex;
   align-items: center;
-  border: 2px solid #205B77;
+  border: 2px solid var(--primary-blue);
   border-radius: 0.7rem;
   padding: 0.7rem 1.2rem;
   width: 180px;
@@ -142,11 +142,11 @@
 .paymentText {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #205B77;
+  color: var(--primary-blue);
 }
 .cardLabel {
   font-size: 1rem;
-  color: #205B77;
+  color: var(--primary-blue);
   margin-bottom: 0.3rem;
 }
 .cardInputBox {
@@ -165,7 +165,7 @@
   font-size: 1.1rem;
   flex: 1;
   background: transparent;
-  color: #205B77;
+  color: var(--primary-blue);
 }
 .cardIcons {
   width: 60px;

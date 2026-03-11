@@ -23,7 +23,7 @@
 }
 
 .breadcrumbLink {
-  color: #205B77;
+  color: var(--primary-blue);
   text-decoration: none;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .title {
-  color: #205B77;
+  color: var(--primary-blue);
   font-size: 2rem;
   font-weight: 900;
   margin: 0 0 0.75rem 0;

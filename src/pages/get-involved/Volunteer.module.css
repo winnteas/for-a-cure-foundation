@@ -19,7 +19,7 @@
 .pageTitle {
   font-size: 3rem;
   font-weight: 900;
-  color: #205B77;
+  color: var(--primary-blue);
   margin-bottom: 1rem;
   line-height: 1.2;
 }
@@ -34,7 +34,7 @@
 }
 
 .breadcrumbLink {
-  color: #205B77;
+  color: var(--primary-blue);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -281,7 +281,7 @@
 .faqQuestion span {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #205B77;
+  color: var(--primary-blue);
   line-height: 1.4;
 }
 
@@ -359,7 +359,7 @@
 .formInput:focus,
 .formTextarea:focus {
   outline: none;
-  border-color: #205B77;
+  border-color: var(--primary-blue);
   box-shadow: 0 0 0 3px rgba(32, 91, 119, 0.1);
 }
 

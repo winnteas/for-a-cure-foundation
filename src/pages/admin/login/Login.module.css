@@ -32,7 +32,7 @@
   display: block;
   font-size: 1rem;
   font-weight: 600;
-  color: #205B77;
+  color: var(--primary-blue);
   margin-bottom: 0.5rem;
 }
 
