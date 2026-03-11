@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './WhatWeDo.module.css';
 import { Link } from 'react-router-dom';
 import researchImg1 from '../../assets/about-us/generate-discoveries.svg'; // Scientist with petri dish
@@ -17,6 +17,15 @@ const WhatWeDoSection: React.FC = () => {
     { label: 'What We Do', link: ''},
 
   ]
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 900);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 900);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  
   return (
   <div className={styles.root}>
     {/* Page Title Section */}
@@ -27,7 +36,9 @@ const WhatWeDoSection: React.FC = () => {
       <div className={styles.scienceContainer}>
         <div className={styles.scienceLeft}>
           
-    <Breadcrumb items={breadcrumbItems} whiteLinks={true}></Breadcrumb>
+        <div className={styles.breadcrumbWrapper}>
+    <Breadcrumb items={breadcrumbItems} whiteLinks={!isMobile} />
+  </div>
           <h2 className={styles.scienceTitle}>Science That Transforms Lives</h2>
           <p className={styles.scienceDescription}>
             We focus on scientific research and regenerative medicine to find cures for life-threatening
@@ -67,10 +78,8 @@ they drive significant advances. Every contribution helps accelerate the develop
     </div>
 
  
-    <div className="whiteDivider"></div>
     {/* Vision, Mission, Values Section */}
     <VisionMissionValues/>
-    <div className="whiteDivider"></div>
 
     {/* Partner With Us Section */}
    <PartnerBanner variant='light'/>

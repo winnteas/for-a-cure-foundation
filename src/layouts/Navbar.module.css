@@ -21,7 +21,7 @@
   justify-content: space-between;
   padding: 0.5rem 3rem;
   background: #355C7D;
-  border-radius: 0 0 1rem 1rem;
+  /* border-radius: 0 0 1rem 1rem; */
   position: relative;
 }
 
@@ -226,7 +226,7 @@
   width: 2rem;
   height: 0.25rem;
   background: var(--primary-blue);
-  border-radius: 10px;
+  /* border-radius: 10px; */
   transition: all 0.3s linear;
   position: relative;
   transform-origin: 1px;
@@ -238,10 +238,6 @@
   display: block;
 }
 
-
-/* .mobileMenuCustom {
-  display: none;
-} */
 
 /* Default: show desktop, hide mobile */
 .navbar {
@@ -262,35 +258,19 @@
 }
 
 /* Mobile */                          
-.mobileMenuCustom {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  background: transparent;
-  box-shadow: none;
-  overflow-y: visible;
-  top: var(--header-height);
-  height: auto;
-  min-height: unset;
-}
 
 .mobileMenuCard {
+  width: 33vw;
+  max-width: 33vw;
+  min-width: 300px;
+  height: 100vh;
   background: #fff;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 32px rgba(32,91,119,0.12);
-  padding: 2rem 1.5rem 1.5rem 1.5rem;
-  max-width: 95vw;
-  width: 95vw;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  overflow-y: auto;
+  border-radius: 16px 0 0 16px;
+  /* overflow-x: hidden; */
 }
-
 .mobileMenuGrid {
   display: flex;
   flex-direction: column;
@@ -299,45 +279,15 @@
   flex: none;
 }
 
-.mobileMenuItem {
-  width: 100%;
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--primary-blue);
-  text-align: left;
-  padding: 0;
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 8px rgba(32,91,119,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0;
-  position: relative;
-  overflow: hidden;
-  text-decoration: none;
-  cursor: pointer;
-}
-.mobileMenuItem + .mobileMenuItem {
-  margin-top: 1rem;
-}
-.mobileMenuItem:not(:last-child)::after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  background: #e0e0e0;
-}
 .mobileMenuItemContent {
   flex: 1;
   padding: 1.2rem 1.5rem;
   display: flex;
   align-items: center;
+  color: #205B77;
+  font-weight: 500;
 }
+
 .mobileMenuDropdownBox {
   background: #f5f7fa;
   border-left: 1px solid #e0e0e0;
@@ -355,7 +305,7 @@
 
 .mobileMenuBottom {
   background: var(--primary-blue);
-  border-radius: 0 0 1rem 1rem;
+  /* border-radius: 0 0 1rem 1rem; */
   padding: 2rem 2rem 1.5rem 2rem;
   display: flex;
   flex-direction: column;
@@ -375,7 +325,7 @@
   min-width: 0;
   padding: 1rem 0.5rem;
   font-size: 1.2rem;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
 }
 .donateButton {
   background: #A8E6CF;
@@ -455,27 +405,33 @@
 }
 
 .mobileDropdownItems {
-  background: #f8f9fa;
-  border-radius: 0 0 0.75rem 0.75rem;
+  background: #f0f4f8;
   overflow: hidden;
-  margin-top: -0.5rem;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .mobileDropdownItem {
   width: 100%;
-  background: #f8f9fa;
+  background: #f0f4f8;
   border: none;
+  border-bottom: 1px solid #CBD5E1;
   font-size: 1.1rem;
   font-weight: 500;
-  color: var(--primary-blue);
+  color: #205B77;
   text-align: left;
   padding: 0;
   display: flex;
   align-items: center;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.2s, color 0.2s;
 }
+
+.mobileDropdownItem:last-child {
+  border-bottom: none;
+}
+
 
 .mobileDropdownItem:hover {
   background: #e9ecef;
@@ -484,7 +440,6 @@
 
 .mobileDropdownItem .mobileMenuItemContent {
   padding: 1rem 1.5rem 1rem 3rem;
-  color: var(--primary-blue);
 }
 
 /* Mobile Navigation Styles */
@@ -522,24 +477,15 @@
   justify-content: flex-end;
 }
 
-.mobileMenuCard {
-  width: 100%;
-  max-width: 350px;
-  height: 100vh;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-}
-
 /* Header Section */
 .mobileMenuHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  padding: 3rem;
   border-bottom: 1px solid #e0e0e0;
   background: #fff;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
 .mobileMenuLogoSection {
@@ -602,11 +548,6 @@
   background: #e8f0f8;
 }
 
-.mobileMenuItemContent {
-  color: #205B77;
-  font-weight: 500;
-}
-
 .mobileMenuDropdownBox {
   display: none;
 }
@@ -617,44 +558,6 @@
 
 .mobileMenuDropdown {
   width: 100%;
-}
-
-.mobileDropdownItems {
-  background: #f8f9fa;
-  border-radius: 0 0 0.75rem 0.75rem;
-  overflow: hidden;
-  margin-top: -0.5rem;
-}
-
-.mobileDropdownItem {
-  width: 100%;
-  background: #f8f9fa;
-  border: none;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #205B77;
-  text-align: left;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.mobileDropdownItem:hover {
-  background: #e9ecef;
-  color: var(--primary-blue);
-}
-
-.mobileDropdownItem:focus-visible {
-  outline: 2px solid #d2eafd;
-  outline-offset: 2px;
-}
-
-.mobileDropdownItem .mobileMenuItemContent {
-  padding: 1rem 1.5rem 1rem 3rem;
-  color: var(--primary-blue);
 }
 
 .mobileBottom {
@@ -682,7 +585,7 @@
   max-width: 200px;
   padding: 1rem 5rem;
   border: none;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -723,7 +626,7 @@
   height: 40px;
   background: transparent;
   border: 2px solid #fff;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -752,9 +655,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1.5rem;
+    height: 70px;
     background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
   }
   
   .mobileNavbarLogo {
@@ -763,12 +668,10 @@
 }
 
 @media (max-width: 480px) {
-  .mobileMenuCard {
-    max-width: 100%;
-  }
   
   .mobileMenuHeader {
-    padding: 1rem;
+    padding: 2.5rem;
+
   }
   
   .mobileMenuItem {
@@ -783,5 +686,18 @@
   .mobileMenuSocials {
     padding: 1rem;
     gap: 1.5rem;
+  }
+
+  .mobileMenuCustom {
+    justify-content: center;
+  }
+
+  .mobileMenuCard {
+    width: 100%;
+    max-width: 100%;
+    min-width: unset;
+    height: 100vh;
+    border-radius: 0px;
+
   }
 }

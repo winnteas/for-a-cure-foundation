@@ -1,7 +1,7 @@
 .section {
   background: var(--primary-blue);
   align-items: center;
-  padding: 5rem 2rem;
+  padding: 3rem 19rem;
   background-size: cover;
   background-position: center;
 }
@@ -11,7 +11,7 @@
   background: #fff;
   border-radius: 2rem;
   flex-direction: column;
-  padding: 2.5rem;
+  padding: 2rem 2rem 5rem 2rem;
   align-items: center;
   justify-content: center
 }
