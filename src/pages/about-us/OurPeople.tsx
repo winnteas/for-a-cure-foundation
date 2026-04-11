@@ -17,7 +17,7 @@ const teamMembers = [
   {
     id: 1,
     name: 'Angie Cleone',
-    title: 'Founder and Chair',
+    title: 'Founder & Chair | Executive Director',
     description: 'Visionary founder dedicated to advancing medical research, Angie leads the Foundation with unwavering passion, strategic insight, and a deep commitment to finding cures.',
     image: angieImg,
     hasMoreInfo: true,
@@ -44,7 +44,7 @@ const teamMembers = [
   {
     id: 4,
     name: 'Adam Fenech',
-    title: 'Managing Director & CEO',
+    title: 'Managing Director',
     description: 'Adam is a seasoned executive with experience in financial services, innovation, and transformation, driving the Foundation’s growth, partnerships, and impact, with care and compassion.',
     image: adamImg,
     hasMoreInfo: false,
