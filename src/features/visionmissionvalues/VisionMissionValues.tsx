@@ -13,12 +13,12 @@ interface Card {
 const cards: Card[] = [
   {
     title: 'Our Vision',
-    text: 'To advance scientific breakthroughs by funding vital research, building global partnerships, securing long term investment, supporting innovation, and engaging diverse communities.',
+    text: 'A world where groundbreaking medical discoveries become life-changing treatments and cures, transforming healthcare and improving lives across the globe.',
     icon: visionIcon
   },
   {
     title: 'Our Mission',
-    text: 'A world where research delivers transformative treatments and cures, uniting scientists, communities, and funders to create lasting health outcomes and hope for generations to come.',
+    text: 'To build an international philanthropic platform that unites leading researchers, philanthropists and corporate partners to accelerate breakthroughs in stem cell research, gene therapy, AI-driven medical research and longevity science.',
     icon: missionIcon
   },
   {
@@ -31,7 +31,7 @@ const cards: Card[] = [
 const VisionMissionValues: React.FC = () => (
   <section className={styles.section}>
     <div className={styles.container}>
-  
+
       <div className={styles.cardsContainer}>
         {cards.map((card, idx) => (
           <div key={idx} className={styles.card}>
@@ -45,4 +45,4 @@ const VisionMissionValues: React.FC = () => (
   </section>
 );
 
-export default VisionMissionValues; 
+export default VisionMissionValues;

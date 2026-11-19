@@ -29,27 +29,22 @@ const ResearchPage: React.FC = () => (
 
     {/* Stem Cells For A Cure Section */}
     <div className={styles.stemCellsSection}>
-      <h3 className={styles.sectionTitle}>Stem Cells For A Cure</h3>
+      <h3 className={styles.sectionTitle}>Advancing Medical Research For A Cure</h3>
       <div className={styles.contentGrid}>
         <div className={styles.textColumn}>
           <p className={styles.researchText}>
-            Stem cell research is the study of unique, unspecialised cells that can develop into different body cell types. 
-            These cells serve as raw materials, capable of dividing, renewing, and becoming specific cells such as muscle, 
-            nerve, or blood cells.
+          For A Cure Foundation is dedicated to accelerating medical breakthroughs through stem cell research, gene therapy, AI-driven medical research and longevity science.
           </p>
           <p className={styles.researchText}>
-            Researchers use stem cells (embryonic, adult, induced pluripotent) to understand disease development, 
-            tissue regeneration, and healing processes.
+          These rapidly advancing fields offer extraordinary potential to transform the prevention, diagnosis and treatment of major diseases, including cancer, diabetes, Parkinson's disease, heart disease and other debilitating conditions.
           </p>
         </div>
         <div className={styles.textColumn}>
           <p className={styles.researchText}>
-            Stem cell research holds immense potential for medical breakthroughs, including new treatments for cancer, 
-            diabetes, Parkinson's disease, spinal cord injuries, and heart disease.
+          From regenerating damaged tissues and developing targeted genetic therapies to harnessing artificial intelligence for drug discovery and understanding the biology of ageing, scientific innovation is opening new possibilities for life-changing treatments.
           </p>
           <p className={styles.researchText}>
-            Scientists are investigating stem cells to repair and replace damaged tissues and organs, aiming to cure 
-            untreatable conditions and offering hope for regenerative medicine.
+          Our vision is to unite leading researchers, philanthropists and corporate partners across the globe to accelerate discoveries, advance innovative therapies and bring the world closer to a cure.
           </p>
         </div>
       </div>

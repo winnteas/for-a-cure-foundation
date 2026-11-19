@@ -55,7 +55,7 @@ const DonatePage: React.FC = () => {
             <div className={styles.faqContent}>
               <h4 className={styles.faqQuestion}>Is my donation tax-deductible?</h4>
               <p className={styles.faqAnswer}>
-                Yes, Aussies 4 Cures Foundation (trading as For A Cure Foundation) is a <a href={certificate} target="_blank">registered charity</a>, and all donations over $2 are tax-deductible in Australia.
+                Yes, Aussies 4 Cures Foundation (trading as For A Cure Foundation) is a <a href={certificate} target="_blank">registered charity</a>. Eligible donations of $2 or more are tax-deductible in Australia.
               </p>
             </div>
           </div>
