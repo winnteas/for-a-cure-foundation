@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import styles from './NewsletterSection.module.css';
 import Button from '../../components/Button';
-import { subscribe } from '../../api/subscribe'
+import { subscribe } from '../../api/subscribe';
+import subscribeIcon from '../../assets/icons/subscribe.svg';
 
 const NewsletterSection: React.FC = () => {
 
@@ -30,7 +31,12 @@ const NewsletterSection: React.FC = () => {
        onChange={(e) => setEmail(e.target.value)}
       value={email} 
        required/>
-      <Button type="submit" variant="primary">Subscribe</Button>
+      <div className={styles.buttonWrapper}>
+        <Button type="submit" variant="primary">
+          <span className={styles.subscribeText}>Subscribe</span>
+          <img src={subscribeIcon} alt="Subscribe" className={styles.subscribeIcon} />
+        </Button>
+      </div>
       
     </form>
     {status && <p className={styles.formLabel}>{status}</p>}

@@ -22,32 +22,25 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, whiteLinks = false }) =>
 
   return (
     <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-      {items.map((item, index) => {
-
-        currentPath += item.link;
-
-        return (
-          <React.Fragment key={index}>
-            {/* Render the link if it's not the last item */}
-            {index < items.length - 1 ? (
-              <>
-                <Link 
-                  to={currentPath} 
-                  className={whiteLinks ? styles.whiteLink : ''}
-                >
-                  {item.label}
-                </Link>
-                <img src={breadcrumbSeparator} className={styles.breadcrumbSeparator} alt="separator" />
-              </>
-            ) : (
-              // If it's the current page, render as a span
-              <span aria-current="page" className={styles.currentPage}>
+      {items.map((item, index) => (
+        <React.Fragment key={index}>
+          {index < items.length - 1 ? (
+            <>
+              <Link 
+                to={item.link} 
+                className={whiteLinks ? styles.whiteLink : ''}
+              >
                 {item.label}
-              </span>
-            )}
-          </React.Fragment>
-        );
-      })}
+              </Link>
+              <img src={breadcrumbSeparator} className={styles.breadcrumbSeparator} alt="separator" />
+            </>
+          ) : (
+            <span aria-current="page" className={styles.currentPage}>
+              {item.label}
+            </span>
+          )}
+        </React.Fragment>
+      ))}
     </nav>
   );
 };

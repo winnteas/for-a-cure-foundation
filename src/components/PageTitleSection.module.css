@@ -13,7 +13,7 @@
 .pageTitle {
   font-size: 3rem;
   font-weight: 900;
-  color: #205B77;
+  color: var(--primary-blue);
   margin-bottom: 1rem;
   line-height: 1.2;
 }

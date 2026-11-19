@@ -19,7 +19,7 @@
 .pageTitle {
   font-size: 3rem;
   font-weight: 900;
-  color: #205B77;
+  color: var(--primary-blue);
   margin: 0;
   line-height: 1.2;
 }
@@ -70,6 +70,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.breadcrumbWrapper {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
 }
 
 .scienceRight {
@@ -148,7 +154,7 @@
 .donationsTitle {
   font-size: 2.5rem;
   font-weight: 900;
-  color: #205B77;
+  color: var(--primary-blue);
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
@@ -375,7 +381,7 @@
 .valueTitle {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #205B77;
+  color: var(--primary-blue);
   margin-bottom: 1rem;
 }
 
@@ -482,7 +488,7 @@
 
 /* Newsletter Section */
 .newsletterSection {
-  background: #205B77;
+  background: var(--primary-blue);
   padding: 4rem 0;
   margin-top: 3rem;
 }
@@ -562,6 +568,11 @@
   .pageTitle {
     font-size: 2.5rem;
   }
+
+  .breadcrumbWrapper {
+    top: 0.5rem;
+    left: 0.75rem;
+  }
   
   .scienceContainer,
   .donationsContainer,
@@ -572,7 +583,7 @@
   .scienceSection,
   .donationsSection,
   .partnerSection {
-    background: #205B77;
+    background: var(--primary-blue);
   }
   
   .donationsSection {
@@ -586,15 +597,22 @@
   .scienceLeft,
   .donationsRight,
   .partnerLeft {
-    padding: 2rem;
+    padding: 5rem;
+  }
+
+  .donationsLeft {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    padding: 0;
   }
   
-  .scienceRight,
+  /* .scienceRight,
   .donationsLeft,
   .partnerRight {
-    padding: 1rem;
+    padding: 5rem;
   }
-  
+   */
   .valuesGrid {
     grid-template-columns: 1fr;
   }
@@ -612,6 +630,28 @@
   .newsletterForm {
     max-width: 100%;
   }
+
+  .scienceContainer {
+    flex-direction: column-reverse;
+  }
+  
+  .donationsContainer {
+    flex-direction: column;
+  }
+
+  .scienceImage,
+  .donationsImage {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .scienceRight,
+  .donationsLeft {
+    height: 400px;
+    overflow: hidden;
+    padding: 0;
+  }
 }
 
 @media (max-width: 600px) {
@@ -622,11 +662,10 @@
   .pageTitle {
     font-size: 2rem;
   }
-  
-  .scienceSection,
-  .donationsSection,
-  .partnerSection {
-    padding: 2rem 0;
+
+  .breadcrumbWrapper {
+    top: 0.1rem;
+    left: 0rem;
   }
   
   .scienceTitle,
@@ -638,7 +677,7 @@
   .scienceLeft,
   .donationsRight,
   .partnerLeft {
-    padding: 1.5rem;
+    padding: 3rem;
   }
   
   .scienceImageContainer,
@@ -646,8 +685,20 @@
   .partnerImageContainer {
     height: 300px;
   }
+
+  .scienceImage,
+  .donationsImage {
+    width: 100%;
+    height: 300px;
+  }
+
+  .scienceRight,
+  .donationsLeft {
+    height: 300px;
+    padding: 0;
+  }
   
   .newsletterTitle {
     font-size: 1.8rem;
   }
-} 
+}

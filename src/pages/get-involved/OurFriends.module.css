@@ -27,7 +27,7 @@
 }
 
 .breadcrumbLink {
-  color: #205B77;
+  color: var(--primary-blue);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -48,21 +48,21 @@
 .pageTitle {
   font-size: 3rem;
   font-weight: 900;
-  color: #205B77;
+  color: var(--primary-blue);
   margin: 0;
   line-height: 1.2;
 }
 
 /* Main Content Area */
 .mainContent {
-  padding: 4rem 0;
+  padding: 2rem 0;
   background: #fff;
 }
 
 .contentContainer {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 2rem 3rem 0;
 }
 
 .introSection {
@@ -73,7 +73,7 @@
 .introTitle {
   font-size: 2.5rem;
   font-weight: 900;
-  color: #205B77;
+  color: var(--primary-blue);
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
@@ -91,7 +91,15 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
-  margin-top: 3rem;
+  margin: 3rem auto 6rem auto;
+  align-items: center;
+  justify-items: center;
+  max-width: 1800px;
+}
+
+.partnersGrid img {
+  width: 500px;
+  height: auto;
 }
 
 .partnerLogo {
@@ -306,7 +314,7 @@
 
 /* Newsletter Section */
 .newsletterSection {
-  background: #205B77;
+  background: var(--primary-blue);
   padding: 4rem 0;
   margin-top: 3rem;
 }
@@ -437,7 +445,7 @@
   
   .partnersGrid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 5rem;
   }
   
   .partnerLogo {

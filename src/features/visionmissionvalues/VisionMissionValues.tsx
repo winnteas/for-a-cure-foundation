@@ -13,7 +13,7 @@ interface Card {
 const cards: Card[] = [
   {
     title: 'Our Vision',
-    text: 'To advance scientific breakthroughs by funding vital research, building global partnerships, securing long term investment, supporting innovation, and engaging diverse communities in advancing regenerative medicine.',
+    text: 'To advance scientific breakthroughs by funding vital research, building global partnerships, securing long term investment, supporting innovation, and engaging diverse communities.',
     icon: visionIcon
   },
   {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './WhatWeDo.module.css';
 import { Link } from 'react-router-dom';
 import researchImg1 from '../../assets/about-us/generate-discoveries.svg'; // Scientist with petri dish
@@ -8,6 +8,7 @@ import PartnerWithUs from '../../features/partners/PartnerWithUs';
 import PageTitleSection from '../../components/PageTitleSection';
 import Button from '../../components/Button';
 import Breadcrumb from '../../components/breadcrumb/Breadcrumb';
+import PartnerBanner from '../../features/partners/PartnerBanner';
 
 const WhatWeDoSection: React.FC = () => {
   const breadcrumbItems = [
@@ -16,6 +17,15 @@ const WhatWeDoSection: React.FC = () => {
     { label: 'What We Do', link: ''},
 
   ]
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 900);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 900);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  
   return (
   <div className={styles.root}>
     {/* Page Title Section */}
@@ -26,7 +36,9 @@ const WhatWeDoSection: React.FC = () => {
       <div className={styles.scienceContainer}>
         <div className={styles.scienceLeft}>
           
-    <Breadcrumb items={breadcrumbItems} whiteLinks={true}></Breadcrumb>
+        <div className={styles.breadcrumbWrapper}>
+    <Breadcrumb items={breadcrumbItems} whiteLinks={!isMobile} />
+  </div>
           <h2 className={styles.scienceTitle}>Science That Transforms Lives</h2>
           <p className={styles.scienceDescription}>
             We focus on scientific research and regenerative medicine to find cures for life-threatening
@@ -56,8 +68,7 @@ transform the lives of patients and their families through innovative medical so
           <h2 className={styles.donationsTitle}>Donations That Generate Discoveries</h2>
           <p className={styles.donationsDescription}>
 Your donations fund cutting-edge scientific research and are directed to laboratories where
-they drive significant advances. Every contribution helps accelerate the development of life-
-saving treatments and brings us closer to finding cures for devastating diseases.
+they drive significant advances. Every contribution helps accelerate the development of life-saving treatments and brings us closer to finding cures for devastating diseases.
           </p>
           <Link to="/get-involved/donate">
             <Button variant="primary">Donate Now</Button>
@@ -67,13 +78,11 @@ saving treatments and brings us closer to finding cures for devastating diseases
     </div>
 
  
-    <div className="whiteDivider"></div>
     {/* Vision, Mission, Values Section */}
     <VisionMissionValues/>
-    <div className="whiteDivider"></div>
 
     {/* Partner With Us Section */}
-   <PartnerWithUs/>
+   <PartnerBanner variant='light'/>
 
 
   </div>

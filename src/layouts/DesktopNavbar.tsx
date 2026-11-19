@@ -16,16 +16,16 @@ const DesktopNavbar: React.FC = () => (
     <div className={styles.topBar}>
       <div className={styles.topBarContent}>
         <div className={styles.left}>
-          <a href="https://www.facebook.com/stemcells.foracure/" className={styles.socialIcon} aria-label="Facebook">
+          <a href="https://www.facebook.com/stemcells.foracure/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Facebook">
             <img src={facebookIcon} alt="Facebook"/>
           </a>
-          <a href="https://www.instagram.com/foracurefoundation/" className={styles.socialIcon} aria-label="Instagram">
+          <a href="https://www.instagram.com/foracurefoundation/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Instagram">
             <img src={instagramIcon} alt="Instagram"/>
           </a>
-          <a href="https://x.com/foracure" className={styles.socialIcon} aria-label="X">
+          <a href="https://x.com/foracure" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="X">
             <img src={xIcon} alt="X"/>
           </a>
-          <a href="https://www.linkedin.com/company/for-a-cure-foundation/?viewAsMember=true" className={styles.socialIcon} aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/company/for-a-cure-foundation/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="LinkedIn">
             <img src={linkedinIcon} alt="LinkedIn"/>
           </a>
           <span className={styles.contactInfo}>
@@ -45,7 +45,7 @@ const DesktopNavbar: React.FC = () => (
           <button className={`${styles.infoButton} ${styles.donateButton}`}>Donate</button>
           </Link>
           <Link to={'/get-involved/volunteer'} className={styles.unstyledLink}>
-          <button className={`${styles.infoButton} ${styles.memberButton}`}>Be a Volunteer</button>
+          <button className={`${styles.infoButton} ${styles.memberButton}`}>Be A Volunteer</button>
           </Link>
         </div>
       </div>
@@ -65,7 +65,7 @@ const DesktopNavbar: React.FC = () => (
           </span>
           <div className={styles.dropdownMenu}>
             <Link to="/about/what-we-do" className={styles.dropdownItem}>What We Do</Link>
-            <Link to="/about/cleone-on-the-frontline" className={styles.dropdownItem}>Cleone on the frontline</Link>
+            <Link to="/about/cleone-on-the-frontline" className={styles.dropdownItem}>Cleone On The Frontline</Link>
             <Link to="/about/our-people" className={styles.dropdownItem}>Our People</Link>
           </div>
         </div>

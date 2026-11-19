@@ -27,6 +27,7 @@ const Footer: React.FC = () => (
           For A Cure Foundation is a registered charity dedicated to accelerating science breakthroughs and bringing treatments to patients sooner.
         </div>
       </div>
+      <div className={styles.bottomSections}>
       {/* Quick Links */}
       <div className={styles.linksSection}>
         <div className={styles.sectionTitle}>Quick Links</div>
@@ -46,14 +47,15 @@ const Footer: React.FC = () => (
           <li className={styles.contactItem}><img src={mailIcon} alt="Mail" className={styles.contactIcon} /> info@foracure.org.au</li>
         </ul>
         <div className={styles.socials}>
-          <a href="https://www.facebook.com/stemcells.foracure/" className={styles.socialIcon} aria-label="Facebook"><img src={facebookIcon} alt="Facebook" className={styles.socialIcon} /></a>
-          <a href="https://www.instagram.com/foracurefoundation/" className={styles.socialIcon} aria-label="Instagram"><img src={instagramIcon} alt="Instagram" className={styles.socialIcon} /></a>
-          <a href="https://x.com/foracure" className={styles.socialIcon} aria-label="X"><img src={xIcon} alt="X" className={styles.socialIcon} /></a>
-          <a href="https://www.linkedin.com/company/for-a-cure-foundation/?viewAsMember=true" className={styles.socialIcon} aria-label="LinkedIn"><img src={linkedInIcon} alt="LinkedIn" className={styles.socialIcon} /></a>
+          <a href="https://www.facebook.com/stemcells.foracure/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Facebook"><img src={facebookIcon} alt="Facebook" className={styles.socialIcon} /></a>
+          <a href="https://www.instagram.com/foracurefoundation/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Instagram"><img src={instagramIcon} alt="Instagram" className={styles.socialIcon} /></a>
+          <a href="https://x.com/foracure" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="X"><img src={xIcon} alt="X" className={styles.socialIcon} /></a>
+          <a href="https://www.linkedin.com/company/for-a-cure-foundation/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="LinkedIn"><img src={linkedInIcon} alt="LinkedIn" className={styles.socialIcon} /></a>
         </div>
         <div className={styles.contactList + ' smallText'}>
         <a className={styles.contactItem} href={certificate} target="_blank">Certificate of Registration</a>
         </div>
+      </div>
       </div>
     </div>
     <hr className={styles.divider} />
