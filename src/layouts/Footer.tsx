@@ -24,9 +24,7 @@ const Footer: React.FC = () => (
       <div className={styles.logoSection}>
         <img src={logoWhite} alt="For A Cure Foundation" className={styles.logo} />
         <div className={styles.orgInfo}>
-          Aussies 4 Cures Foundation<br />
-          ABN/DGR 66677630705 trading as For A Cure Foundation is a charitable organisation<br />
-          (Charity) advancing the prevention or control of diseases in human beings.
+          For A Cure Foundation is a registered charity dedicated to accelerating science breakthroughs and bringing treatments to patients sooner.
         </div>
       </div>
       {/* Quick Links */}
@@ -60,7 +58,7 @@ const Footer: React.FC = () => (
     </div>
     <hr className={styles.divider} />
     <div className={styles.footerBottom + ' smallText'}>
-      <div>Copyright © 2025 For A Cure Foundation</div>
+      <div>Copyright © 2026 For A Cure Foundation</div>
       <div>ABN/DGR 66677630705</div>
     </div>
   </footer>
